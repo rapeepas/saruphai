@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ที่นอน 6 ฟุต ตัวไหนดี? · สรุปให้ตัวไหนดี</title>
+<meta name="description" content="สรุปจากเสียงผู้ใช้จริง: ที่นอน 6 ฟุต เทียบสเปกและเสียงคนใช้แบบแถวต่อแถว">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Kanit:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5ef; --card:#ffffff; --ink:#1b2340; --ink-2:#4a5270; --ink-3:#7a8099;
+  --rule:#dcd8cc; --accent:#f5c518; --accent-ink:#1b2340; --mark:#fff1b0;
+  --good:#1f7a4d; --warn:#a2541b; --chip:#eceae2;
+  --font-display:"Kanit",system-ui,sans-serif; --font-body:"Anuphan",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}}
+:root[data-theme="dark"]{--paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 var(--font-body)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;font-style:normal;line-height:1.25;overflow-wrap:anywhere;min-width:0}
+a{color:inherit}
+.mast{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-2)}
+.mast b{font-family:var(--font-display);font-weight:600;color:var(--ink)}
+.code{background:var(--accent);color:var(--accent-ink);font-weight:600;border-radius:4px;padding:1px 8px;white-space:nowrap}
+header.top{padding:28px 0 8px}
+header.top h1{font-size:clamp(28px,7vw,40px);margin:0 0 10px}
+.meta{color:var(--ink-2);font-size:14px;margin:0}
+.meta span{white-space:nowrap}
+.verdict{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:16px 18px;margin:22px 0 8px}
+.verdict h2{font-size:18px;margin:0 0 8px}
+.verdict ul{margin:0;padding-left:20px}
+.verdict li{margin:4px 0}
+section{padding-top:34px}
+section>h2{font-size:22px;margin:0 0 4px}
+.sub{color:var(--ink-2);font-size:14px;margin:0 0 16px}
+mark{background:var(--mark);color:inherit;padding:0 2px}
+/* findings */
+.find{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.find li{padding:12px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.find b{font-weight:600}
+.find small{color:var(--ink-3);font-size:13px}
+blockquote{margin:6px 0 0;padding:0 0 0 12px;border-left:2px solid var(--rule);color:var(--ink-2)}
+/* compare */
+.cmp{background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow:clip}
+.cmp-head{position:sticky;top:0;z-index:2;background:var(--card);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px;border-bottom:1px solid var(--rule)}
+.cmp-head figure{margin:0;text-align:center;min-width:0}
+.cmp-head img{width:100%;max-width:96px;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.cmp-head figcaption{font:600 13px/1.3 var(--font-display);margin-top:6px;overflow-wrap:anywhere}
+.row{padding:10px 12px;border-bottom:1px solid var(--rule)}
+.row:last-child{border-bottom:0}
+.row h3{font:600 13px/1.3 var(--font-body);color:var(--ink-3);margin:0 0 6px;letter-spacing:.02em}
+.cells{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;font-size:14px;line-height:1.45}
+.cells div{min-width:0;overflow-wrap:anywhere}
+.na{color:var(--ink-3)}
+.yes{color:var(--good);font-weight:600}
+/* product notes */
+.prod{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:16px;margin-bottom:12px;display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px}
+.prod img{width:72px;height:72px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.prod h3{font-size:17px;margin:0 0 4px}
+.prod p{margin:4px 0;font-size:15px}
+.prod .fits{color:var(--ink-2)}
+.shop{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:10px;font-size:14px;color:var(--ink-3)}
+.shop a{border:1px solid var(--ink-3);border-radius:4px;padding:4px 12px;text-decoration:none;color:var(--ink);white-space:nowrap}
+.shop a:hover{border-color:var(--ink)}
+.shop a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* caveats */
+.cav{list-style:none;padding:0;margin:0}
+.cav li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid var(--rule)}
+.cav li::before{content:"!";position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;background:var(--chip);color:var(--warn);font:600 12px/18px var(--font-display);text-align:center}
+.src{font-size:14px;color:var(--ink-2)}
+.src li{margin:3px 0}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-3)}
+
+.mast a.home{font-family:var(--font-display);font-weight:600;color:var(--ink);text-decoration:none}.clips{margin-top:6px}.clips a{color:var(--ink);text-underline-offset:3px}.srch{font-size:15px;margin:18px 0 4px}.src a{color:var(--ink-2);text-underline-offset:3px}footer a{color:var(--ink-2)}.cmp-head,.cells{grid-template-columns:repeat(3,minmax(0,1fr))}</style></head>
+<body style="--n:3"><div class="wrap">
+<div class="mast"><a href="/" class="home">สรุปให้ตัวไหนดี</a><span>สรุปจากผู้ใช้จริง <span class="code">รหัส 8</span></span></div>
+<header class="top"><h1>ที่นอน 6 ฟุต ตัวไหนดี?</h1>
+<p class="meta"><span>Pantip 32 กระทู้ 245 ความเห็น</span> · <span>อ่านคอมเมนต์ 1,063 รายการจาก 57 คลิป</span> · <span>กลุ่ม FB 4 กลุ่ม (โพสต์ใหญ่สุด 183 คอมเมนต์)</span> · <span>อัปเดต 18 ต.ค. 2569</span></p>
+<p class="meta clips"><a href="https://th.shp.ee/2qrbp62m" rel="noopener">คลิปใน Shopee</a></p></header>
+<div class="verdict"><h2>สรุปสั้น</h2><ul><li><b>ไม่มีแบรนด์ไหนไม่ยุบเลย</b> ทุกแบรนด์ใหญ่มีทั้งเคสใช้ 10–20 ปี และเคสยุบในไม่กี่เดือน</li><li>คนน้ำหนักเยอะ เสียงซ้ำว่า <b>สปริงธรรมดายุบเร็ว</b> ยางพาราแน่นหรือรุ่นแข็งไปได้ดีกว่า และควรวางบนฐานแข็ง</li><li>อ่าน <b>เงื่อนไขประกันยุบ</b> ก่อนซื้อ ส่วนใหญ่ <mark>ซ่อม ไม่ใช่เปลี่ยน</mark> และค่าขนส่งอาจต้องจ่ายเอง</li></ul></div>
+<section><h2>เสียงจากผู้ใช้จริง</h2><ul class="find"><li><b>เสียงทนระยะยาวที่ชัดที่สุด: Slumberland สปริงแน่น · Patex ยางพาราแน่น · Sealy</b><small>จาก Pantip 32 กระทู้ (ทุกข้อมีเลขกระทู้)</small><blockquote>“ใช้มาเกือบ 23 ปี (ซื้อปี 46) ยังดี”</blockquote><blockquote>“ใช้เกิน 10 ปี ยังนอนดี”</blockquote></li><li><b>ประกันยุบส่วนใหญ่คือซ่อม ไม่ใช่เปลี่ยน</b><small>ไม่มีที่นอนสำรองระหว่างซ่อมราว 2 สัปดาห์ · ค่าขนส่งลูกค้าจ่ายเองหลัง 1–3 ปี</small><blockquote>“ประกัน 12 ปี ใช้ 6 ปียุบ เข้าเงื่อนไข แต่ได้แค่ซ่อม ไม่เปลี่ยน”</blockquote></li><li><b>น้ำหนักตัวมีผลกับการยุบมาก</b><small>เสียงซ้ำทั้ง Pantip และ YouTube</small><blockquote>“หนัก 100 กก. สปริงไม่น่าเอาอยู่ ยังไงก็ยุบ”</blockquote></li><li><b>ยางพาราแท้ทั้งก้อนราคาไม่ต่ำกว่าหมื่น</b><small>ถูกกว่านั้นส่วนใหญ่เป็นชั้นยาง 1–2 นิ้วบนสปริงหรือโฟม · โพสต์ FB เดียวพูดคำว่าปลอม/ไม่แท้ 16 ครั้ง</small><blockquote>“ยางพาราแท้หนักมาก ขนาดคิงไซส์ 4 คนยังยกแทบไม่ไหว”</blockquote></li><li><b>ที่นอนม้วนใส่กล่องที่ซื้อออนไลน์ ฟูไม่ขึ้น ไม่ตรงปก</b><small>โพสต์ผู้บริโภค 183 คอมเมนต์ · ร้านให้รอ 7–14 วันก่อนเคลม</small></li></ul></section>
+<section><h2>เทียบ 3 ตัวแบบแถวต่อแถว</h2><p class="sub">สเปกจากเว็บแบรนด์และร้านค้า (ดูที่มาท้ายหน้า) และเสียงคนใช้</p>
+<div class="cmp"><div class="cmp-in"><div class="cmp-head"><figure><img src="https://cf.shopee.co.th/file/th-11134207-81zte-mtm4wlzmrc3p02_tn" alt="Slumberland ที่นอนสปริง รุ่น Fantastic (Ekaluk Mall)" loading="lazy"><figcaption>Slumberland Fantastic</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/th-11134207-7r98y-lxrmixvd7lxrd3_tn" alt="PATEX ที่นอนยางพาราแท้ 100% รุ่น Venice ประกัน 15 ปี (PATEX Official)" loading="lazy"><figcaption>PATEX Venice</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/2449a26cd909406592c64420540e15e9_tn" alt="Sealy ที่นอน รุ่น Benefit พร้อมเครื่องนอน (Ekaluk Mall)" loading="lazy"><figcaption>Sealy Benefit</figcaption></figure></div><div class="row"><h3>วัสดุหลัก</h3><div class="cells"><div>สปริงบอนเนล + โฟมความหนาแน่นสูง</div><div>ยางพาราแท้ 100% 3 ชั้น (ความหนาแน่น 85/95/110)</div><div>แบรนด์ไม่ระบุ</div></div></div><div class="row"><h3>ความหนา</h3><div class="cells"><div>11 นิ้ว</div><div>เลือกได้ 6, 8 หรือ 10 นิ้ว</div><div>แบรนด์ไม่ระบุ</div></div></div><div class="row"><h3>ความนุ่ม-แน่นที่แบรนด์ระบุ</h3><div class="cells"><div>5 จาก 10 (นุ่มแน่น)</div><div>นุ่มแน่น</div><div>แบรนด์ไม่ระบุ</div></div></div><div class="row"><h3>ประกัน</h3><div class="cells"><div>10 ปี</div><div>15 ปี (ตามเงื่อนไขบริษัท)</div><div>แบรนด์ไม่ระบุ</div></div></div><div class="row"><h3>คนนอน 5 ปีขึ้นไปเล่า (Pantip)</h3><div class="cells"><div>สปริงแน่น 10 ปีไม่ยุบ · เกือบ 23 ปียังดี</div><div>เกิน 10 ปียังนอนดี · หนัก 90 กก. ไม่ยุบ</div><div>ใช้มา 20 ปีแล้วมั้ง (1 เสียง)</div></div></div><div class="row"><h3>เสียงเรื่องยุบและเคลม (Pantip)</h3><div class="cells"><div>ไม่ถึงปียุบ เคลม 2 รอบใน 4 ปี (1 กระทู้) · ปีที่ 8 ยุบ บริษัทซ่อมและให้ที่นอนสำรอง (1)</div><div>ยังไม่มีเสียงเรื่องยุบหรือเคลม</div><div>ยังไม่มีเสียงเรื่องยุบหรือเคลม</div></div></div><div class="row"><h3>คะแนนใน Shopee (แค่ความประทับใจแรก)</h3><div class="cells"><div>★4.97 · 389 รีวิว</div><div>★4.91 · 11 รีวิว</div><div>★4.94 · 36 รีวิว</div></div></div><div class="row"><h3>เหมาะกับ</h3><div class="cells"><div>งบหมื่นต้นๆ ชอบนอนแน่น</div><div>อยากได้ยางพาราแท้ ไม่สะเทือน</div><div>อยากได้ชุดเครื่องนอนครบ</div></div></div></div></div></section>
+<section><h2>รายตัว</h2><p class="sub">ราคาคือราคาวันที่เก็บข้อมูล อาจเปลี่ยนแล้ว</p><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-81zte-mtm4wlzmrc3p02_tn" alt="" loading="lazy"><div><h3>Slumberland ที่นอนสปริง รุ่น Fantastic (Ekaluk Mall)</h3><p>สปริงบอนเนลเสริมโฟม หนา 11 นิ้ว ความแน่น 5 จาก 10 ประกัน 10 ปีตามหน้าแบรนด์ Slumberland มีเสียงคนนอน 10–23 ปี แต่ก็มีเคสยุบในปีแรก</p><p class="fits">เหมาะกับ: งบหมื่นต้นๆ ชอบนอนแน่น</p><div class="shop"><span>~฿9,900 (18 ต.ค. 2569)</span><a class="go" data-pid="43257564/688958629" href="/go?p=43257564/688958629&amp;s=mattress&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a><a class="go" data-pid="43257564/27621381095" href="/go?p=43257564/27621381095&amp;s=mattress&amp;ch=hub" rel="nofollow sponsored">พ็อกเก็ตสปริง รุ่น Oscars</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-7r98y-lxrmixvd7lxrd3_tn" alt="" loading="lazy"><div><h3>PATEX ที่นอนยางพาราแท้ 100% รุ่น Venice ประกัน 15 ปี (PATEX Official)</h3><p>ยางพาราแท้ 100% สามชั้น มีความหนาให้เลือก 6, 8 และ 10 นิ้ว ประกัน 15 ปีตามเงื่อนไขบริษัท Patex มีเสียงคนใช้เกิน 10 ปี แต่ราคาสูงที่สุดในสามตัว</p><p class="fits">เหมาะกับ: อยากได้ยางพาราแท้ ไม่สะเทือน</p><div class="shop"><span>~฿35,350 (18 ต.ค. 2569)</span><a class="go" data-pid="147969709/6969977114" href="/go?p=147969709/6969977114&amp;s=mattress&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/2449a26cd909406592c64420540e15e9_tn" alt="" loading="lazy"><div><h3>Sealy ที่นอน รุ่น Benefit พร้อมเครื่องนอน (Ekaluk Mall)</h3><p>มาพร้อมชุดเครื่องนอน แต่เว็บ Sealy ไทยไม่มีหน้าสเปกของรุ่น Benefit จึงยังไม่รู้วัสดุ ความหนา และปีประกัน Sealy มีเสียงคนใช้ราว 20 ปี 1 เสียง</p><p class="fits">เหมาะกับ: อยากได้ชุดเครื่องนอนครบ</p><div class="shop"><span>~฿20,590 (18 ต.ค. 2569)</span><a class="go" data-pid="43257564/2170925493" href="/go?p=43257564/2170925493&amp;s=mattress&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a></div></div></article></section>
+<section><h2>สิ่งที่เราไม่เคลม</h2><ul class="cav"><li>ไม่บอกว่ายี่ห้อไหนไม่ยุบ ทุกแบรนด์มีเคสยุบเร็ว และเสียงทนเป็นระดับยี่ห้อ ไม่ใช่รุ่นในตาราง</li><li>ไม่เคลมว่าที่นอนรุ่นไหนแก้ปวดหลัง มีเสียงทั้งสองทาง</li><li>ไม่เคลมเรื่องกันไรฝุ่น เชื้อรา หรือแบคทีเรีย แม้แบรนด์เขียนไว้</li><li>ราคาในหน้านี้เป็นราคาเริ่มต้น (3.5 ฟุต) ขนาด 6 ฟุตแพงกว่า</li><li>Sealy Benefit ไม่พบในเว็บ Sealy ไทย ควรถามร้านเรื่องวัสดุ ความหนา และเงื่อนไขประกันยุบก่อนซื้อ</li></ul></section>
+<section><h2>ที่มาของข้อมูล</h2><ul class="src"><li>Pantip 32 กระทู้ 245 ความเห็น (ค้นคำ ที่นอนยุบ, ยี่ห้อไหนทน, เคลมที่นอน ฯลฯ)</li><li>YouTube ไทย: บัณฑิตกายภาพ, THE STANDARD PODCAST, Extreme IT, Klong9furniture, AntiheroThai และอื่นๆ (57 คลิป 1,063 คอมเมนต์)</li><li>กลุ่ม Facebook พวกเราคือผู้บริโภค, งานบ้านที่รัก, แชร์ทริคงานบ้าน, ซื้อขายเฉพาะเตียงที่นอนมือสอง</li></ul><h3 class="srch">ที่มาของสเปก</h3><ul class="src"><li><a href="https://www.slumberland.co.th/th/products-detail/141/Fantastic" rel="noopener">Slumberland Thailand Fantastic</a></li><li><a href="https://patexstore.com/product/mattress-venice/" rel="noopener">PATEX Venice</a></li><li><a href="https://www.sealythailand.com/warranty/" rel="noopener">Sealy Thailand เงื่อนไขประกัน (ไม่มีรุ่น Benefit)</a></li></ul></section>
+<footer>ลิงก์ร้านเป็นลิงก์แอฟฟิลิเอท ถ้าซื้อผ่านลิงก์เราได้ค่าคอมมิชชันจาก Shopee ราคาที่คุณจ่ายเท่าเดิม · <a href="/">ดูหมวดอื่น</a></footer>
+</div>
+<script>
+(function(){var q=new URLSearchParams(location.search),ch=(q.get('ch')||'hub').replace(/[^a-z0-9-]/gi,'').slice(0,12)||'hub';
+document.querySelectorAll('a.go').forEach(function(a){a.href='/go?p='+encodeURIComponent(a.dataset.pid)+'&s=mattress&ch='+encodeURIComponent(ch);});
+document.querySelectorAll('a.home').forEach(function(a){a.href='/?ch='+encodeURIComponent(ch);});})();
+</script>
+</body></html>
