@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>หม้อไฟฟ้าหอพัก ตัวไหนดี? · สรุปให้ตัวไหนดี</title>
+<meta name="description" content="สรุปจากเสียงผู้ใช้จริง: หม้อไฟฟ้าหอพัก เทียบสเปกและเสียงคนใช้แบบแถวต่อแถว">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Kanit:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5ef; --card:#ffffff; --ink:#1b2340; --ink-2:#4a5270; --ink-3:#7a8099;
+  --rule:#dcd8cc; --accent:#f5c518; --accent-ink:#1b2340; --mark:#fff1b0;
+  --good:#1f7a4d; --warn:#a2541b; --chip:#eceae2;
+  --font-display:"Kanit",system-ui,sans-serif; --font-body:"Anuphan",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}}
+:root[data-theme="dark"]{--paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 var(--font-body)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;font-style:normal;line-height:1.25;overflow-wrap:anywhere;min-width:0}
+a{color:inherit}
+.mast{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-2)}
+.mast b{font-family:var(--font-display);font-weight:600;color:var(--ink)}
+.code{background:var(--accent);color:var(--accent-ink);font-weight:600;border-radius:4px;padding:1px 8px;white-space:nowrap}
+header.top{padding:28px 0 8px}
+header.top h1{font-size:clamp(28px,7vw,40px);margin:0 0 10px}
+.meta{color:var(--ink-2);font-size:14px;margin:0}
+.meta span{white-space:nowrap}
+.verdict{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:16px 18px;margin:22px 0 8px}
+.verdict h2{font-size:18px;margin:0 0 8px}
+.verdict ul{margin:0;padding-left:20px}
+.verdict li{margin:4px 0}
+section{padding-top:34px}
+section>h2{font-size:22px;margin:0 0 4px}
+.sub{color:var(--ink-2);font-size:14px;margin:0 0 16px}
+mark{background:var(--mark);color:inherit;padding:0 2px}
+/* findings */
+.find{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.find li{padding:12px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.find b{font-weight:600}
+.find small{color:var(--ink-3);font-size:13px}
+blockquote{margin:6px 0 0;padding:0 0 0 12px;border-left:2px solid var(--rule);color:var(--ink-2)}
+/* compare */
+.cmp{background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow:clip}
+.cmp-head{position:sticky;top:0;z-index:2;background:var(--card);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px;border-bottom:1px solid var(--rule)}
+.cmp-head figure{margin:0;text-align:center;min-width:0}
+.cmp-head img{width:100%;max-width:96px;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.cmp-head figcaption{font:600 13px/1.3 var(--font-display);margin-top:6px;overflow-wrap:anywhere}
+.row{padding:10px 12px;border-bottom:1px solid var(--rule)}
+.row:last-child{border-bottom:0}
+.row h3{font:600 13px/1.3 var(--font-body);color:var(--ink-3);margin:0 0 6px;letter-spacing:.02em}
+.cells{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;font-size:14px;line-height:1.45}
+.cells div{min-width:0;overflow-wrap:anywhere}
+.na{color:var(--ink-3)}
+.yes{color:var(--good);font-weight:600}
+/* product notes */
+.prod{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:16px;margin-bottom:12px;display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px}
+.prod img{width:72px;height:72px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.prod h3{font-size:17px;margin:0 0 4px}
+.prod p{margin:4px 0;font-size:15px}
+.prod .fits{color:var(--ink-2)}
+.shop{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:10px;font-size:14px;color:var(--ink-3)}
+.shop a{border:1px solid var(--ink-3);border-radius:4px;padding:4px 12px;text-decoration:none;color:var(--ink);white-space:nowrap}
+.shop a:hover{border-color:var(--ink)}
+.shop a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* caveats */
+.cav{list-style:none;padding:0;margin:0}
+.cav li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid var(--rule)}
+.cav li::before{content:"!";position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;background:var(--chip);color:var(--warn);font:600 12px/18px var(--font-display);text-align:center}
+.src{font-size:14px;color:var(--ink-2)}
+.src li{margin:3px 0}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-3)}
+
+.mast a.home{font-family:var(--font-display);font-weight:600;color:var(--ink);text-decoration:none}.clips{margin-top:6px}.clips a{color:var(--ink);text-underline-offset:3px}.srch{font-size:15px;margin:18px 0 4px}.src a{color:var(--ink-2);text-underline-offset:3px}footer a{color:var(--ink-2)}.cmp-head,.cells{grid-template-columns:repeat(3,minmax(0,1fr))}</style></head>
+<body style="--n:3"><div class="wrap">
+<div class="mast"><a href="/" class="home">สรุปให้ตัวไหนดี</a><span>สรุปจากผู้ใช้จริง <span class="code">รหัส 80</span></span></div>
+<header class="top"><h1>หม้อไฟฟ้าหอพัก ตัวไหนดี?</h1>
+<p class="meta"><span>อ่านคอมเมนต์ 1,250 รายการจาก 26 คลิป</span> · <span>กลุ่ม FB งานบ้านที่รัก 1 โพสต์</span> · <span>อัปเดต 18 ต.ค. 2569</span></p>
+<p class="meta clips"><a href="https://th.shp.ee/mhzhjug4" rel="noopener">คลิปใน Shopee</a></p></header>
+<div class="verdict"><h2>สรุปสั้น</h2><ul><li>เรื่องที่คนพูดมากที่สุดคือ <b>ความปลอดภัย</b> หม้อราคาถูกบางตัว <mark>ขั้วเสียบสายที่ตัวหม้อไหม้หรือละลาย</mark> และมีคนเล่าว่าโดนไฟดูด</li><li>เกณฑ์ที่มีเสียงรองรับคือ มี มอก. · มีระบบตัดไฟเมื่อแห้งหรือร้อนเกิน · <b>วัตต์ไม่สูงเกินปลั๊กหอ</b> · มีประกัน</li><li>กลุ่ม FB แนะนำ <b>หม้อหุงข้าวใบเล็ก</b> สำหรับหอ เพราะหุงเสร็จแล้วตัดไฟเอง ถอดปลั๊กก่อนคนหรือตักทุกครั้ง และอย่าเสียบพ่วงหลายเครื่อง</li></ul></div>
+<section><h2>เสียงจากผู้ใช้จริง</h2><ul class="find"><li><b>ขั้วเสียบสายที่ตัวหม้อไหม้หรือละลาย</b><small>75 คอมเมนต์เรื่องไฟไหม้/ละลาย · 153 คอมเมนต์เรื่องปลั๊ก</small><blockquote>“100–200 บาท ตรงตูดเสียบสายไหม้ละลายคาสาย”</blockquote><blockquote>“ปลายปลั๊กที่เสียบหม้อไหม้บ่อย ต้องหาสายดีๆ มาแทน”</blockquote></li><li><b>ไฟดูดจากหม้อราคาถูก</b><small>2 เสียงขึ้นไป · คนเตือนว่าอย่าเอาช้อนโลหะคนหรือเอามือวัดน้ำตอนเสียบปลั๊ก</small><blockquote>“เคยโดนไฟดูดจากหม้อถูกๆ”</blockquote></li><li><b>กลุ่ม FB ไม่แนะนำหม้ออเนกประสงค์ทรงราคาถูก</b><small>โพสต์ 'หม้อไฟฟ้าไว้ใช้ในหอ ยี่ห้อไหนดีและปลอดภัยที่สุด'</small><blockquote>“ปลั๊กหอพักไม่รู้สภาพ ควรให้ช่างตรวจ”</blockquote></li><li><b>ทางเลือกที่คนในกลุ่มแนะนำ</b><small>หม้อหุงข้าวขนาดเล็ก เพราะตัดไฟเมื่อหม้อแห้ง · Kashiwa มี 1 เสียง</small><blockquote>“Kashiwa หม้อต้มใบเล็ก กระทะไฟฟ้า หม้ออบลมร้อน ใช้มาหลายปี”</blockquote></li><li><b>ด้านในเคลือบ vs สเตนเลส</b><small>เสียงซ้ำ 3 เสียงขึ้นไปว่าสเตนเลสใช้หลายปีไม่มีปัญหา</small><blockquote>“แบบเคลือบดำเคยใช้แล้วลอก”</blockquote></li><li><b>หุงข้าวด้วยหม้ออเนกประสงค์ต้องคอยคน</b><small>ไม่งั้นก้นไหม้</small><blockquote>“โฆษณาว่าหุงข้าวได้ แต่ร้อนจนข้าวไหม้”</blockquote></li></ul></section>
+<section><h2>เทียบ 3 ตัวแบบแถวต่อแถว</h2><p class="sub">สเปกจากเว็บแบรนด์และร้านค้า (ดูที่มาท้ายหน้า) และเสียงคนใช้</p>
+<div class="cmp"><div class="cmp-in"><div class="cmp-head"><figure><img src="https://cf.shopee.co.th/file/th-11134207-7rasb-m708vpek07p3c1_tn" alt="SMARTHOME หม้อหุงข้าวมินิ 0.6 ลิตร SRC0603 (smarthome_official_shop)" loading="lazy"><figcaption>SMARTHOME SRC0603</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/cn-11134207-820l4-mruzez4n4nph8f_tn" alt="Kashiwa หม้ออเนกประสงค์ไฟฟ้า KW-219 ปรับความร้อน 2 ระดับ (KashiwaOutlet0.th)" loading="lazy"><figcaption>Kashiwa KW-219</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/sg-11134201-825ag-muaffbchtssi1b_tn" alt="Seagull หม้อไฟฟ้าอเนกประสงค์ 1.8 ลิตร (Seagull Electric)" loading="lazy"><figcaption>Seagull 1.8 ล.</figcaption></figure></div><div class="row"><h3>ประเภท</h3><div class="cells"><div>หม้อหุงข้าวมินิ หุงและอุ่นในเครื่องเดียว</div><div>หม้ออเนกประสงค์ ปรับไฟ 2 ระดับ (HomePro)</div><div>หม้ออเนกประสงค์ ปรับไฟ 3 ระดับ (HomePro)</div></div></div><div class="row"><h3>ความจุ</h3><div class="cells"><div>0.6 ลิตร</div><div>1.5 ลิตร (HomePro · อีกหน้าระบุ 1.1 ลิตร)</div><div>1.8 ลิตร (HomePro)</div></div></div><div class="row"><h3>กำลังไฟ (ดูให้ไม่เกินปลั๊กหอ)</h3><div class="cells"><div class=yes>200 W</div><div>700 W (HomePro)</div><div>300 / 500 / 800 W (HomePro)</div></div></div><div class="row"><h3>ด้านในหม้อ</h3><div class="cells"><div>เคลือบ Non-Stick</div><div>อะลูมิเนียม เคลือบ Non-Stick (HomePro)</div><div>เคลือบ PTFE (HomePro)</div></div></div><div class="row"><h3>ตัดไฟเอง</h3><div class="cells"><div>หุงเสร็จตัดเป็นอุ่นอัตโนมัติ (Rakahub)</div><div>แบรนด์ไม่ระบุ</div><div>ตัดไฟอัตโนมัติเมื่อร้อนเกิน (HomePro)</div></div></div><div class="row"><h3>ขนาด</h3><div class="cells"><div>19 × 18.7 × 23.2 ซม.</div><div>ยาวรวมด้าม 34 ซม. · กว้าง 19.5 ซม. · สูง 12.5 ซม. (HomePro)</div><div>18.1 × 22.6 × 18.3 ซม. · 0.93 กก. (HomePro)</div></div></div><div class="row"><h3>ประกัน</h3><div class="cells"><div>แบรนด์ไม่ระบุ</div><div>6 เดือน (HomePro) · รูปร้านใน Shopee ระบุ 1 ปี</div><div>แบรนด์ไม่ระบุ</div></div></div><div class="row"><h3>เสียงคนใช้/กลุ่ม FB</h3><div class="cells"><div>กลุ่ม FB แนะนำหม้อหุงข้าวเล็กสำหรับหอ (ระดับประเภท)</div><div>มี 1 เสียงว่าใช้หม้อใบเล็กของ Kashiwa มาหลายปี</div><div>ยังไม่มีเสียงคนใช้ไทย</div></div></div><div class="row"><h3>คะแนนใน Shopee (แค่ความประทับใจแรก)</h3><div class="cells"><div>★4.90 · 6,484 รีวิว</div><div>★4.90 · 4,772 รีวิว</div><div>★4.94 · 2,148 รีวิว</div></div></div><div class="row"><h3>เหมาะกับ</h3><div class="cells"><div>หุงข้าว/ต้มง่ายๆ เน้นตัดไฟเอง</div><div>ต้ม ผัด ทำกับข้าวในห้อง</div><div>อยากได้ใบใหญ่ขึ้นนิด จากร้านแบรนด์</div></div></div></div></div></section>
+<section><h2>รายตัว</h2><p class="sub">ราคาคือราคาวันที่เก็บข้อมูล อาจเปลี่ยนแล้ว</p><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-7rasb-m708vpek07p3c1_tn" alt="" loading="lazy"><div><h3>SMARTHOME หม้อหุงข้าวมินิ 0.6 ลิตร SRC0603 (smarthome_official_shop)</h3><p>หม้อหุงข้าวใบเล็ก 0.6 ลิตร 200 W หุงเสร็จแล้วเปลี่ยนเป็นอุ่นเอง ซึ่งเป็นแบบที่กลุ่ม FB แนะนำสำหรับหอ ใช้ต้มหรือผัดไม่ได้เหมือนหม้ออเนกประสงค์</p><p class="fits">เหมาะกับ: หุงข้าว/ต้มง่ายๆ เน้นตัดไฟเอง</p><div class="shop"><span>~฿529 (18 ต.ค. 2569)</span><a class="go" data-pid="59894103/29178565309" href="/go?p=59894103/29178565309&amp;s=dorm-pot&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/cn-11134207-820l4-mruzez4n4nph8f_tn" alt="" loading="lazy"><div><h3>Kashiwa หม้ออเนกประสงค์ไฟฟ้า KW-219 ปรับความร้อน 2 ระดับ (KashiwaOutlet0.th)</h3><p>หม้ออเนกประสงค์ 700 W ปรับไฟได้ 2 ระดับ ด้านในเป็นอะลูมิเนียมเคลือบกันติด ในกลุ่ม FB มี 1 เสียงว่าใช้หม้อใบเล็กของ Kashiwa มาหลายปี ส่วนระบบตัดไฟเมื่อร้อนเกิน ร้านและแบรนด์ไม่ได้ระบุ</p><p class="fits">เหมาะกับ: ต้ม ผัด ทำกับข้าวในห้อง</p><div class="shop"><span>~฿360 (18 ต.ค. 2569)</span><a class="go" data-pid="1387117323/29616792926" href="/go?p=1387117323/29616792926&amp;s=dorm-pot&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a><a class="go" data-pid="316135716/43818387542" href="/go?p=316135716/43818387542&amp;s=dorm-pot&amp;ch=hub" rel="nofollow sponsored">HAN RIVER 2.5 ล. 2 ระดับไฟ</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/sg-11134201-825ag-muaffbchtssi1b_tn" alt="" loading="lazy"><div><h3>Seagull หม้อไฟฟ้าอเนกประสงค์ 1.8 ลิตร (Seagull Electric)</h3><p>หม้ออเนกประสงค์ 1.8 ลิตร ปรับไฟ 3 ระดับตั้งแต่ 300 ถึง 800 W ร้านระบุว่ามีระบบตัดไฟเมื่อร้อนเกินและสายไฟถอดเก็บได้ ยังไม่มีเสียงคนใช้ไทยระยะยาว</p><p class="fits">เหมาะกับ: อยากได้ใบใหญ่ขึ้นนิด จากร้านแบรนด์</p><div class="shop"><span>~฿789 (18 ต.ค. 2569)</span><a class="go" data-pid="1485671971/26644319061" href="/go?p=1485671971/26644319061&amp;s=dorm-pot&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a></div></div></article></section>
+<section><h2>สิ่งที่เราไม่เคลม</h2><ul class="cav"><li>ไม่เคลมว่ารุ่นไหนปลอดภัย 100% เราพูดเป็นเกณฑ์เท่านั้น</li><li>ยังยืนยันเลข มอก. รายรุ่นไม่ได้ ดูเลข มอก. ที่ตัวเครื่องหรือกล่อง หรือถามร้านก่อนซื้อ</li><li>ไม่เคลมว่าหม้อเคลือบก่อมะเร็ง มีคนพูดถึง แต่ไม่มีหลักฐาน</li><li>ไม่บอกว่ายี่ห้อไหนทนที่สุด เสียงคนใช้ระยะยาวยังน้อยเกินไป</li><li>สเปก Seagull มาจากรุ่น SEC-005-CR 1.8 ลิตรที่ HomePro ขาย เราเปิดหน้า Shopee เพื่อเทียบรหัสรุ่นไม่ได้</li></ul></section>
+<section><h2>ที่มาของข้อมูล</h2><ul class="src"><li>YouTube ไทย: ลองให้/บอส ทดสอบหม้อไฟฟ้าราคาถูกจนพัง, รีวิวหม้อทรง Wellcomm/หม้อชาบู, Hafele และอื่นๆ รวม 26 คลิป คอมเมนต์ 1,250 รายการ (ไทย 876)</li><li>กลุ่ม Facebook งานบ้านที่รัก: โพสต์ถามหม้อไฟฟ้าสำหรับหอ</li></ul><h3 class="srch">ที่มาของสเปก</h3><ul class="src"><li><a href="https://www.smart-home.co.th/product/54332/mini-rice-cooker-0-6l-src0603" rel="noopener">SMART HOME SRC0603 (เว็บแบรนด์)</a></li><li><a href="https://www.rakahub.com/product/smarthome-06-src0603" rel="noopener">Rakahub SMARTHOME SRC0603 (ระบบหุงและอุ่น)</a></li><li><a href="https://www.homepro.co.th/p/888155800005" rel="noopener">HomePro Kashiwa KW-219 1.5 ลิตร</a></li><li><a href="https://www.homepro.co.th/p/888155800019" rel="noopener">HomePro Kashiwa KW-219 + กาต้มน้ำ (วัสดุ ประกัน)</a></li><li><a href="https://www.homepro.co.th/p/1316142" rel="noopener">HomePro Seagull SEC-005-CR 1.8 ลิตร</a></li></ul></section>
+<footer>ลิงก์ร้านเป็นลิงก์แอฟฟิลิเอท ถ้าซื้อผ่านลิงก์เราได้ค่าคอมมิชชันจาก Shopee ราคาที่คุณจ่ายเท่าเดิม · <a href="/">ดูหมวดอื่น</a></footer>
+</div>
+<script>
+(function(){var q=new URLSearchParams(location.search),ch=(q.get('ch')||'hub').replace(/[^a-z0-9-]/gi,'').slice(0,12)||'hub';
+document.querySelectorAll('a.go').forEach(function(a){a.href='/go?p='+encodeURIComponent(a.dataset.pid)+'&s=dorm-pot&ch='+encodeURIComponent(ch);});
+document.querySelectorAll('a.home').forEach(function(a){a.href='/?ch='+encodeURIComponent(ch);});})();
+</script>
+</body></html>
