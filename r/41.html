@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>แอร์ติดผนัง ตัวไหนดี? · สรุปให้ตัวไหนดี</title>
+<meta name="description" content="สรุปจากเสียงผู้ใช้จริง: แอร์ติดผนัง เทียบสเปกและเสียงคนใช้แบบแถวต่อแถว">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Kanit:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5ef; --card:#ffffff; --ink:#1b2340; --ink-2:#4a5270; --ink-3:#7a8099;
+  --rule:#dcd8cc; --accent:#f5c518; --accent-ink:#1b2340; --mark:#fff1b0;
+  --good:#1f7a4d; --warn:#a2541b; --chip:#eceae2;
+  --font-display:"Kanit",system-ui,sans-serif; --font-body:"Anuphan",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}}
+:root[data-theme="dark"]{--paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 var(--font-body)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;font-style:normal;line-height:1.25;overflow-wrap:anywhere;min-width:0}
+a{color:inherit}
+.mast{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-2)}
+.mast b{font-family:var(--font-display);font-weight:600;color:var(--ink)}
+.code{background:var(--accent);color:var(--accent-ink);font-weight:600;border-radius:4px;padding:1px 8px;white-space:nowrap}
+header.top{padding:28px 0 8px}
+header.top h1{font-size:clamp(28px,7vw,40px);margin:0 0 10px}
+.meta{color:var(--ink-2);font-size:14px;margin:0}
+.meta span{white-space:nowrap}
+.verdict{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:16px 18px;margin:22px 0 8px}
+.verdict h2{font-size:18px;margin:0 0 8px}
+.verdict ul{margin:0;padding-left:20px}
+.verdict li{margin:4px 0}
+section{padding-top:34px}
+section>h2{font-size:22px;margin:0 0 4px}
+.sub{color:var(--ink-2);font-size:14px;margin:0 0 16px}
+mark{background:var(--mark);color:inherit;padding:0 2px}
+/* findings */
+.find{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.find li{padding:12px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.find b{font-weight:600}
+.find small{color:var(--ink-3);font-size:13px}
+blockquote{margin:6px 0 0;padding:0 0 0 12px;border-left:2px solid var(--rule);color:var(--ink-2)}
+/* compare */
+.cmp{background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow:clip}
+.cmp-head{position:sticky;top:0;z-index:2;background:var(--card);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px;border-bottom:1px solid var(--rule)}
+.cmp-head figure{margin:0;text-align:center;min-width:0}
+.cmp-head img{width:100%;max-width:96px;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.cmp-head figcaption{font:600 13px/1.3 var(--font-display);margin-top:6px;overflow-wrap:anywhere}
+.row{padding:10px 12px;border-bottom:1px solid var(--rule)}
+.row:last-child{border-bottom:0}
+.row h3{font:600 13px/1.3 var(--font-body);color:var(--ink-3);margin:0 0 6px;letter-spacing:.02em}
+.cells{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;font-size:14px;line-height:1.45}
+.cells div{min-width:0;overflow-wrap:anywhere}
+.na{color:var(--ink-3)}
+.yes{color:var(--good);font-weight:600}
+/* product notes */
+.prod{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:16px;margin-bottom:12px;display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px}
+.prod img{width:72px;height:72px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.prod h3{font-size:17px;margin:0 0 4px}
+.prod p{margin:4px 0;font-size:15px}
+.prod .fits{color:var(--ink-2)}
+.shop{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:10px;font-size:14px;color:var(--ink-3)}
+.shop a{border:1px solid var(--ink-3);border-radius:4px;padding:4px 12px;text-decoration:none;color:var(--ink);white-space:nowrap}
+.shop a:hover{border-color:var(--ink)}
+.shop a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* caveats */
+.cav{list-style:none;padding:0;margin:0}
+.cav li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid var(--rule)}
+.cav li::before{content:"!";position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;background:var(--chip);color:var(--warn);font:600 12px/18px var(--font-display);text-align:center}
+.src{font-size:14px;color:var(--ink-2)}
+.src li{margin:3px 0}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-3)}
+
+.mast a.home{font-family:var(--font-display);font-weight:600;color:var(--ink);text-decoration:none}.clips{margin-top:6px}.clips a{color:var(--ink);text-underline-offset:3px}.srch{font-size:15px;margin:18px 0 4px}.src a{color:var(--ink-2);text-underline-offset:3px}footer a{color:var(--ink-2)}.cmp-head,.cells{grid-template-columns:repeat(3,minmax(0,1fr))}</style></head>
+<body style="--n:3"><div class="wrap">
+<div class="mast"><a href="/" class="home">สรุปให้ตัวไหนดี</a><span>สรุปจากผู้ใช้จริง <span class="code">รหัส 41</span></span></div>
+<header class="top"><h1>แอร์ติดผนัง ตัวไหนดี?</h1>
+<p class="meta"><span>อ่านคอมเมนต์ 3,676 รายการจาก 52 คลิป</span> · <span>ราว 150 คอมเมนต์บอกอายุการใช้งาน</span> · <span>อัปเดต 18 ต.ค. 2569</span></p>
+<p class="meta clips"><a href="https://th.shp.ee/hmro8qat" rel="noopener">คลิปใน Shopee</a> · <a href="https://youtube.com/shorts/uGWF24gwvAw" rel="noopener">คลิปใน YouTube</a></p></header>
+<div class="verdict"><h2>สรุปสั้น</h2><ul><li>ช่างหลายคนพูดตรงกันว่า <b>การติดตั้งและการแวคคั่ม</b> สำคัญพอๆ กับยี่ห้อ ราคาแอร์ออนไลน์ส่วนใหญ่ <mark>ยังไม่รวมติดตั้ง</mark></li><li>เช็ก <b>คอยล์ทองแดงหรืออลูมิเนียม</b> เป็นรายรุ่น บางซีรีส์ของยี่ห้อญี่ปุ่นเปลี่ยนเป็นอลูมิเนียมแล้ว ทั้งสามรุ่นในหน้านี้เป็นทองแดง</li><li><b>อินเวอร์เตอร์</b> ประหยัดไฟกว่าแต่ค่าซ่อมแผงแพงกว่า บ้านที่มีหนู มด จิ้งจกเข้าคอยล์ร้อน ช่างแนะนำ <b>ระบบธรรมดา (fix speed)</b> ที่ซ่อมง่ายกว่า</li></ul></div>
+<section><h2>เสียงจากผู้ใช้จริง</h2><ul class="find"><li><b>ติดตั้งดีสำคัญพอๆ กับยี่ห้อ ต้องแวคคั่มทุกครั้ง</b><small>ฉันทามติของช่างหลายช่อง</small><blockquote>“ติดตั้ง 60% ตัวเครื่อง 40%”</blockquote><blockquote>“ถ้าแวคดี น้ำยาไม่มีวันหมด”</blockquote></li><li><b>คอยล์ทองแดงกับอลูมิเนียมเป็นเรื่องที่คนกังวลมาก</b><small>ทองแดง 65 คอมเมนต์ · อลูมิเนียม 33 คอมเมนต์</small><blockquote>“คอยล์อลูมิเนียม 4–5 ปีรั่ว”</blockquote><blockquote>“รั่วแล้วจบ”</blockquote></li><li><b>อาการที่เจอซ้ำที่สุด</b><small>คอมเพรสเซอร์ 133 · รั่ว/น้ำยาหมด 93 · เสียงดัง 91 · น้ำหยด 24 คอมเมนต์</small></li><li><b>อินเวอร์เตอร์ประหยัดไฟ แต่เสียทีแพงและอาจรออะไหล่นาน</b><small>บ้านสวนหรือบ้านที่มีหนู จิ้งจก ช่างแนะนำระบบธรรมดา</small><blockquote>“แผงควบคุม inverter เสีย รอ 3 เดือน ค่าแผง 5–6 พัน + ค่าแรง”</blockquote></li><li><b>อ่านเงื่อนไขประกันให้ดี</b><small>ประกันบนกล่องอาจไม่ตรงกับตอนลงทะเบียน</small><blockquote>“ประกันคอม 10 ปี มักไม่รวมค่าแรง/น้ำยา/แผง”</blockquote></li><li><b>เสียงระยะยาวส่วนใหญ่เป็นรุ่นเก่า</b><small>แอร์อยู่ได้ 10–20 ปี เสียงหลายปีจึงเป็นรุ่นที่ไม่ได้ขายแล้ว</small><blockquote>“inverter R-22 อายุ 13 ปีไม่เคยเสีย (Daikin)”</blockquote><blockquote>“รีสอร์ต 20 กว่าตัว 10–15 ปี ไม่มีตัวไหนพัง รั่วบ้าง 2–3 ตัว (Central Air)”</blockquote></li></ul></section>
+<section><h2>เทียบ 3 ตัวแบบแถวต่อแถว</h2><p class="sub">สเปกจากเว็บแบรนด์และร้านค้า (ดูที่มาท้ายหน้า) และเสียงคนใช้</p>
+<div class="cmp"><div class="cmp-in"><div class="cmp-head"><figure><img src="https://cf.shopee.co.th/file/th-11134207-81ztd-mnlmk32gdcec40_tn" alt="Daikin Sabai Inverter FTKB" loading="lazy"><figcaption>Daikin Sabai FTKB</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/th-11134207-81ztm-mkto3fgyascm1a_tn" alt="Mitsubishi Heavy Duty รุ่น CYV ระบบธรรมดา" loading="lazy"><figcaption>Mitsubishi Heavy CYV</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/th-11134207-7rasj-m63vu4ywlm7qab_tn" alt="Central Air 2JSFE ระบบธรรมดา" loading="lazy"><figcaption>Central Air 2JSFE</figcaption></figure></div><div class="row"><h3>ระบบ</h3><div class="cells"><div>อินเวอร์เตอร์</div><div>ธรรมดา (fix speed)</div><div>ธรรมดา (fix speed)</div></div></div><div class="row"><h3>วัสดุท่อในแผงคอยล์</h3><div class="cells"><div>ท่อทองแดง (Copper tube)</div><div>ทองแดง (แบรนด์ใช้ทองแดงทุกรุ่น)</div><div>ทองแดง ทั้งคอยล์เย็นและคอยล์ร้อน</div></div></div><div class="row"><h3>ขนาดที่มีให้เลือก</h3><div class="cells"><div>9,200–20,500 BTU</div><div>9,200–25,300 BTU</div><div>9,600–25,100 BTU (ร้านตัวแทน)</div></div></div><div class="row"><h3>รุ่นราว 12,000 BTU</h3><div class="cells"><div>FTKB12ZV2S · 12,300 BTU</div><div>SRK13CYV-W1 · 12,350 BTU</div><div>CFW-2JSFE13 · 12,300 BTU (ร้านตัวแทน)</div></div></div><div class="row"><h3>SEER รุ่นราว 12,000 BTU (สูงกว่า = ประหยัดไฟกว่า)</h3><div class="cells"><div class=yes>18.20</div><div>13.60 (ร้านตัวแทน)</div><div>13.82 (ร้านตัวแทน)</div></div></div><div class="row"><h3>ประกันคอมเพรสเซอร์</h3><div class="cells"><div>5 ปี (ร้านตัวแทน)</div><div>5 ปี (ร้านตัวแทน)</div><div>แบรนด์ไม่ระบุ (ร้านตัวแทนเขียน 5 หรือ 10 ปี ไม่ตรงกัน)</div></div></div><div class="row"><h3>ประกันชิ้นส่วนอื่น</h3><div class="cells"><div>แผงวงจร 3 ปี (แบรนด์) · อะไหล่ 1 ปี (ร้านตัวแทน)</div><div class=yes>ทุกชิ้นส่วน 5 ปี ไม่รวมค่าบริการและน้ำยา (แบรนด์)</div><div>อะไหล่ 3 ปี (ร้านตัวแทน)</div></div></div><div class="row"><h3>คนใช้หลายปีพูดถึงยี่ห้อ</h3><div class="cells"><div>เอ่ยถึง 206 ครั้ง · มีอายุใช้งานกำกับ 23 · บางบ้าน inverter 13–15 ปียังดี</div><div>มีน้อย: “Heavy Duty 25 ปี+” (เสียงเดียว)</div><div>เอ่ยถึง 8 ครั้ง · มีอายุใช้งานกำกับ 3 · ช่างว่าอะไหล่หาง่าย ซ่อมไม่แพง</div></div></div><div class="row"><h3>คะแนนใน Shopee (แค่ความประทับใจแรก)</h3><div class="cells"><div>★4.9 · 2,045 รีวิว</div><div>★4.86 · 657 รีวิว</div><div>★4.83 · 361 รีวิว</div></div></div><div class="row"><h3>เหมาะกับ</h3><div class="cells"><div>ห้องนอน เปิดนาน</div><div>อยากได้แบรนด์ญี่ปุ่น คอยล์ทองแดง</div><div>งบน้อย / บ้านมีหนู จิ้งจก (ระบบธรรมดาซ่อมง่าย)</div></div></div></div></div></section>
+<section><h2>รายตัว</h2><p class="sub">ราคาคือราคาวันที่เก็บข้อมูล อาจเปลี่ยนแล้ว</p><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-81ztd-mnlmk32gdcec40_tn" alt="" loading="lazy"><div><h3>Daikin Sabai Inverter FTKB</h3><p>อินเวอร์เตอร์ SEER 18.20 ประหยัดไฟที่สุดในสามรุ่น ท่อคอยล์เป็นทองแดงตามเว็บ Daikin ช่างและคนใช้ชมว่าเงียบเหมาะห้องนอน แต่แผงอินเวอร์เตอร์ถ้าเสียค่าซ่อมแพงกว่าระบบธรรมดา</p><p class="fits">เหมาะกับ: ห้องนอน เปิดนาน</p><div class="shop"><span>~฿13,049 (18 ต.ค. 2569)</span><a class="go" data-pid="244515831/5179543734" href="/go?p=244515831/5179543734&amp;s=wall-ac&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a><a class="go" data-pid="376856393/26726662181" href="/go?p=376856393/26726662181&amp;s=wall-ac&amp;ch=hub" rel="nofollow sponsored">ร้าน Daikin อีกร้าน (FTKB-AZ)</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-81ztm-mkto3fgyascm1a_tn" alt="" loading="lazy"><div><h3>Mitsubishi Heavy Duty รุ่น CYV ระบบธรรมดา</h3><p>ระบบธรรมดา คอยล์ทองแดง แบรนด์รับประกันทุกชิ้นส่วน 5 ปี (ไม่รวมค่าบริการและน้ำยา) เสียงคนใช้หลายปีของ Mitsubishi ส่วนใหญ่เป็นของ Mitsubishi Electric ไม่ใช่ Heavy Duty</p><p class="fits">เหมาะกับ: อยากได้แบรนด์ญี่ปุ่น คอยล์ทองแดง</p><div class="shop"><span>~฿14,959 (18 ต.ค. 2569)</span><a class="go" data-pid="105262702/7202612063" href="/go?p=105262702/7202612063&amp;s=wall-ac&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a><a class="go" data-pid="105262702/23958900484" href="/go?p=105262702/23958900484&amp;s=wall-ac&amp;ch=hub" rel="nofollow sponsored">รุ่นอินเวอร์เตอร์ YUKI</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-7rasj-m63vu4ywlm7qab_tn" alt="" loading="lazy"><div><h3>Central Air 2JSFE ระบบธรรมดา</h3><p>แบรนด์ไทย ระบบธรรมดา คอยล์ทองแดง ราคาถูกที่สุดในสามรุ่น ช่างพูดว่าอะไหล่หาง่ายและซ่อมไม่แพง แต่เสียงคนใช้มีน้อย และร้านตัวแทนเขียนประกันคอมเพรสเซอร์ไม่ตรงกัน</p><p class="fits">เหมาะกับ: งบน้อย / บ้านมีหนู จิ้งจก</p><div class="shop"><span>~฿9,602 (18 ต.ค. 2569)</span><a class="go" data-pid="91252302/2374341209" href="/go?p=91252302/2374341209&amp;s=wall-ac&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a><a class="go" data-pid="91252302/15356749530" href="/go?p=91252302/15356749530&amp;s=wall-ac&amp;ch=hub" rel="nofollow sponsored">รุ่นอินเวอร์เตอร์ IVJS</a></div></div></article></section>
+<section><h2>สิ่งที่เราไม่เคลม</h2><ul class="cav"><li>ไม่บอกว่ายี่ห้อไหนทนที่สุด เสียงระยะยาวส่วนใหญ่เป็นรุ่นเก่าที่ไม่ได้ขายแล้ว</li><li>ราคาในหน้านี้ส่วนใหญ่เป็นราคาเฉพาะเครื่อง ยังไม่รวมติดตั้ง</li><li>สเปกในตารางเทียบรุ่นราว 12,000 BTU ถ้าเลือกขนาดอื่นในร้าน ตัวเลขจะต่างไป</li><li>ไม่เคลมเรื่องฟอกอากาศ กรองฝุ่น หรือกำจัดเชื้อโรค แม้บางร้านเขียนไว้</li><li>ไม่เคลมว่าแอร์จีนทนเท่าแอร์ญี่ปุ่น ยังไม่มีเสียง 10 ปีพอ</li></ul></section>
+<section><h2>ที่มาของข้อมูล</h2><ul class="src"><li>YouTube ไทย: KonTamAir คนทำแอร์, AirService, คุยกับลุงช่าง, Daddy's Tips, ช่างสามัญประจำบ้าน และอื่นๆ (3,676 คอมเมนต์ 52 คลิป)</li><li>ช่องรีวิวใช้งานจริง: ทำได้ชัวร์, Extreme IT, ลองให้, OHMSHOW และอื่นๆ</li></ul><h3 class="srch">ที่มาของสเปก</h3><ul class="src"><li><a href="https://daikin.co.th/th/product/FTKB-ZV2S" rel="noopener">Daikin Thailand FTKB-ZV2S</a></li><li><a href="https://www.theweatherair.com/air-daikin-inverter-wall-type-ftkb-9200btu-20500btu-r32.html" rel="noopener">ร้านตัวแทน Daikin FTKB (ประกัน)</a></li><li><a href="https://www.mitsuheavythai.com/" rel="noopener">Mitsubishi Heavy Duty Thailand (คอยล์ทองแดง ประกันทุกชิ้นส่วน 5 ปี)</a></li><li><a href="https://mitsuheavythai.com/th/residential-products-list.php" rel="noopener">Mitsubishi Heavy Duty รุ่น CYV</a></li><li><a href="https://mitsuheavythai.com/th/residential-products-details.php?Id=160" rel="noopener">Mitsubishi Heavy Duty SRK13CYV-W1</a></li><li><a href="https://mitsuheavythai.com/th/article-content.php?Id=13" rel="noopener">Mitsubishi Heavy Duty เงื่อนไขการรับประกัน</a></li><li><a href="https://www.theweatherair.com/air-mitsubishi-heavyduty-wall-type-kaze-srk-cyv-r32-9,200btu-25,300btu.html" rel="noopener">ร้านตัวแทน Mitsubishi Heavy Duty KAZE CYV (SEER ประกัน)</a></li><li><a href="https://ttair.co.th/product/central-air-wall-type-jsfe-series/" rel="noopener">ร้านตัวแทน Central Air 2JSFE (TT Air)</a></li><li><a href="https://scair.co.th/products/central-air-jsfe-series" rel="noopener">ร้านตัวแทน Central Air 2JSFE (สยามเจริญแอร์)</a></li></ul></section>
+<footer>ลิงก์ร้านเป็นลิงก์แอฟฟิลิเอท ถ้าซื้อผ่านลิงก์เราได้ค่าคอมมิชชันจาก Shopee ราคาที่คุณจ่ายเท่าเดิม · <a href="/">ดูหมวดอื่น</a></footer>
+</div>
+<script>
+(function(){var q=new URLSearchParams(location.search),ch=(q.get('ch')||'hub').replace(/[^a-z0-9-]/gi,'').slice(0,12)||'hub';
+document.querySelectorAll('a.go').forEach(function(a){a.href='/go?p='+encodeURIComponent(a.dataset.pid)+'&s=wall-ac&ch='+encodeURIComponent(ch);});
+document.querySelectorAll('a.home').forEach(function(a){a.href='/?ch='+encodeURIComponent(ch);});})();
+</script>
+</body></html>
