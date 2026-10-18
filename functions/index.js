@@ -333,8 +333,9 @@ const OG = {
 },
 "79": {
 "t": "เครื่องลดความชื้น ตัวไหนดี? · สรุปให้ตัวไหนดี",
-"d": "สรุปจากเสียงผู้ใช้จริงหลายปี ช่าง และรีวิว · กดดูรุ่นที่คนใช้จริงพูดถึง",
-"s": "dehumidifier"
+"d": "สรุปจากเสียงผู้ใช้จริง เทียบสเปกและเสียงคนใช้แบบแถวต่อแถว ก่อนตัดสินใจซื้อ",
+"s": "dehumidifier",
+"r": 1
 },
 "80": {
 "t": "หม้อไฟฟ้าหอพัก ตัวไหนดี? · สรุปให้ตัวไหนดี",
@@ -349,9 +350,11 @@ const OG = {
 };
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 export async function onRequestGet({ request, env }) {
-  const res = await env.ASSETS.fetch(request);
+  const u0 = new URL(request.url), m0 = OG[u0.searchParams.get("c") || ""];
+  let res = await env.ASSETS.fetch(request);
+  if (m0 && m0.r) { try { const rp = await env.ASSETS.fetch(new URL(`/r/${u0.searchParams.get("c")}`, u0.origin)); if (rp.ok) res = rp; } catch (e) {} }
   try {
-    const u = new URL(request.url), m = OG[u.searchParams.get("c") || ""];
+    const u = u0, m = m0;
     if (!m || !(res.headers.get("content-type") || "").includes("text/html")) return res;
     const img = m.s ? `${u.origin}/covers/${m.s}.jpg` : "";
     const tags = `<meta property="og:type" content="website"><meta property="og:site_name" content="สรุปให้ตัวไหนดี">` +
