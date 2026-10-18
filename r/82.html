@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>น้ำยาล้างเชื้อรา ตัวไหนดี? · สรุปให้ตัวไหนดี</title>
+<meta name="description" content="สรุปจากเสียงผู้ใช้จริง: น้ำยาล้างเชื้อรา เทียบสเปกและเสียงคนใช้แบบแถวต่อแถว">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Kanit:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5ef; --card:#ffffff; --ink:#1b2340; --ink-2:#4a5270; --ink-3:#7a8099;
+  --rule:#dcd8cc; --accent:#f5c518; --accent-ink:#1b2340; --mark:#fff1b0;
+  --good:#1f7a4d; --warn:#a2541b; --chip:#eceae2;
+  --font-display:"Kanit",system-ui,sans-serif; --font-body:"Anuphan",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}}
+:root[data-theme="dark"]{--paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 var(--font-body)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;font-style:normal;line-height:1.25;overflow-wrap:anywhere;min-width:0}
+a{color:inherit}
+.mast{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-2)}
+.mast b{font-family:var(--font-display);font-weight:600;color:var(--ink)}
+.code{background:var(--accent);color:var(--accent-ink);font-weight:600;border-radius:4px;padding:1px 8px;white-space:nowrap}
+header.top{padding:28px 0 8px}
+header.top h1{font-size:clamp(28px,7vw,40px);margin:0 0 10px}
+.meta{color:var(--ink-2);font-size:14px;margin:0}
+.meta span{white-space:nowrap}
+.verdict{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:16px 18px;margin:22px 0 8px}
+.verdict h2{font-size:18px;margin:0 0 8px}
+.verdict ul{margin:0;padding-left:20px}
+.verdict li{margin:4px 0}
+section{padding-top:34px}
+section>h2{font-size:22px;margin:0 0 4px}
+.sub{color:var(--ink-2);font-size:14px;margin:0 0 16px}
+mark{background:var(--mark);color:inherit;padding:0 2px}
+/* findings */
+.find{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.find li{padding:12px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.find b{font-weight:600}
+.find small{color:var(--ink-3);font-size:13px}
+blockquote{margin:6px 0 0;padding:0 0 0 12px;border-left:2px solid var(--rule);color:var(--ink-2)}
+/* compare */
+.cmp{background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow:clip}
+.cmp-head{position:sticky;top:0;z-index:2;background:var(--card);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px;border-bottom:1px solid var(--rule)}
+.cmp-head figure{margin:0;text-align:center;min-width:0}
+.cmp-head img{width:100%;max-width:96px;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.cmp-head figcaption{font:600 13px/1.3 var(--font-display);margin-top:6px;overflow-wrap:anywhere}
+.row{padding:10px 12px;border-bottom:1px solid var(--rule)}
+.row:last-child{border-bottom:0}
+.row h3{font:600 13px/1.3 var(--font-body);color:var(--ink-3);margin:0 0 6px;letter-spacing:.02em}
+.cells{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;font-size:14px;line-height:1.45}
+.cells div{min-width:0;overflow-wrap:anywhere}
+.na{color:var(--ink-3)}
+.yes{color:var(--good);font-weight:600}
+/* product notes */
+.prod{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:16px;margin-bottom:12px;display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px}
+.prod img{width:72px;height:72px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.prod h3{font-size:17px;margin:0 0 4px}
+.prod p{margin:4px 0;font-size:15px}
+.prod .fits{color:var(--ink-2)}
+.shop{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:10px;font-size:14px;color:var(--ink-3)}
+.shop a{border:1px solid var(--ink-3);border-radius:4px;padding:4px 12px;text-decoration:none;color:var(--ink);white-space:nowrap}
+.shop a:hover{border-color:var(--ink)}
+.shop a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* caveats */
+.cav{list-style:none;padding:0;margin:0}
+.cav li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid var(--rule)}
+.cav li::before{content:"!";position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;background:var(--chip);color:var(--warn);font:600 12px/18px var(--font-display);text-align:center}
+.src{font-size:14px;color:var(--ink-2)}
+.src li{margin:3px 0}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-3)}
+
+.mast a.home{font-family:var(--font-display);font-weight:600;color:var(--ink);text-decoration:none}.clips{margin-top:6px}.clips a{color:var(--ink);text-underline-offset:3px}.srch{font-size:15px;margin:18px 0 4px}.src a{color:var(--ink-2);text-underline-offset:3px}footer a{color:var(--ink-2)}.cmp-head,.cells{grid-template-columns:repeat(4,minmax(0,1fr))}.cmp{overflow-x:auto;scroll-snap-type:x proximity}.cmp-in{min-width:calc(var(--n)*112px + 24px)}.cmp-head{position:static}</style></head>
+<body style="--n:4"><div class="wrap">
+<div class="mast"><a href="/" class="home">สรุปให้ตัวไหนดี</a><span>สรุปจากผู้ใช้จริง <span class="code">รหัส 82</span></span></div>
+<header class="top"><h1>น้ำยาล้างเชื้อรา ตัวไหนดี?</h1>
+<p class="meta"><span>Pantip 46 กระทู้ ราว 75 เสียงคนใช้จริง (ปี 2555–2569)</span> · <span>คอมเมนต์ YouTube 881 รายการจาก 38 คลิป</span> · <span>กลุ่ม Facebook บ้าน/แม่บ้านชอบรีวิว ราว 230 คอมเมนต์ที่ไม่มีลิงก์ + โพสต์ถามเรื่องฝ้าห้องน้ำ 135 คอมเมนต์</span> · <span>ไม่นับความเห็นที่แนบลิงก์ขายหรือมาจากบัญชีแบรนด์</span> · <span>อัปเดต 19 ต.ค. 2569</span></p>
+</header>
+<div class="verdict"><h2>สรุปสั้น</h2><ul><li>ที่คนใช้แล้วราออกมากที่สุดคือ <b>ไฮเตอร์</b> และเคล็ดที่พูดตรงกันคือ <mark>อย่าขัดทันที ชุบทิชชู่แปะไว้หรือฉีดทิ้งไว้ 30 นาที–1 ชม. แล้วค่อยขัด</mark></li><li>ถ้า<b>ไม่แก้ความชื้น ราจะกลับมา</b> ไม่ว่าใช้น้ำยาอะไร คนที่หายจริงคือคนที่แก้ความชื้นได้ เช่น พัดลมดูดอากาศ เปิดหน้าต่าง เช็ดให้แห้ง แก้ท่อรั่ว</li><li>ราที่เข้าเนื้อซิลิโคนหรือฝ้ายิปซัมแล้ว น้ำยาทำได้แค่จาง ต้องลอกซิลิโคนทาใหม่หรือเปลี่ยนแผ่น</li><li><b>ห้ามผสมไฮเตอร์กับน้ำยาล้างห้องน้ำ น้ำยากรด หรือน้ำส้มสายชู</b> มีคนเล่าว่าฉุนจนแสบตาแสบจมูก ใช้ทีละอย่าง เปิดหน้าต่าง ใส่ถุงมือ</li></ul></div>
+<section><h2>เสียงจากผู้ใช้จริง</h2><ul class="find"><li><b>ไฮเตอร์ ราออก</b><small>Pantip ~34 · FB ~33 · YouTube ~15</small><blockquote>“ชุบทิชชู่แปะไว้ แล้วค่อยขัด ราออก”</blockquote><blockquote>“สีชมพูใช้ดี สีเหลืองฉุนน้อยกว่า”</blockquote></li><li><b>ราขึ้นใหม่เพราะความชื้น</b><small>FB ~20 · YouTube 9 · Pantip หลายกระทู้</small><blockquote>“ผนังยังชื้นอยู่ ล้างแล้วกลับมาใน 2 สัปดาห์”</blockquote><blockquote>“ใช้เครื่องลดความชื้นแล้วไม่กลับมา”</blockquote></li><li><b>ราเข้าเนื้อซิลิโคน / ฝ้า ต้องเปลี่ยน</b><small>Pantip 4 ทำเอง + ~6 · FB ~12 (ฝ้ายิปซัม)</small><blockquote>“ลอกซิลิโคนออกแล้วยิงใหม่ จบ”</blockquote></li><li><b>กลิ่นแรง / ผสมน้ำยาแล้วฉุน</b><small>Pantip 7 + 3 เคสผสมน้ำยา · YouTube 5 + เตือนสูตรผสม ~10</small><blockquote>“ผสมกับน้ำยาล้างห้องน้ำแล้วไอ แสบตา ต้องวิ่งออกจากห้องน้ำ”</blockquote></li><li><b>น้ำยากรดกัดยาแนวปูน</b><small>Pantip 4</small><blockquote>“ใช้น้ำยาล้างห้องน้ำขัดยาแนวบ่อยๆ ยาแนวกร่อน”</blockquote></li></ul></section>
+<section><h2>เทียบ 4 ตัวแบบแถวต่อแถว</h2><p class="sub">สเปกจากเว็บแบรนด์และร้านค้า (ดูที่มาท้ายหน้า) และเสียงคนใช้</p>
+<p class="sub swipe">ปัดตารางไปทางซ้ายเพื่อดูตัวที่เหลือ →</p><div class="cmp"><div class="cmp-in"><div class="cmp-head"><figure><img src="https://cf.shopee.co.th/file/765ac7194357d7fecd3147a3722a2b7a_tn" alt="ไฮเตอร์ น้ำยาซักผ้าขาว สีชมพู 2,500 มล. (Kao Official Store)" loading="lazy"><figcaption>ไฮเตอร์ สีชมพู</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/th-11134207-7qul2-lia0jompb5d43f_tn" alt="ไฮเตอร์ น้ำยาซักผ้าขาว สีเหลือง 2,500 มล. (Kao Official Store)" loading="lazy"><figcaption>ไฮเตอร์ สีเหลือง</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/3a8cf30376eeed14f564f21a3aa8e8f8_tn" alt="TOA 113 Microkill 1 ลิตร" loading="lazy"><figcaption>TOA 113 Microkill</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/th-11134207-7r98p-lm748277cn47c6_tn" alt="Dettol ไฮยีน มัลติยูส (Dettol Official)" loading="lazy"><figcaption>เดทตอล ไฮยีน มัลติยูส</figcaption></figure></div><div class="row"><h3>ใช้กับ</h3><div class="cells"><div>ยาแนว กระเบื้อง ผนังห้องน้ำ</div><div>ยาแนว กระเบื้อง ผนังห้องน้ำ</div><div>ผนังปูน ฝ้าปูน ก่อนทาสีใหม่</div><div>เช็ดถูพื้นผิว</div></div></div><div class="row"><h3>วิธีที่คนใช้</h3><div class="cells"><div>ชุบทิชชู่แปะ/ฉีดทิ้ง 30 นาที–1 ชม. แล้วขัด</div><div>เหมือนสีชมพู</div><div>ทาที่ผนัง ทิ้งให้แห้ง แล้วทาสี</div><div>เช็ดตาม</div></div></div><div class="row"><h3>เสียงคนใช้</h3><div class="cells"><div class=yes>ราออก ใช้มากที่สุดทั้ง 3 แหล่ง</div><div class=yes>ฉุนน้อยกว่าสีอื่น</div><div>"สเปรย์ทั่วไปไม่เวิร์ก เปลี่ยนมาใช้ TOA" (เสียงน้อย)</div><div>กลิ่นอ่อนกว่า แต่มีเสียงว่ารากลับมา</div></div></div><div class="row"><h3>กลิ่น</h3><div class="cells"><div>แรง แสบจมูก</div><div>อ่อนกว่า (ตามคนใช้)</div><div>ไม่พบข้อมูลจากคนใช้</div><div>อ่อน</div></div></div><div class="row"><h3>ข้อควรระวัง</h3><div class="cells"><div>ห้ามผสมกับน้ำยากรด/น้ำส้มสายชู</div><div>ห้ามผสมกับน้ำยากรด/น้ำส้มสายชู</div><div>ใส่ถุงมือ เปิดให้อากาศถ่ายเท</div><div>—</div></div></div><div class="row"><h3>ร้าน</h3><div class="cells"><div>Kao Official Store</div><div>Kao Official Store</div><div>ร้านวัสดุ</div><div>Dettol Official</div></div></div></div></div></section>
+<section><h2>รายตัว</h2><p class="sub">ราคาคือราคาวันที่เก็บข้อมูล อาจเปลี่ยนแล้ว</p><article class="prod"><img src="https://cf.shopee.co.th/file/765ac7194357d7fecd3147a3722a2b7a_tn" alt="" loading="lazy"><div><h3>ไฮเตอร์ น้ำยาซักผ้าขาว สีชมพู 2,500 มล. (Kao Official Store)</h3><p>ตัวที่คนใช้ล้างราบ่อยที่สุดทั้งใน Pantip กลุ่ม FB และ YouTube ชุบทิชชู่แปะไว้ก่อนขัด ★4.93 จาก 5,047 รีวิว</p><p class="fits">เหมาะกับ: ยาแนว กระเบื้อง ผนังห้องน้ำ</p><div class="shop"><span>~฿90 (19 ต.ค. 2569)</span><a class="go" data-pid="666178603/14148476565" href="/go?p=666178603/14148476565&amp;s=mold-cleaner&amp;ch=hub" rel="nofollow sponsored">ดูใน Shopee</a><a class="go" data-pid="666178603/11386302648" href="/go?p=666178603/11386302648&amp;s=mold-cleaner&amp;ch=hub" rel="nofollow sponsored">แพ็ก 2 ขวด</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-7qul2-lia0jompb5d43f_tn" alt="" loading="lazy"><div><h3>ไฮเตอร์ น้ำยาซักผ้าขาว สีเหลือง 2,500 มล. (Kao Official Store)</h3><p>คนใช้บอกว่าฉุนน้อยกว่าสีอื่น ★4.92 จาก 1,516 รีวิว</p><p class="fits">เหมาะกับ: ไม่ชอบกลิ่นแรง</p><div class="shop"><span>~฿90 (19 ต.ค. 2569)</span><a class="go" data-pid="666178603/12375008095" href="/go?p=666178603/12375008095&amp;s=mold-cleaner&amp;ch=hub" rel="nofollow sponsored">ดูใน Shopee</a><a class="go" data-pid="666178603/14349887746" href="/go?p=666178603/14349887746&amp;s=mold-cleaner&amp;ch=hub" rel="nofollow sponsored">แพ็ก 2 ขวด กลิ่นเฟรช</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/3a8cf30376eeed14f564f21a3aa8e8f8_tn" alt="" loading="lazy"><div><h3>TOA 113 Microkill 1 ลิตร</h3><p>ใช้ทาผนังหรือฝ้าปูนก่อนทาสีใหม่ เสียงคนใช้ยังน้อย ★4.85 จาก 679 รีวิว</p><p class="fits">เหมาะกับ: ผนังปูนที่จะทาสีใหม่</p><div class="shop"><span>~฿126 (19 ต.ค. 2569)</span><a class="go" data-pid="107662545/6743770296" href="/go?p=107662545/6743770296&amp;s=mold-cleaner&amp;ch=hub" rel="nofollow sponsored">ดูใน Shopee</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-7r98p-lm748277cn47c6_tn" alt="" loading="lazy"><div><h3>Dettol ไฮยีน มัลติยูส (Dettol Official)</h3><p>กลิ่นอ่อนกว่าไฮเตอร์ ใช้เช็ดถู มีเสียงว่ารากลับมาอีก ★4.93 จาก 3,357 รีวิว</p><p class="fits">เหมาะกับ: อยากได้กลิ่นอ่อน</p><div class="shop"><span>~฿539 (19 ต.ค. 2569)</span><a class="go" data-pid="156008447/11151062660" href="/go?p=156008447/11151062660&amp;s=mold-cleaner&amp;ch=hub" rel="nofollow sponsored">ดูใน Shopee</a></div></div></article></section>
+<section><h2>สิ่งที่เราไม่เคลม</h2><ul class="cav"><li>เราไม่เคลมเรื่องฆ่าเชื้อหรือสุขภาพ เล่าเฉพาะว่าคนใช้บอกว่าคราบราออก ไม่ออก หรือกลับมา</li><li>น้ำยาเอาคราบออกได้ แต่ไม่กันราไม่ให้กลับมา ต้องแก้ความชื้นด้วย</li><li>เรื่องน้ำยากัดยาแนวหรือทำสีด่าง ข้อมูลยังไม่พอ ลองในจุดเล็กๆ ก่อน</li><li>TOA 113, HG Mould Spray, Mr Muscle มีเสียงคนใช้น้อย (2–5 เสียง)</li><li>ไม่แนะนำสูตรผสมไฮเตอร์กับน้ำส้มสายชู/น้ำยาล้างจานที่แชร์กันในคลิป มีคำเตือนซ้ำหลายครั้งว่าฉุนอันตราย</li></ul></section>
+<section><h2>ที่มาของข้อมูล</h2><ul class="src"><li>Pantip: กระทู้เชื้อราห้องน้ำ ยาแนว ผนังชื้น 46 กระทู้ ปี 2555–2569</li><li>YouTube: คลิปล้างเชื้อรา/ทดสอบน้ำยา 38 คลิป คอมเมนต์ 881 รายการ (ไม่นับคลิปเชื้อราผิวหนัง)</li><li>Facebook: กลุ่มบ้าน ถาม-ตอบบ้าน แม่บ้านชอบรีวิว</li></ul></section>
+<footer>ปุ่มไป Shopee เป็นลิงก์แอฟฟิลิเอท ถ้าซื้อผ่านลิงก์เราได้ค่าคอมมิชชันจาก Shopee ราคาที่คุณจ่ายเท่าเดิม · <a href="/">ดูหมวดอื่น</a></footer>
+</div>
+<script>
+(function(){var q=new URLSearchParams(location.search),ch=(q.get('ch')||'hub').replace(/[^a-z0-9-]/gi,'').slice(0,12)||'hub';
+document.querySelectorAll('a.go').forEach(function(a){a.href='/go?p='+encodeURIComponent(a.dataset.pid)+'&s=mold-cleaner&ch='+encodeURIComponent(ch);});
+document.querySelectorAll('a.home').forEach(function(a){a.href='/?ch='+encodeURIComponent(ch);});})();
+</script>
+</body></html>
