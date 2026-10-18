@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>พัดลม ตัวไหนดี? · สรุปให้ตัวไหนดี</title>
+<meta name="description" content="สรุปจากเสียงผู้ใช้จริง: พัดลม เทียบสเปกและเสียงคนใช้แบบแถวต่อแถว">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Kanit:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5ef; --card:#ffffff; --ink:#1b2340; --ink-2:#4a5270; --ink-3:#7a8099;
+  --rule:#dcd8cc; --accent:#f5c518; --accent-ink:#1b2340; --mark:#fff1b0;
+  --good:#1f7a4d; --warn:#a2541b; --chip:#eceae2;
+  --font-display:"Kanit",system-ui,sans-serif; --font-body:"Anuphan",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}}
+:root[data-theme="dark"]{--paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 var(--font-body)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;font-style:normal;line-height:1.25;overflow-wrap:anywhere;min-width:0}
+a{color:inherit}
+.mast{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-2)}
+.mast b{font-family:var(--font-display);font-weight:600;color:var(--ink)}
+.code{background:var(--accent);color:var(--accent-ink);font-weight:600;border-radius:4px;padding:1px 8px;white-space:nowrap}
+header.top{padding:28px 0 8px}
+header.top h1{font-size:clamp(28px,7vw,40px);margin:0 0 10px}
+.meta{color:var(--ink-2);font-size:14px;margin:0}
+.meta span{white-space:nowrap}
+.verdict{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:16px 18px;margin:22px 0 8px}
+.verdict h2{font-size:18px;margin:0 0 8px}
+.verdict ul{margin:0;padding-left:20px}
+.verdict li{margin:4px 0}
+section{padding-top:34px}
+section>h2{font-size:22px;margin:0 0 4px}
+.sub{color:var(--ink-2);font-size:14px;margin:0 0 16px}
+mark{background:var(--mark);color:inherit;padding:0 2px}
+/* findings */
+.find{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.find li{padding:12px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.find b{font-weight:600}
+.find small{color:var(--ink-3);font-size:13px}
+blockquote{margin:6px 0 0;padding:0 0 0 12px;border-left:2px solid var(--rule);color:var(--ink-2)}
+/* compare */
+.cmp{background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow:clip}
+.cmp-head{position:sticky;top:0;z-index:2;background:var(--card);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px;border-bottom:1px solid var(--rule)}
+.cmp-head figure{margin:0;text-align:center;min-width:0}
+.cmp-head img{width:100%;max-width:96px;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.cmp-head figcaption{font:600 13px/1.3 var(--font-display);margin-top:6px;overflow-wrap:anywhere}
+.row{padding:10px 12px;border-bottom:1px solid var(--rule)}
+.row:last-child{border-bottom:0}
+.row h3{font:600 13px/1.3 var(--font-body);color:var(--ink-3);margin:0 0 6px;letter-spacing:.02em}
+.cells{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;font-size:14px;line-height:1.45}
+.cells div{min-width:0;overflow-wrap:anywhere}
+.na{color:var(--ink-3)}
+.yes{color:var(--good);font-weight:600}
+/* product notes */
+.prod{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:16px;margin-bottom:12px;display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px}
+.prod img{width:72px;height:72px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.prod h3{font-size:17px;margin:0 0 4px}
+.prod p{margin:4px 0;font-size:15px}
+.prod .fits{color:var(--ink-2)}
+.shop{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:10px;font-size:14px;color:var(--ink-3)}
+.shop a{border:1px solid var(--ink-3);border-radius:4px;padding:4px 12px;text-decoration:none;color:var(--ink);white-space:nowrap}
+.shop a:hover{border-color:var(--ink)}
+.shop a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* caveats */
+.cav{list-style:none;padding:0;margin:0}
+.cav li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid var(--rule)}
+.cav li::before{content:"!";position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;background:var(--chip);color:var(--warn);font:600 12px/18px var(--font-display);text-align:center}
+.src{font-size:14px;color:var(--ink-2)}
+.src li{margin:3px 0}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-3)}
+
+.mast a.home{font-family:var(--font-display);font-weight:600;color:var(--ink);text-decoration:none}.clips{margin-top:6px}.clips a{color:var(--ink);text-underline-offset:3px}.srch{font-size:15px;margin:18px 0 4px}.src a{color:var(--ink-2);text-underline-offset:3px}footer a{color:var(--ink-2)}.cmp-head,.cells{grid-template-columns:repeat(3,minmax(0,1fr))}</style></head>
+<body style="--n:3"><div class="wrap">
+<div class="mast"><a href="/" class="home">สรุปให้ตัวไหนดี</a><span>สรุปจากผู้ใช้จริง <span class="code">รหัส 71</span></span></div>
+<header class="top"><h1>พัดลม ตัวไหนดี?</h1>
+<p class="meta"><span>อ่านคอมเมนต์ 8,091 รายการจาก 51 คลิป</span> · <span>Pantip 3 กระทู้</span> · <span>กลุ่ม FB 5 โพสต์ (โพสต์ใหญ่สุด 346 คอมเมนต์)</span> · <span>อัปเดต 18 ต.ค. 2569</span></p>
+<p class="meta clips"><a href="https://th.shp.ee/sbql0r29" rel="noopener">คลิปใน Shopee</a> · <a href="https://youtube.com/shorts/V_XIqAYpfO0" rel="noopener">คลิปใน YouTube</a></p></header>
+<div class="verdict"><h2>สรุปสั้น</h2><ul><li>คนใช้หลายปีเรียงความทนตรงกันว่า <b>Mitsubishi > Sharp > Hatari</b> แต่ Hatari ก็มีคนใช้ 8–10 ปี และอะไหล่หาง่ายที่สุด</li><li>อาการที่เจอบ่อยที่สุดคือ <b>แคปเสื่อม</b> (หมุนช้า ต้องเขี่ย) อะไหล่หลักสิบบาท ส่วนขดลวดไหม้หรือบอร์ดเสีย ช่างแนะนำให้ซื้อใหม่</li><li>ถ้าเน้นใช้ยาว เลือก <b>รุ่นปุ่มกด</b> เพราะช่างบอกว่ารีโมตเพิ่มบอร์ดที่เสียได้ ส่วนทาวเวอร์ลมเบา <mark>เหมาะกับห้องแอร์เท่านั้น</mark></li></ul></div>
+<section><h2>เสียงจากผู้ใช้จริง</h2><ul class="find"><li><b>ความทนตามเสียงคนใช้หลายปี: Mitsubishi > Sharp > Hatari</b><small>ตรงกันทั้ง YouTube และ Pantip 3 กระทู้</small><blockquote>“เกือบ 30 ปี มี 8 ตัวไม่เคยเสียสักตัว”</blockquote><blockquote>“Hatari พังจนเข็ด ย้ายมา Sharp ทั้ง 16/18 นิ้ว ทนมาก”</blockquote></li><li><b>อาการเสียอันดับ 1 คือคาปาซิเตอร์ (แคป) เสื่อม</b><small>631 คอมเมนต์ · อะไหล่หลักสิบบาท ซ่อมเองได้</small><blockquote>“ส่วนใหญ่ไม่หมุนเพราะแคปเสื่อมตามเวลา”</blockquote></li><li><b>บูชฝืดและขดลวดไหม้ คือจุดที่ช่างบอกว่าซื้อใหม่คุ้มกว่า</b><small>บูช 187 · ขดลวด/มอเตอร์ 241 คอมเมนต์ · ค่าซ่อมจริง 400–600 บาท ใกล้ราคาพัดลมใหม่</small></li><li><b>รุ่นที่คนพูดว่าทนมักเป็นรุ่นปุ่มกดธรรมดา</b><small>รีโมตมีบอร์ดเพิ่มจุดเสีย (ช่าง)</small></li><li><b>พัดลมทาวเวอร์ลมเบากว่าพัดลมใบพัด</b><small>กลุ่ม FB ≥6 เสียงไปทางเดียวกัน · เหมาะกับห้องแอร์</small><blockquote>“ถอดทำความสะอาดยาก ฝุ่นจับ”</blockquote></li><li><b>พัดลม DC ยังไม่มีเสียงใช้เกิน 2–3 ปี</b><small>18 คอมเมนต์ · พังทีเป็นที่บอร์ด ช่างทั่วไปซ่อมไม่ค่อยได้</small></li></ul></section>
+<section><h2>เทียบ 3 ตัวแบบแถวต่อแถว</h2><p class="sub">สเปกจากเว็บแบรนด์และร้านค้า (ดูที่มาท้ายหน้า) และเสียงคนใช้</p>
+<div class="cmp"><div class="cmp-in"><div class="cmp-head"><figure><img src="https://cf.shopee.co.th/file/th-11134207-7ras8-m6hydwi0lfq872_tn" alt="Mitsubishi พัดลมสไลด์ 16 นิ้ว R16A-GB" loading="lazy"><figcaption>Mitsubishi R16A-GB</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/th-11134207-7ra0l-mcael9r5aw5gda_tn" alt="Sharp พัดลมสไลด์ 16 นิ้ว PJ-SL163" loading="lazy"><figcaption>Sharp PJ-SL163</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/th-11134207-7rase-m4tpmicudulm12_tn" alt="Hatari พัดลมสไลด์ 16 นิ้ว S16M1" loading="lazy"><figcaption>Hatari S16M1</figcaption></figure></div><div class="row"><h3>ขนาด · กำลังไฟ</h3><div class="cells"><div>16 นิ้ว · 46 W (HomePro)</div><div>16 นิ้ว · 45 W (HomePro)</div><div>16 นิ้ว · 49 W (HomePro)</div></div></div><div class="row"><h3>แรงลม · การควบคุม</h3><div class="cells"><div>3 ระดับ · ปุ่มกด ไม่มีรีโมต (HomePro)</div><div>3 ระดับ · ปุ่มกด ไม่มีรีโมต (HomePro)</div><div>3 ระดับ · ปุ่มกด ไม่มีรีโมต (HomePro)</div></div></div><div class="row"><h3>ประกันมอเตอร์</h3><div class="cells"><div class=yes>5 ปี (HomePro)</div><div>3 ปี (HomePro)</div><div>3 ปี (HomePro)</div></div></div><div class="row"><h3>ตัดไฟเมื่อมอเตอร์ร้อนเกิน</h3><div class="cells"><div>มี เทอร์โมฟิวส์ 140°C (HomePro)</div><div>มี เทอร์โมฟิวส์ 140°C (HomePro)</div><div>มี เทอร์โมฟิวส์ (HomePro)</div></div></div><div class="row"><h3>ฉลากประหยัดไฟ</h3><div class="cells"><div>เบอร์ 5 · 5 ดาว (HomePro)</div><div>แบรนด์ไม่ระบุ</div><div>เบอร์ 5 · 5 ดาว (HomePro)</div></div></div><div class="row"><h3>คอมเมนต์ YouTube ที่เล่าเรื่องใช้นาน/พัง</h3><div class="cells"><div>58 จาก 247 ที่เอ่ยถึง</div><div>59 จาก 221 ที่เอ่ยถึง</div><div>106 จาก 512 ที่เอ่ยถึง</div></div></div><div class="row"><h3>คนใช้ไทยหลายปีเล่า (YouTube/Pantip)</h3><div class="cells"><div>เกือบ 20 ปียังดี · R16 เกือบ 10 ปีเพิ่งเปลี่ยนแคป</div><div>16 นิ้ว 6–7 ปียังเหมือนใหม่ · 4 ปีลมไม่ตก</div><div>16 นิ้ว 8 ปี · หอ 21 ตัวลมตกใน 3 ปี</div></div></div><div class="row"><h3>เรื่องที่คนบ่น</h3><div class="cells"><div>แพงกว่า · R16A-GB ลูกปืนเริ่มดัง (1 เสียง)</div><div>ปุ่มกดเสียราว 2 ปี (2 เสียง)</div><div>บูชฝืด คอหัก ลมตกใน 2–5 ปี</div></div></div><div class="row"><h3>คะแนนใน Shopee (แค่ความประทับใจแรก)</h3><div class="cells"><div>★4.91 · 2,967 รีวิว</div><div>★4.86 · 1,483 รีวิว</div><div>★4.88 · 41,736 รีวิว</div></div></div><div class="row"><h3>เหมาะกับ</h3><div class="cells"><div>อยากใช้ยาว เปิดนานๆ</div><div>งบน้อยกว่า ใช้ยาว</div><div>งบน้อย ซ่อมง่าย</div></div></div></div></div></section>
+<section><h2>รายตัว</h2><p class="sub">ราคาคือราคาวันที่เก็บข้อมูล อาจเปลี่ยนแล้ว</p><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-7ras8-m6hydwi0lfq872_tn" alt="" loading="lazy"><div><h3>Mitsubishi พัดลมสไลด์ 16 นิ้ว R16A-GB</h3><p>ยี่ห้อที่คนใช้หลายปีพูดถึงว่าทนที่สุด ทั้งใน YouTube และ Pantip ร้านระบุประกันมอเตอร์ 5 ปี นานกว่าอีกสองตัว แต่ราคาสูงกว่า</p><p class="fits">เหมาะกับ: อยากใช้ยาว เปิดนานๆ</p><div class="shop"><span>~฿1,439 (18 ต.ค. 2569)</span><a class="go" data-pid="316642245/6555313934" href="/go?p=316642245/6555313934&amp;s=fan&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a><a class="go" data-pid="45952389/12155828869" href="/go?p=45952389/12155828869&amp;s=fan&amp;ch=hub" rel="nofollow sponsored">Living Fan 16 นิ้ว LV16-GB</a><a class="go" data-pid="316642245/7455316540" href="/go?p=316642245/7455316540&amp;s=fan&amp;ch=hub" rel="nofollow sponsored">รุ่น 18 นิ้ว R18A-GB</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-7ra0l-mcael9r5aw5gda_tn" alt="" loading="lazy"><div><h3>Sharp พัดลมสไลด์ 16 นิ้ว PJ-SL163</h3><p>คนที่เลิกใช้ Hatari หลายคนย้ายมาใช้ Sharp และเล่าว่าใช้ 5–7 ปีไม่มีปัญหา เสียงบ่นที่ซ้ำคือปุ่มกดเสียราว 2 ปี (2 เสียง)</p><p class="fits">เหมาะกับ: งบน้อยกว่า ใช้ยาว</p><div class="shop"><span>~฿912 (18 ต.ค. 2569)</span><a class="go" data-pid="144046792/2437655546" href="/go?p=144046792/2437655546&amp;s=fan&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a><a class="go" data-pid="144046792/24576817344" href="/go?p=144046792/24576817344&amp;s=fan&amp;ch=hub" rel="nofollow sponsored">รุ่น PJ-SL165</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-7rase-m4tpmicudulm12_tn" alt="" loading="lazy"><div><h3>Hatari พัดลมสไลด์ 16 นิ้ว S16M1</h3><p>ขายเยอะที่สุด อะไหล่หาง่าย ช่างซ่อมง่าย เสียงคนใช้แตกเป็นสองทาง มีทั้งคนใช้ 8–10 ปี และคนบ่นบูชฝืดหรือลมตกใน 2–5 ปี</p><p class="fits">เหมาะกับ: งบน้อย ซ่อมง่าย</p><div class="shop"><span>~฿948 (18 ต.ค. 2569)</span><a class="go" data-pid="1226237536/28703143024" href="/go?p=1226237536/28703143024&amp;s=fan&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a><a class="go" data-pid="1226237536/41155830794" href="/go?p=1226237536/41155830794&amp;s=fan&amp;ch=hub" rel="nofollow sponsored">รุ่น S16C1</a></div></div></article></section>
+<section><h2>สิ่งที่เราไม่เคลม</h2><ul class="cav"><li>ไม่บอกว่ายี่ห้อไหนไม่พังแน่นอน คอมเมนต์ในคลิปซ่อมมาจากคนที่พัดลมเสีย ยี่ห้อที่ขายเยอะอย่าง Hatari จึงถูกพูดถึงเรื่องพังมากตามสัดส่วน</li><li>เสียงใช้ 20–30 ปีส่วนใหญ่เป็นพัดลมรุ่นเก่าในบ้าน ไม่ใช่รุ่นในตารางโดยตรง</li><li>ไม่เคลมว่าพัดลม DC ทนกว่าแบบ AC เพราะยังไม่มีเสียงใช้เกิน 2–3 ปี</li><li>สเปกในตารางมาจากหน้าร้าน HomePro เพราะไม่พบหน้าสเปกของทั้งสามแบรนด์ หน้า Sharp เขียนประกันมอเตอร์ทั้ง 3 ปีและ 5 ปี เราใช้ค่าในตารางสเปก (3 ปี)</li></ul></section>
+<section><h2>ที่มาของข้อมูล</h2><ul class="src"><li>YouTube ไทย: สองสิงห์ Modify, Mr. Puy, นายคอม DIY, พ่อบ้านงานช่าง, ลองให้, เสียบปลั๊ก, Extreme IT และอื่นๆ (51 คลิป 8,091 คอมเมนต์)</li><li>Pantip 3 กระทู้ (รีวิวพัดลมที่บ้าน, แบรนด์ไหนทน, เปิด 24 ชม. ไม่เสีย)</li><li>กลุ่ม Facebook งานบ้านที่รัก 5 โพสต์ (โพสต์ใหญ่สุด 346 คอมเมนต์)</li></ul><h3 class="srch">ที่มาของสเปก</h3><ul class="src"><li><a href="https://www.homepro.co.th/p/1190714" rel="noopener">HomePro Mitsubishi R16A-GB</a></li><li><a href="https://www.homepro.co.th/p/1235892" rel="noopener">HomePro Sharp PJ-SL163WH</a></li><li><a href="https://www.homepro.co.th/p/1079632" rel="noopener">HomePro Sharp PJ-SL163CG</a></li><li><a href="https://www.homepro.co.th/p/1189083" rel="noopener">HomePro Hatari S16M1</a></li></ul></section>
+<footer>ลิงก์ร้านเป็นลิงก์แอฟฟิลิเอท ถ้าซื้อผ่านลิงก์เราได้ค่าคอมมิชชันจาก Shopee ราคาที่คุณจ่ายเท่าเดิม · <a href="/">ดูหมวดอื่น</a></footer>
+</div>
+<script>
+(function(){var q=new URLSearchParams(location.search),ch=(q.get('ch')||'hub').replace(/[^a-z0-9-]/gi,'').slice(0,12)||'hub';
+document.querySelectorAll('a.go').forEach(function(a){a.href='/go?p='+encodeURIComponent(a.dataset.pid)+'&s=fan&ch='+encodeURIComponent(ch);});
+document.querySelectorAll('a.home').forEach(function(a){a.href='/?ch='+encodeURIComponent(ch);});})();
+</script>
+</body></html>
