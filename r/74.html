@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>เครื่องทำน้ำอุ่น ตัวไหนดี? · สรุปให้ตัวไหนดี</title>
+<meta name="description" content="สรุปจากเสียงผู้ใช้จริง: เครื่องทำน้ำอุ่น เทียบสเปกและเสียงคนใช้แบบแถวต่อแถว">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Kanit:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5ef; --card:#ffffff; --ink:#1b2340; --ink-2:#4a5270; --ink-3:#7a8099;
+  --rule:#dcd8cc; --accent:#f5c518; --accent-ink:#1b2340; --mark:#fff1b0;
+  --good:#1f7a4d; --warn:#a2541b; --chip:#eceae2;
+  --font-display:"Kanit",system-ui,sans-serif; --font-body:"Anuphan",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}}
+:root[data-theme="dark"]{--paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 var(--font-body)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;font-style:normal;line-height:1.25;overflow-wrap:anywhere;min-width:0}
+a{color:inherit}
+.mast{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-2)}
+.mast b{font-family:var(--font-display);font-weight:600;color:var(--ink)}
+.code{background:var(--accent);color:var(--accent-ink);font-weight:600;border-radius:4px;padding:1px 8px;white-space:nowrap}
+header.top{padding:28px 0 8px}
+header.top h1{font-size:clamp(28px,7vw,40px);margin:0 0 10px}
+.meta{color:var(--ink-2);font-size:14px;margin:0}
+.meta span{white-space:nowrap}
+.verdict{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:16px 18px;margin:22px 0 8px}
+.verdict h2{font-size:18px;margin:0 0 8px}
+.verdict ul{margin:0;padding-left:20px}
+.verdict li{margin:4px 0}
+section{padding-top:34px}
+section>h2{font-size:22px;margin:0 0 4px}
+.sub{color:var(--ink-2);font-size:14px;margin:0 0 16px}
+mark{background:var(--mark);color:inherit;padding:0 2px}
+/* findings */
+.find{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.find li{padding:12px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.find b{font-weight:600}
+.find small{color:var(--ink-3);font-size:13px}
+blockquote{margin:6px 0 0;padding:0 0 0 12px;border-left:2px solid var(--rule);color:var(--ink-2)}
+/* compare */
+.cmp{background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow:clip}
+.cmp-head{position:sticky;top:0;z-index:2;background:var(--card);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px;border-bottom:1px solid var(--rule)}
+.cmp-head figure{margin:0;text-align:center;min-width:0}
+.cmp-head img{width:100%;max-width:96px;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.cmp-head figcaption{font:600 13px/1.3 var(--font-display);margin-top:6px;overflow-wrap:anywhere}
+.row{padding:10px 12px;border-bottom:1px solid var(--rule)}
+.row:last-child{border-bottom:0}
+.row h3{font:600 13px/1.3 var(--font-body);color:var(--ink-3);margin:0 0 6px;letter-spacing:.02em}
+.cells{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;font-size:14px;line-height:1.45}
+.cells div{min-width:0;overflow-wrap:anywhere}
+.na{color:var(--ink-3)}
+.yes{color:var(--good);font-weight:600}
+/* product notes */
+.prod{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:16px;margin-bottom:12px;display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px}
+.prod img{width:72px;height:72px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.prod h3{font-size:17px;margin:0 0 4px}
+.prod p{margin:4px 0;font-size:15px}
+.prod .fits{color:var(--ink-2)}
+.shop{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:10px;font-size:14px;color:var(--ink-3)}
+.shop a{border:1px solid var(--ink-3);border-radius:4px;padding:4px 12px;text-decoration:none;color:var(--ink);white-space:nowrap}
+.shop a:hover{border-color:var(--ink)}
+.shop a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* caveats */
+.cav{list-style:none;padding:0;margin:0}
+.cav li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid var(--rule)}
+.cav li::before{content:"!";position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;background:var(--chip);color:var(--warn);font:600 12px/18px var(--font-display);text-align:center}
+.src{font-size:14px;color:var(--ink-2)}
+.src li{margin:3px 0}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-3)}
+
+.mast a.home{font-family:var(--font-display);font-weight:600;color:var(--ink);text-decoration:none}.clips{margin-top:6px}.clips a{color:var(--ink);text-underline-offset:3px}.srch{font-size:15px;margin:18px 0 4px}.src a{color:var(--ink-2);text-underline-offset:3px}footer a{color:var(--ink-2)}.cmp-head,.cells{grid-template-columns:repeat(3,minmax(0,1fr))}</style></head>
+<body style="--n:3"><div class="wrap">
+<div class="mast"><a href="/" class="home">สรุปให้ตัวไหนดี</a><span>สรุปจากผู้ใช้จริง <span class="code">รหัส 74</span></span></div>
+<header class="top"><h1>เครื่องทำน้ำอุ่น ตัวไหนดี?</h1>
+<p class="meta"><span>อ่านคอมเมนต์ 1,565 รายการจาก 30 คลิป</span> · <span>เสียงคนใช้หลายปีที่บอกยี่ห้อราว 30 เสียง</span> · <span>อัปเดต 18 ต.ค. 2569</span></p>
+<p class="meta clips"><a href="https://th.shp.ee/txf6l8ky" rel="noopener">คลิปใน Shopee</a></p></header>
+<div class="verdict"><h2>สรุปสั้น</h2><ul><li>เรื่องที่ช่างและคนใช้พูดตรงกันที่สุดคือ <b>ต้องต่อสายดิน</b> และกดปุ่มทดสอบตัดไฟรั่วเป็นประจำ <mark>ไม่ต่อสายดิน ระบบตัดไฟรั่วอาจไม่ตัด</mark></li><li>เลือก <b>วัตต์ให้เข้ากับแรงน้ำ</b> บ้านน้ำแรงหรือมีปั๊มควรใช้ 4,500 W ขึ้นไป ไม่งั้นน้ำไม่ร้อน ส่วนบ้านน้ำเบาควรใช้รุ่นมีปั๊มในตัว ซึ่งสามรุ่นในหน้านี้ไม่มี</li><li>ดู <b>วัสดุหม้อต้มและประกันฮีตเตอร์</b> คนใช้เล่าว่าหม้อพลาสติกวิศวกรรม (Grilon/Polyamide) และทองแดงทนกว่าอลูมิเนียม บ้านน้ำกระด้างมีปัญหาตะกรันมากกว่า</li></ul></div>
+<section><h2>เสียงจากผู้ใช้จริง</h2><ul class="find"><li><b>น้ำไม่ร้อนเป็นอาการที่ถามมากที่สุด หลายครั้งแค่กดปุ่มรีเซ็ตเทอร์โมสตัท</b><small>104 คอมเมนต์ในคลิปช่าง</small><blockquote>“กดรีเซ็ตแล้วหาย”</blockquote></li><li><b>ความปลอดภัย: ต้องมีสายดินและระบบตัดไฟรั่ว</b><small>สายดิน 23 คอมเมนต์ · ELCB/ELB 51 คอมเมนต์</small><blockquote>“ไม่ต่อสายดิน ELCB ไม่ตัด”</blockquote><blockquote>“ขอให้มีสายดิน เครื่องเก่าใหม่ก็ตัดหมด”</blockquote></li><li><b>หม้อต้มพลาสติกวิศวกรรมกับทองแดงถูกชม อลูมิเนียมถูกบ่น</b><small>ทองแดง 29 คอมเมนต์ · อลูมิเนียม 1 เสียงชัด</small><blockquote>“รื้อเครื่องหม้อ Grilon อายุสิบกว่าปี ยังกริ๊ป ไม่มีตะกรัน ไม่แตก”</blockquote><blockquote>“รั่วแล้วเชื่อมซ่อมไม่ได้ เปลี่ยนมาใช้เพื่อลดต้นทุน”</blockquote></li><li><b>แรงน้ำบ้านต้องเข้ากับวัตต์ของเครื่อง</b><small>บ้านน้ำแรงเกินหรือเบาเกิน ทำให้เครื่องไม่ร้อนได้</small><blockquote>“ใช้ปั๊มบ้าน + 4,500 W เปิดสุดได้แค่ 38 องศา”</blockquote></li><li><b>Panasonic มีเสียงคนใช้ระยะยาวด้านบวกมากที่สุด</b><small>เอ่ยถึง 32 ครั้ง</small><blockquote>“ใช้ 10 ปีไม่มีปัญหา”</blockquote><blockquote>“ใช้มา 2–3 รุ่นใน 20–30 ปี”</blockquote></li><li><b>ข้อมูลเอียงไปทางอาการเสีย</b><small>คอมเมนต์ส่วนใหญ่มาจากคลิปซ่อม คนที่เครื่องเสียจึงมาถาม</small><blockquote>“เลือกยี่ห้อดังๆ ไว้ก่อน ไม่ใช่ไม่เสีย แต่ QC ดีกว่า”</blockquote></li></ul></section>
+<section><h2>เทียบ 3 ตัวแบบแถวต่อแถว</h2><p class="sub">สเปกจากเว็บแบรนด์และร้านค้า (ดูที่มาท้ายหน้า) และเสียงคนใช้</p>
+<div class="cmp"><div class="cmp-in"><div class="cmp-head"><figure><img src="https://cf.shopee.co.th/file/th-11134207-7rasl-m7j2qhn7ab27be_tn" alt="Panasonic DH-3VL1TW 3,500 W" loading="lazy"><figcaption>Panasonic DH-3VL1TW</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/th-11134207-7rasl-m7j2qhn7ab27be_tn" alt="Panasonic DH-4VL1TW1 4,500 W" loading="lazy"><figcaption>Panasonic DH-4VL1TW1</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/sg-11134201-82580-mua4iczex1jc82_tn" alt="Stiebel Eltron DX 35 E 3,500 W" loading="lazy"><figcaption>Stiebel DX 35 E</figcaption></figure></div><div class="row"><h3>กำลังไฟ</h3><div class="cells"><div>3,500 W</div><div>4,500 W</div><div>3,500 W</div></div></div><div class="row"><h3>วัสดุหม้อต้ม / ตัวทำความร้อน</h3><div class="cells"><div>ฮีตเตอร์ทองแดง แทงค์พลาสติก (ร้านค้า)</div><div>ฮีตเตอร์ทองแดง แทงค์พลาสติก (ร้านค้า)</div><div>Reinforced Polyamide (Power Buy)</div></div></div><div class="row"><h3>ระบบตัดไฟรั่วในเครื่อง (ยังต้องต่อสายดิน)</h3><div class="cells"><div>มี ELB (ร้านค้า)</div><div>มี ELB</div><div>มี ELSD</div></div></div><div class="row"><h3>มาตรฐานกันน้ำ (IEC 60529)</h3><div class="cells"><div>IP25 (ร้านค้า)</div><div>IP25</div><div>IP24 / IP25</div></div></div><div class="row"><h3>แรงดันน้ำที่ใช้ได้</h3><div class="cells"><div>0.1–3.87 กก./ตร.ซม. (ร้านค้า)</div><div>0.1–3.87 กก./ตร.ซม.</div><div>แบรนด์ไม่ระบุ (ระบุแค่น้ำไหลขั้นต่ำ 1.2 ลิตร/นาที)</div></div></div><div class="row"><h3>การปรับอุณหภูมิ</h3><div class="cells"><div>ปุ่มหมุน ไม่มีจอ (ร้านค้า)</div><div>ปุ่มหมุน ไม่มีจอ</div><div>ปุ่มหมุนปรับได้ต่อเนื่อง</div></div></div><div class="row"><h3>ประกัน</h3><div class="cells"><div>หม้อต้ม 5 ปี · อะไหล่ 1 ปี (ร้านค้า)</div><div>ตัวทำความร้อน 5 ปี (ร้านค้า)</div><div>ฮีตเตอร์ 5 ปี · อะไหล่และบริการ 1 ปี</div></div></div><div class="row"><h3>คนใช้หลายปีพูดถึงยี่ห้อ</h3><div class="cells"><div>เอ่ยถึง 32 ครั้ง · เสียงบวกระยะยาวมากสุด 10–30 ปี</div><div>ยี่ห้อเดียวกับช่องซ้าย (เสียงไม่แยกรุ่น)</div><div>เอ่ยถึง 5 ครั้ง · “หม้อต้ม Grilon ใช้กันมาเป็น 10 ปี”</div></div></div><div class="row"><h3>คะแนนใน Shopee (แค่ความประทับใจแรก)</h3><div class="cells"><div>★4.86 · 5,498 รีวิว</div><div>★4.91 · 858 รีวิว</div><div>★4.9 · 327 รีวิว</div></div></div><div class="row"><h3>เหมาะกับ</h3><div class="cells"><div>บ้านทั่วไป น้ำปกติ</div><div>บ้านน้ำแรง มีปั๊ม</div><div>บ้านน้ำกระด้าง</div></div></div></div></div></section>
+<section><h2>รายตัว</h2><p class="sub">ราคาคือราคาวันที่เก็บข้อมูล อาจเปลี่ยนแล้ว</p><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-7rasl-m7j2qhn7ab27be_tn" alt="" loading="lazy"><div><h3>Panasonic DH-3VL1TW 3,500 W</h3><p>3,500 W มี ELB ในตัวและกันน้ำ IP25 ร้านค้าระบุประกันหม้อต้ม 5 ปี Panasonic เป็นยี่ห้อที่คนใช้เล่าว่าใช้ได้ 10–30 ปีมากที่สุดในข้อมูลที่เราอ่าน</p><p class="fits">เหมาะกับ: บ้านทั่วไป น้ำปกติ</p><div class="shop"><span>~฿2,633 (18 ต.ค. 2569)</span><a class="go" data-pid="42626027/1514646301" href="/go?p=42626027/1514646301&amp;s=water-heater&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a><a class="go" data-pid="85000935/5838449004" href="/go?p=85000935/5838449004&amp;s=water-heater&amp;ch=hub" rel="nofollow sponsored">ร้านอื่น (ฮวดพานิช)</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-7rasl-m7j2qhn7ab27be_tn" alt="" loading="lazy"><div><h3>Panasonic DH-4VL1TW1 4,500 W</h3><p>รุ่นเดียวกันแต่ 4,500 W สำหรับบ้านที่น้ำแรงหรือต่อปั๊ม ไม่มีปั๊มในตัว ถ้าน้ำแรงมาก คนใช้บางคนเล่าว่าเปิดสุดยังได้แค่ราว 38 องศา</p><p class="fits">เหมาะกับ: บ้านน้ำแรง มีปั๊ม</p><div class="shop"><span>~฿2,980 (18 ต.ค. 2569)</span><a class="go" data-pid="85000935/6951905654" href="/go?p=85000935/6951905654&amp;s=water-heater&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/sg-11134201-82580-mua4iczex1jc82_tn" alt="" loading="lazy"><div><h3>Stiebel Eltron DX 35 E 3,500 W</h3><p>หม้อต้มเป็นพลาสติกวิศวกรรม Reinforced Polyamide มีระบบตัดไฟรั่ว ELSD และประกันฮีตเตอร์ 5 ปี เสียงคนใช้ของยี่ห้อนี้ยังน้อย (5 ครั้ง) แต่เป็นด้านบวก</p><p class="fits">เหมาะกับ: บ้านน้ำกระด้าง</p><div class="shop"><span>~฿2,298 (18 ต.ค. 2569)</span><a class="go" data-pid="39516382/607143658" href="/go?p=39516382/607143658&amp;s=water-heater&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a><a class="go" data-pid="617921716/12862690837" href="/go?p=617921716/12862690837&amp;s=water-heater&amp;ch=hub" rel="nofollow sponsored">รุ่นแทงค์ทองแดง WS 35E-2</a><a class="go" data-pid="39516382/7546025327" href="/go?p=39516382/7546025327&amp;s=water-heater&amp;ch=hub" rel="nofollow sponsored">รุ่น 4,500 W CHROME-2</a></div></div></article></section>
+<section><h2>สิ่งที่เราไม่เคลม</h2><ul class="cav"><li>ไม่บอกว่ายี่ห้อไหนทนที่สุด เสียงที่บอกยี่ห้อมีราว 30 เสียง และคอมเมนต์ส่วนใหญ่มาจากคลิปซ่อม</li><li>ไม่เคลมว่ายี่ห้อที่มีคลิปซ่อมเยอะเสียบ่อยกว่า จำนวนคลิปไม่ใช่อัตราเสีย</li><li>ไม่เคลมว่าเครื่องมีระบบตัดไฟรั่วแล้วไม่ต้องต่อสายดิน ช่างย้ำว่าต้องต่อ</li><li>ไม่เคลมผลต่อผิวหรือสุขภาพจากเครื่องทำน้ำอุ่นหรือไส้กรองฝักบัว</li><li>วัสดุหม้อต้มของ Panasonic สองรุ่นนี้ร้านค้าเขียนไม่ตรงกัน (บางร้านว่าหม้อทองแดง บางร้านว่าแทงค์พลาสติก) เราใช้ข้อความที่ร้านส่วนใหญ่เขียน</li><li>สเปกรุ่น 4,500 W มาจากหน้า DH-4VL1TW ของ Panasonic ในร้านใช้รหัส DH-4VL1TW1</li></ul></section>
+<section><h2>ที่มาของข้อมูล</h2><ul class="src"><li>YouTube ไทย: สอนonline อ.สงกรานต์, นายช่างเล็ก, ช่างหนูวิเศษ, สองสิงห์ Modify, Extreme IT, Daddy's Tips และอื่นๆ (1,565 คอมเมนต์ 30 คลิป)</li></ul><h3 class="srch">ที่มาของสเปก</h3><ul class="src"><li><a href="https://www.panasonic.com/th/consumer/home-appliance/water-heater/single-point-shower/dh-4vl1tw.specs.html" rel="noopener">Panasonic Thailand DH-4VL1TW (สเปก)</a></li><li><a href="https://www.thianthong.com/panasonic-dh-3vl1tw-3500w.html" rel="noopener">เธียรทอง Panasonic DH-3VL1TW</a></li><li><a href="https://www.gooddeal.co.th/product/191385-188402/dh-3vl1t" rel="noopener">Gooddeal Panasonic DH-3VL1T</a></li><li><a href="https://www.panyaeshop.com/product/344475-235180/dh-4vl1tw" rel="noopener">Panyae Panasonic DH-4VL1TW (ประกัน)</a></li><li><a href="https://stiebeleltron.ph/product/stiebel-eltron-water-heater-dx-series/" rel="noopener">Stiebel Eltron DX Series (เว็บแบรนด์ ฟิลิปปินส์)</a></li><li><a href="https://www.powerbuy.co.th/th/product/stiebel-eltron-%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%AD%E0%B8%B8%E0%B9%88%E0%B8%99-stiebel-dx-35e-213159" rel="noopener">Power Buy Stiebel DX 35 E</a></li></ul></section>
+<footer>ลิงก์ร้านเป็นลิงก์แอฟฟิลิเอท ถ้าซื้อผ่านลิงก์เราได้ค่าคอมมิชชันจาก Shopee ราคาที่คุณจ่ายเท่าเดิม · <a href="/">ดูหมวดอื่น</a></footer>
+</div>
+<script>
+(function(){var q=new URLSearchParams(location.search),ch=(q.get('ch')||'hub').replace(/[^a-z0-9-]/gi,'').slice(0,12)||'hub';
+document.querySelectorAll('a.go').forEach(function(a){a.href='/go?p='+encodeURIComponent(a.dataset.pid)+'&s=water-heater&ch='+encodeURIComponent(ch);});
+document.querySelectorAll('a.home').forEach(function(a){a.href='/?ch='+encodeURIComponent(ch);});})();
+</script>
+</body></html>
