@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ผ้าห่มเย็น ตัวไหนดี? · สรุปให้ตัวไหนดี</title>
+<meta name="description" content="สรุปจากเสียงผู้ใช้จริง: ผ้าห่มเย็น เทียบสเปกและเสียงคนใช้แบบแถวต่อแถว">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Kanit:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5ef; --card:#ffffff; --ink:#1b2340; --ink-2:#4a5270; --ink-3:#7a8099;
+  --rule:#dcd8cc; --accent:#f5c518; --accent-ink:#1b2340; --mark:#fff1b0;
+  --good:#1f7a4d; --warn:#a2541b; --chip:#eceae2;
+  --font-display:"Kanit",system-ui,sans-serif; --font-body:"Anuphan",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}}
+:root[data-theme="dark"]{--paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 var(--font-body)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;font-style:normal;line-height:1.25;overflow-wrap:anywhere;min-width:0}
+a{color:inherit}
+.mast{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-2)}
+.mast b{font-family:var(--font-display);font-weight:600;color:var(--ink)}
+.code{background:var(--accent);color:var(--accent-ink);font-weight:600;border-radius:4px;padding:1px 8px;white-space:nowrap}
+header.top{padding:28px 0 8px}
+header.top h1{font-size:clamp(28px,7vw,40px);margin:0 0 10px}
+.meta{color:var(--ink-2);font-size:14px;margin:0}
+.meta span{white-space:nowrap}
+.verdict{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:16px 18px;margin:22px 0 8px}
+.verdict h2{font-size:18px;margin:0 0 8px}
+.verdict ul{margin:0;padding-left:20px}
+.verdict li{margin:4px 0}
+section{padding-top:34px}
+section>h2{font-size:22px;margin:0 0 4px}
+.sub{color:var(--ink-2);font-size:14px;margin:0 0 16px}
+mark{background:var(--mark);color:inherit;padding:0 2px}
+/* findings */
+.find{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.find li{padding:12px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.find b{font-weight:600}
+.find small{color:var(--ink-3);font-size:13px}
+blockquote{margin:6px 0 0;padding:0 0 0 12px;border-left:2px solid var(--rule);color:var(--ink-2)}
+/* compare */
+.cmp{background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow:clip}
+.cmp-head{position:sticky;top:0;z-index:2;background:var(--card);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px;border-bottom:1px solid var(--rule)}
+.cmp-head figure{margin:0;text-align:center;min-width:0}
+.cmp-head img{width:100%;max-width:96px;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.cmp-head figcaption{font:600 13px/1.3 var(--font-display);margin-top:6px;overflow-wrap:anywhere}
+.row{padding:10px 12px;border-bottom:1px solid var(--rule)}
+.row:last-child{border-bottom:0}
+.row h3{font:600 13px/1.3 var(--font-body);color:var(--ink-3);margin:0 0 6px;letter-spacing:.02em}
+.cells{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;font-size:14px;line-height:1.45}
+.cells div{min-width:0;overflow-wrap:anywhere}
+.na{color:var(--ink-3)}
+.yes{color:var(--good);font-weight:600}
+/* product notes */
+.prod{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:16px;margin-bottom:12px;display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px}
+.prod img{width:72px;height:72px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.prod h3{font-size:17px;margin:0 0 4px}
+.prod p{margin:4px 0;font-size:15px}
+.prod .fits{color:var(--ink-2)}
+.shop{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:10px;font-size:14px;color:var(--ink-3)}
+.shop a{border:1px solid var(--ink-3);border-radius:4px;padding:4px 12px;text-decoration:none;color:var(--ink);white-space:nowrap}
+.shop a:hover{border-color:var(--ink)}
+.shop a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* caveats */
+.cav{list-style:none;padding:0;margin:0}
+.cav li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid var(--rule)}
+.cav li::before{content:"!";position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;background:var(--chip);color:var(--warn);font:600 12px/18px var(--font-display);text-align:center}
+.src{font-size:14px;color:var(--ink-2)}
+.src li{margin:3px 0}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-3)}
+
+.mast a.home{font-family:var(--font-display);font-weight:600;color:var(--ink);text-decoration:none}.clips{margin-top:6px}.clips a{color:var(--ink);text-underline-offset:3px}.srch{font-size:15px;margin:18px 0 4px}.src a{color:var(--ink-2);text-underline-offset:3px}footer a{color:var(--ink-2)}.cmp-head,.cells{grid-template-columns:repeat(3,minmax(0,1fr))}</style></head>
+<body style="--n:3"><div class="wrap">
+<div class="mast"><a href="/" class="home">สรุปให้ตัวไหนดี</a><span>สรุปจากผู้ใช้จริง <span class="code">รหัส 78</span></span></div>
+<header class="top"><h1>ผ้าห่มเย็น ตัวไหนดี?</h1>
+<p class="meta"><span>อ่านคอมเมนต์ 320 รายการจาก 16 คลิป</span> · <span>Pantip 8 กระทู้</span> · <span>กลุ่ม FB 4 กลุ่ม (ข้อมูลบาง)</span> · <span>อัปเดต 18 ต.ค. 2569</span></p>
+<p class="meta clips"><a href="https://th.shp.ee/53en4mrs" rel="noopener">คลิปใน Shopee</a></p></header>
+<div class="verdict"><h2>สรุปสั้น</h2><ul><li>ผ้าห่มเย็น <b>ไม่ได้ทำความเย็นเอง</b> แค่ช่วยระบายความร้อนจากตัว จึงต้องใช้คู่พัดลมหรือแอร์ ถ้าห้องแอร์เย็นจัดอาจหนาว</li><li>ปัญหาที่คนเจอบ่อยที่สุดคือ <b>ขึ้นขุยหลังซักไม่กี่ครั้ง</b> ทำให้คันและเย็นน้อยลง ดูเนื้อผ้าและวิธีซักก่อนซื้อ</li><li>เสียงคนใช้ระยะยาวในหมวดนี้มีน้อยมาก ยี่ห้อที่มีเสียงใช้นานชัดที่สุดคือ <mark>IKEA (4–5 ปี)</mark></li></ul></div>
+<section><h2>เสียงจากผู้ใช้จริง</h2><ul class="find"><li><b>ขึ้นขุยเป็นปัญหาอันดับ 1</b><small>20 คอมเมนต์ · เสียงซ้ำมากกับ Nitori (4 เสียง)</small><blockquote>“ผืน 3,000 กว่า ไม่ถึงปี ขุยเต็ม เก็บเข้าตู้”</blockquote><blockquote>“ขุยจนคันตัว ไม่ค่อยเย็น ย้ายไป Bewell”</blockquote></li><li><b>IKEA มีเสียงใช้นานดีที่สุด และราคาถูก</b><small>14 คอมเมนต์เอ่ยถึง IKEA</small><blockquote>“รุ่นถูกสีขาว เย็นมาก ทนมาก 4–5 ปียังใช้”</blockquote><blockquote>“วาฟเฟิล ยิ่งซักยิ่งนิ่ม”</blockquote></li><li><b>Bewell เสียงส่วนใหญ่บวก แต่ยังใช้ไม่นาน</b><small>10 คอมเมนต์ · เสียงใช้ 3–4 เดือน</small><blockquote>“3–4 เดือน the best นอนห้องแอร์เย็นสบาย”</blockquote><blockquote>“ซักครั้งเดียวขุย ด้ายตึงหลุดเป็นแถบ (1 เสียง)”</blockquote></li><li><b>เปิดแอร์แล้วจะหนาวไหม</b><small>คำถามซ้ำทั้ง YouTube และกลุ่ม FB</small><blockquote>“แอร์ 21–29 องศาสบาย”</blockquote><blockquote>“บางยี่ห้อเย็นจนหนาว”</blockquote></li><li><b>ไม่เปิดแอร์ใช้ได้ไหม</b><small>เสียงแตก</small><blockquote>“ห้องพัดลมก็เย็นได้ (2 เสียง)”</blockquote><blockquote>“5 นาทีแรกเย็น แล้วก็ร้อนเท่าตัว (1 เสียง)”</blockquote></li><li><b>คนขี้ร้อนแต่ต้องห่ม มีอยู่จริง</b><small>กระทู้ Pantip มีคนตอบ 70 ความเห็น ส่วนใหญ่ห่มทุกคืนแม้เปิดแอร์ · คนเอ่ยถึง MUJI และ Nitori</small></li></ul></section>
+<section><h2>เทียบ 3 ตัวแบบแถวต่อแถว</h2><p class="sub">สเปกจากเว็บแบรนด์และร้านค้า (ดูที่มาท้ายหน้า) และเสียงคนใช้</p>
+<div class="cmp"><div class="cmp-in"><div class="cmp-head"><figure><img src="https://cf.shopee.co.th/file/th-11134207-81ztc-ms52zc1ilts624_tn" alt="Bewell ผ้าห่มเย็นอเนกประสงค์ นุ่มลื่น (Bewell Official Store)" loading="lazy"><figcaption>Bewell ผ้าห่มเย็น</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/th-11134207-7rasa-m85q6xf7zpzja0_tn" alt="IKEA GRÄSROTSFLY แกรสรอตส์ฟลาย ผ้านวมเย็นสบาย (ร้านหิ้ว PromptVanich)" loading="lazy"><figcaption>IKEA GRÄSROTSFLY</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/th-11134207-7r992-lqxfqa1kgdkt43_tn" alt="MUJI Cotton Cool Touch Thin Duvet ผ้าห่มเย็นมูจิ (ร้านหิ้ว ChonShops)" loading="lazy"><figcaption>MUJI ผ้าห่มเย็นผ้าฝ้าย</figcaption></figure></div><div class="row"><h3>เนื้อผ้าด้านนอก</h3><div class="cells"><div>ไนลอน + สแปนเด็กซ์ (HomePro)</div><div>ไลโอเซลล์ 100%</div><div>ผ้าฝ้าย 100% (รุ่นญี่ปุ่นปี 2026)</div></div></div><div class="row"><h3>ไส้</h3><div class="cells"><div>แบรนด์ไม่ระบุ</div><div>โพลีเอสเตอร์ 90% · วิสโคส 10%</div><div>โพลีเอสเตอร์</div></div></div><div class="row"><h3>ขนาดที่แบรนด์มี</h3><div class="cells"><div>150 × 200 / 200 × 230 ซม. (HomePro)</div><div>150 × 200 / 240 × 220 ซม.</div><div>S 140 × 190 / D 180 × 200 ซม.</div></div></div><div class="row"><h3>น้ำหนัก (ผืนเล็กสุด)</h3><div class="cells"><div>1.52 กก. (HomePro)</div><div class=yes>1.08 กก.</div><div>แบรนด์ไม่ระบุ</div></div></div><div class="row"><h3>วิธีซัก</h3><div class="cells"><div>เครื่องซักรอบหมุนต่ำ · ผึ่งในร่ม · ห้ามฟอกขาว (HomePro)</div><div>เครื่องซักไม่เกิน 60°C · อบผ้าได้ไม่เกิน 80°C</div><div>ซักเครื่องได้ ใส่ถุงซัก</div></div></div><div class="row"><h3>เรื่องขุย (เสียงคนใช้)</h3><div class="cells"><div>มี 1 เสียงว่าซักครั้งเดียวขุย</div><div>ไม่เจอเสียงขุย</div><div>ยังไม่มีเสียงคนใช้ไทยเรื่องขุย</div></div></div><div class="row"><h3>เสียงคนใช้ระยะยาว</h3><div class="cells"><div>ใช้ 3–4 เดือน เย็นสบายในห้องแอร์</div><div class=yes>IKEA รุ่นถูกใช้ 4–5 ปี (ระดับยี่ห้อ)</div><div>ชมว่าดี แต่เสียงน้อย ไม่มีเสียงใช้นาน</div></div></div><div class="row"><h3>ร้านใน Shopee</h3><div class="cells"><div>ร้านทางการของแบรนด์</div><div>ร้านหิ้ว (IKEA ไม่มีร้านทางการ)</div><div>ร้านหิ้ว (MUJI ไม่มีร้านทางการ)</div></div></div><div class="row"><h3>คะแนนใน Shopee (แค่ความประทับใจแรก)</h3><div class="cells"><div>★4.93 · 177 รีวิว</div><div>★5.0 · 7 รีวิว</div><div>★5.0 · 25 รีวิว</div></div></div><div class="row"><h3>เหมาะกับ</h3><div class="cells"><div>นอนห้องแอร์</div><div>งบน้อย อยากได้ทน</div><div>ขี้ร้อนแต่ต้องห่ม</div></div></div></div></div></section>
+<section><h2>รายตัว</h2><p class="sub">ราคาคือราคาวันที่เก็บข้อมูล อาจเปลี่ยนแล้ว</p><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-81ztc-ms52zc1ilts624_tn" alt="" loading="lazy"><div><h3>Bewell ผ้าห่มเย็นอเนกประสงค์ นุ่มลื่น (Bewell Official Store)</h3><p>ผ้าห่มเย็นเนื้อลื่นจากร้านทางการ คนใช้ 3–4 เดือนเล่าว่านอนห้องแอร์แล้วเย็นสบาย ยังไม่มีเสียงใช้เกิน 1 ปี และมี 1 เสียงว่าขึ้นขุยหลังซัก</p><p class="fits">เหมาะกับ: นอนห้องแอร์</p><div class="shop"><span>~฿1,699 (18 ต.ค. 2569)</span><a class="go" data-pid="39233325/27493746216" href="/go?p=39233325/27493746216&amp;s=cooling-blanket&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a><a class="go" data-pid="39233325/27005518392" href="/go?p=39233325/27005518392&amp;s=cooling-blanket&amp;ch=hub" rel="nofollow sponsored">รุ่นผ้าห่มเย็นอัจฉริยะ</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-7rasa-m85q6xf7zpzja0_tn" alt="" loading="lazy"><div><h3>IKEA GRÄSROTSFLY แกรสรอตส์ฟลาย ผ้านวมเย็นสบาย (ร้านหิ้ว PromptVanich)</h3><p>ผ้านวมผิวไลโอเซลล์ ขนาด 150 × 200 ซม. หนัก 1.08 กก. ซักเครื่องได้ถึง 60°C IKEA เป็นยี่ห้อที่มีเสียงคนใช้ 4–5 ปี แต่ใน Shopee มีแค่ร้านหิ้ว รีวิวยังน้อย</p><p class="fits">เหมาะกับ: งบน้อย อยากได้ทน</p><div class="shop"><span>~฿1,189 (18 ต.ค. 2569)</span><a class="go" data-pid="138796984/17999065315" href="/go?p=138796984/17999065315&amp;s=cooling-blanket&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-7r992-lqxfqa1kgdkt43_tn" alt="" loading="lazy"><div><h3>MUJI Cotton Cool Touch Thin Duvet ผ้าห่มเย็นมูจิ (ร้านหิ้ว ChonShops)</h3><p>ผ้าห่มบางผิวผ้าฝ้ายที่แต่งผิวให้สัมผัสเย็น ซักเครื่องได้ แพงที่สุดในสามตัว มีคนเอ่ยถึงทั้งใน YouTube และ Pantip แต่ยังไม่มีเสียงใช้นาน</p><p class="fits">เหมาะกับ: ขี้ร้อนแต่ต้องห่ม</p><div class="shop"><span>~฿3,599 (18 ต.ค. 2569)</span><a class="go" data-pid="2232236/24010827662" href="/go?p=2232236/24010827662&amp;s=cooling-blanket&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a></div></div></article></section>
+<section><h2>สิ่งที่เราไม่เคลม</h2><ul class="cav"><li>ไม่เคลมว่าเย็นได้โดยไม่เปิดแอร์หรือพัดลม เสียงคนใช้ยังแตกกัน</li><li>ไม่เคลมว่าปรับอุณหภูมิหรือลดอุณหภูมิร่างกายได้ แม้ชื่อสินค้าบางร้านเขียนไว้ และไม่เคลมเรื่องช่วยคนแพ้ง่าย</li><li>ไม่บอกว่ายี่ห้อไหนไม่ขุยแน่นอน เสียงยังน้อยเกินไป</li><li>สเปก Bewell มาจากรุ่น Smart Cool ที่ HomePro ขาย เราเปิดหน้า Shopee เพื่อเทียบว่าเป็นผืนเดียวกันไม่ได้ ขนาดและน้ำหนักของลิสต์นี้อาจต่างไป</li><li>MUJI ญี่ปุ่นเปลี่ยนผิวผ้าเป็นผ้าฝ้าย 100% ในรุ่นปี 2026 รุ่นก่อนเป็นใยสังเคราะห์ ร้านหิ้วอาจส่งล็อตไหนก็ได้ ถามร้านก่อนซื้อ</li><li>IKEA และ MUJI ในตารางเป็นร้านหิ้ว ไม่ใช่ร้านทางการของแบรนด์</li></ul></section>
+<section><h2>ที่มาของข้อมูล</h2><ul class="src"><li>YouTube ไทย: ลองให้ 2 คลิป (Nitori และยี่ห้อยอดนิยม · IKEA vs MUJI) และคลิปแบรนด์อื่นๆ รวม 16 คลิป คอมเมนต์ 320 รายการ (ไทย 209)</li><li>Pantip: ค้น 10 คำ อ่าน 8 กระทู้</li><li>กลุ่ม Facebook: แชร์ทริคงานบ้าน, งานบ้านที่รัก, พวกเราคือผู้บริโภค และอีก 1 กลุ่ม (ส่วนใหญ่เป็นคำถามและลิงก์ขาย)</li></ul><h3 class="srch">ที่มาของสเปก</h3><ul class="src"><li><a href="https://www.homepro.co.th/p/1269586" rel="noopener">HomePro Bewell Smart Cool 150×200 ซม.</a></li><li><a href="https://www.homepro.co.th/p/1269609" rel="noopener">HomePro Bewell Smart Cool 200×230 ซม.</a></li><li><a href="https://www.ikea.com/ee/en/p/graesrotsfly-duvet-cool-50602386/" rel="noopener">IKEA GRÄSROTSFLY 150×200 ซม.</a></li><li><a href="https://www.ikea.com/ee/en/p/graesrotsfly-duvet-cool-10602393/" rel="noopener">IKEA GRÄSROTSFLY 240×220 ซม.</a></li><li><a href="https://www.roomie.jp/2026/06/1781112/" rel="noopener">roomie.jp: MUJI ひんやり綿 薄掛ふとん (2026)</a></li><li><a href="https://www.muji.com/jp/ja/shop/046753/articles/muji-staff/1676885" rel="noopener">MUJI ร้านสาขาญี่ปุ่น: ひんやり綿 薄掛ふとん ขนาด S/D</a></li></ul></section>
+<footer>ลิงก์ร้านเป็นลิงก์แอฟฟิลิเอท ถ้าซื้อผ่านลิงก์เราได้ค่าคอมมิชชันจาก Shopee ราคาที่คุณจ่ายเท่าเดิม · <a href="/">ดูหมวดอื่น</a></footer>
+</div>
+<script>
+(function(){var q=new URLSearchParams(location.search),ch=(q.get('ch')||'hub').replace(/[^a-z0-9-]/gi,'').slice(0,12)||'hub';
+document.querySelectorAll('a.go').forEach(function(a){a.href='/go?p='+encodeURIComponent(a.dataset.pid)+'&s=cooling-blanket&ch='+encodeURIComponent(ch);});
+document.querySelectorAll('a.home').forEach(function(a){a.href='/?ch='+encodeURIComponent(ch);});})();
+</script>
+</body></html>
