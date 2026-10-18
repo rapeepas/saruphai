@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>พาวเวอร์แบงก์ ตัวไหนดี? · สรุปให้ตัวไหนดี</title>
+<meta name="description" content="สรุปจากเสียงผู้ใช้จริง: พาวเวอร์แบงก์ เทียบสเปกและเสียงคนใช้แบบแถวต่อแถว">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Kanit:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5ef; --card:#ffffff; --ink:#1b2340; --ink-2:#4a5270; --ink-3:#7a8099;
+  --rule:#dcd8cc; --accent:#f5c518; --accent-ink:#1b2340; --mark:#fff1b0;
+  --good:#1f7a4d; --warn:#a2541b; --chip:#eceae2;
+  --font-display:"Kanit",system-ui,sans-serif; --font-body:"Anuphan",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}}
+:root[data-theme="dark"]{--paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 var(--font-body)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;font-style:normal;line-height:1.25;overflow-wrap:anywhere;min-width:0}
+a{color:inherit}
+.mast{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-2)}
+.mast b{font-family:var(--font-display);font-weight:600;color:var(--ink)}
+.code{background:var(--accent);color:var(--accent-ink);font-weight:600;border-radius:4px;padding:1px 8px;white-space:nowrap}
+header.top{padding:28px 0 8px}
+header.top h1{font-size:clamp(28px,7vw,40px);margin:0 0 10px}
+.meta{color:var(--ink-2);font-size:14px;margin:0}
+.meta span{white-space:nowrap}
+.verdict{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:16px 18px;margin:22px 0 8px}
+.verdict h2{font-size:18px;margin:0 0 8px}
+.verdict ul{margin:0;padding-left:20px}
+.verdict li{margin:4px 0}
+section{padding-top:34px}
+section>h2{font-size:22px;margin:0 0 4px}
+.sub{color:var(--ink-2);font-size:14px;margin:0 0 16px}
+mark{background:var(--mark);color:inherit;padding:0 2px}
+/* findings */
+.find{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.find li{padding:12px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.find b{font-weight:600}
+.find small{color:var(--ink-3);font-size:13px}
+blockquote{margin:6px 0 0;padding:0 0 0 12px;border-left:2px solid var(--rule);color:var(--ink-2)}
+/* compare */
+.cmp{background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow:clip}
+.cmp-head{position:sticky;top:0;z-index:2;background:var(--card);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px;border-bottom:1px solid var(--rule)}
+.cmp-head figure{margin:0;text-align:center;min-width:0}
+.cmp-head img{width:100%;max-width:96px;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.cmp-head figcaption{font:600 13px/1.3 var(--font-display);margin-top:6px;overflow-wrap:anywhere}
+.row{padding:10px 12px;border-bottom:1px solid var(--rule)}
+.row:last-child{border-bottom:0}
+.row h3{font:600 13px/1.3 var(--font-body);color:var(--ink-3);margin:0 0 6px;letter-spacing:.02em}
+.cells{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;font-size:14px;line-height:1.45}
+.cells div{min-width:0;overflow-wrap:anywhere}
+.na{color:var(--ink-3)}
+.yes{color:var(--good);font-weight:600}
+/* product notes */
+.prod{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:16px;margin-bottom:12px;display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px}
+.prod img{width:72px;height:72px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.prod h3{font-size:17px;margin:0 0 4px}
+.prod p{margin:4px 0;font-size:15px}
+.prod .fits{color:var(--ink-2)}
+.shop{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:10px;font-size:14px;color:var(--ink-3)}
+.shop a{border:1px solid var(--ink-3);border-radius:4px;padding:4px 12px;text-decoration:none;color:var(--ink);white-space:nowrap}
+.shop a:hover{border-color:var(--ink)}
+.shop a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* caveats */
+.cav{list-style:none;padding:0;margin:0}
+.cav li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid var(--rule)}
+.cav li::before{content:"!";position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;background:var(--chip);color:var(--warn);font:600 12px/18px var(--font-display);text-align:center}
+.src{font-size:14px;color:var(--ink-2)}
+.src li{margin:3px 0}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-3)}
+
+.mast a.home{font-family:var(--font-display);font-weight:600;color:var(--ink);text-decoration:none}.clips{margin-top:6px}.clips a{color:var(--ink);text-underline-offset:3px}.srch{font-size:15px;margin:18px 0 4px}.src a{color:var(--ink-2);text-underline-offset:3px}footer a{color:var(--ink-2)}.cmp-head,.cells{grid-template-columns:repeat(3,minmax(0,1fr))}</style></head>
+<body style="--n:3"><div class="wrap">
+<div class="mast"><a href="/" class="home">สรุปให้ตัวไหนดี</a><span>สรุปจากผู้ใช้จริง <span class="code">รหัส 83</span></span></div>
+<header class="top"><h1>พาวเวอร์แบงก์ ตัวไหนดี?</h1>
+<p class="meta"><span>Pantip 55 กระทู้ ราว 150 เสียงคนใช้จริง (ปี 2556–2569)</span> · <span>คอมเมนต์ YouTube 2,045 รายการจาก 46 คลิป (เล่าว่าใช้เอง 237)</span> · <span>กลุ่ม Facebook จุดกางเต็นท์ งานบ้านที่รัก แม่บ้านชอบรีวิว</span> · <span>ไม่นับความเห็นที่แนบลิงก์ขายราว 170 ข้อ และความเห็นชมแบบสแปมปี 68–69</span> · <span>อัปเดต 19 ต.ค. 2569</span></p>
+</header>
+<div class="verdict"><h2>สรุปสั้น</h2><ul><li><b>แบตบวมเป็นได้ทุกยี่ห้อ</b> ส่วนใหญ่หลังใช้ 1–2 ปี ตัวเร่งที่คนเล่าเองคือ <mark>ทิ้งไว้ในรถ ทำตก ความร้อน และชาร์จเต็มแล้วเก็บนาน</mark> บวมแล้วให้เลิกใช้ทันที</li><li>ความจุที่ชาร์จออกได้จริง <b>ราว 60–70% ของตัวเลขบนกล่อง</b> เป็นเรื่องปกติ ส่วนตัวราคาถูกที่เขียน 90,000–150,000 mAh คนแกะดูแล้วไม่ถึงจริง</li><li>ไม่มียี่ห้อไหนที่เสียงคนใช้ยืนยันว่าไม่บวม Eloop/Orsen ถูกพูดถึงมากที่สุดและเสียงแตกทั้งสองทาง รุ่นเก่ามีเสียงทนหลายปี รุ่นใหม่บางรุ่นมีเสียงบวมไม่ถึงปี</li><li>ซื้อจากร้านศูนย์ไทยที่มีประกันและ มอก. เพราะร้านนำเข้าเคลมยาก</li></ul></div>
+<section><h2>เสียงจากผู้ใช้จริง</h2><ul class="find"><li><b>แบตบวม</b><small>Pantip ~26 · YouTube หลายเสียง (3 เดือน–5 ปี) · FB</small><blockquote>“ไม่ถึงปีบวม 3 อันแล้ว”</blockquote><blockquote>“ทิ้งไว้ในรถแล้วบวม”</blockquote></li><li><b>ชาร์จไม่เข้า วงจรรวน พอร์ตพัง</b><small>Pantip ~17 + ~8</small><blockquote>“ช่อง Type-C ชาร์จไม่เข้า”</blockquote></li><li><b>ความจุไม่ถึงที่เขียน / ของปลอม</b><small>Pantip ~13 · YouTube หลายเสียง</small><blockquote>“แกะ 38000 แล้ววัดได้ 707 mAh”</blockquote><blockquote>“รุ่น 20000 ข้างในเป็นเซลล์ 10000 ก้อนเดียว”</blockquote></li><li><b>Eloop รุ่นเก่าทน รุ่นใหม่เสียงแตก</b><small>FB E29 ~9 ชม · YouTube E14 ทน 3–8 ปี / E29 รุ่นใหม่บวม 3–4 · Pantip ทน ~14 / พัง-บวม ~25</small><blockquote>“พก 2 ตัวไปแคมป์ก็เหลือ”</blockquote><blockquote>“รุ่นใหม่บวมไม่ถึงปี”</blockquote></li><li><b>Anker ใช้ได้นาน (เสียงน้อย)</b><small>Pantip 2 เสียงตรง</small><blockquote>“ใช้มา 7 ปี”</blockquote><blockquote>“ใช้ 4–5 ปีแล้ว”</blockquote></li></ul></section>
+<section><h2>เทียบ 3 ตัวแบบแถวต่อแถว</h2><p class="sub">สเปกจากเว็บแบรนด์และร้านค้า (ดูที่มาท้ายหน้า) และเสียงคนใช้</p>
+<div class="cmp"><div class="cmp-in"><div class="cmp-head"><figure><img src="https://cf.shopee.co.th/file/sg-11134201-825b5-mucu3cl55hc18d_tn" alt="Eloop E33 แบตสำรอง 10000mAh (Orsen &amp; Eloop Thailand)" loading="lazy"><figcaption>Eloop E33 10,000 mAh</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/cn-11134207-820l4-mnspffrc3gud3f_tn" alt="Anker Zolo Powerbank 10000/20000mAh 22.5W (Anker Flagship Store)" loading="lazy"><figcaption>Anker Zolo 10,000/20,000 mAh</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/sg-11134201-825ar-mucu3h0iyz2812_tn" alt="Orsen by Eloop E29 แบตสำรอง 30000mAh (Orsen &amp; Eloop Thailand)" loading="lazy"><figcaption>Orsen E29 30,000 mAh</figcaption></figure></div><div class="row"><h3>ความจุบนกล่อง</h3><div class="cells"><div>10,000 mAh (มีรุ่น 20,000 = E34)</div><div>10,000 / 20,000 mAh</div><div>30,000 mAh</div></div></div><div class="row"><h3>ชาร์จออก</h3><div class="cells"><div>2.4A / 12W (ตามร้าน)</div><div>22.5W (ตามร้าน)</div><div>PD สูงสุด 30–45W ตามรุ่นย่อย (ตามร้าน)</div></div></div><div class="row"><h3>มาตรฐาน</h3><div class="cells"><div>มอก. 2879-2560 (รูปร้าน)</div><div>CCC (รูปร้าน) · มอก. ดูที่กล่อง</div><div>มอก. 2879-2560 (รูปร้าน)</div></div></div><div class="row"><h3>ประกัน</h3><div class="cells"><div>1 ปี (ร้านทางการ)</div><div>18 เดือน (รูปร้าน)</div><div>1 ปี (ร้านทางการ)</div></div></div><div class="row"><h3>เสียงคนใช้ระยะยาว</h3><div class="cells"><div class=yes>Eloop รุ่นเก่าใช้ 3–8 ปี · ยี่ห้อนี้มีเสียงบวมด้วย</div><div class=yes>ใช้ 4–7 ปี (2 เสียง)</div><div>อึด พก 2 ตัวไปแคมป์ / รุ่นใหม่มีเสียงบวมไม่ถึงปี</div></div></div><div class="row"><h3>เหมาะกับ</h3><div class="cells"><div>พกทุกวัน</div><div>พกทุกวัน ชาร์จเร็ว</div><div>ไฟดับหลายวัน เดินทาง (หนัก)</div></div></div></div></div></section>
+<section><h2>รายตัว</h2><p class="sub">ราคาคือราคาวันที่เก็บข้อมูล อาจเปลี่ยนแล้ว</p><article class="prod"><img src="https://cf.shopee.co.th/file/sg-11134201-825b5-mucu3cl55hc18d_tn" alt="" loading="lazy"><div><h3>Eloop E33 แบตสำรอง 10000mAh (Orsen &amp; Eloop Thailand)</h3><p>รุ่นพกทุกวันจากร้านทางการ ประกัน 1 ปี ★4.89 จาก 53,087 รีวิว</p><p class="fits">เหมาะกับ: พกทุกวัน</p><div class="shop"><span>~฿299 (19 ต.ค. 2569)</span><a class="go" data-pid="28426506/5606980067" href="/go?p=28426506/5606980067&amp;s=powerbank&amp;ch=hub" rel="nofollow sponsored">ดูใน Shopee</a><a class="go" data-pid="28426506/20896489945" href="/go?p=28426506/20896489945&amp;s=powerbank&amp;ch=hub" rel="nofollow sponsored">Eloop E34 20,000 mAh</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/cn-11134207-820l4-mnspffrc3gud3f_tn" alt="" loading="lazy"><div><h3>Anker Zolo Powerbank 10000/20000mAh 22.5W (Anker Flagship Store)</h3><p>มีสายในตัว ชาร์จเร็ว 22.5W มีคนเล่าว่าใช้ Anker 4–7 ปี แต่เสียงยังน้อย ★4.93 จาก 8,565 รีวิว</p><p class="fits">เหมาะกับ: พกทุกวัน ชาร์จเร็ว</p><div class="shop"><span>~฿999 (19 ต.ค. 2569)</span><a class="go" data-pid="1063747073/50403990152" href="/go?p=1063747073/50403990152&amp;s=powerbank&amp;ch=hub" rel="nofollow sponsored">ดูใน Shopee</a><a class="go" data-pid="1063747073/40019328083" href="/go?p=1063747073/40019328083&amp;s=powerbank&amp;ch=hub" rel="nofollow sponsored">Anker Nano 10000 45W</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/sg-11134201-825ar-mucu3h0iyz2812_tn" alt="" loading="lazy"><div><h3>Orsen by Eloop E29 แบตสำรอง 30000mAh (Orsen &amp; Eloop Thailand)</h3><p>ความจุสูงไว้ตอนไฟดับหรือแคมป์ คนในกลุ่มแคมป์บอกว่าอึด แต่มีเสียงว่ารุ่นใหม่บวมไม่ถึงปี ★4.92 จาก 9,998 รีวิว</p><p class="fits">เหมาะกับ: ไฟดับหลายวัน แคมป์</p><div class="shop"><span>~฿1,199 (19 ต.ค. 2569)</span><a class="go" data-pid="28426506/921769377" href="/go?p=28426506/921769377&amp;s=powerbank&amp;ch=hub" rel="nofollow sponsored">ดูใน Shopee</a></div></div></article></section>
+<section><h2>สิ่งที่เราไม่เคลม</h2><ul class="cav"><li>ไม่มียี่ห้อไหนที่เสียงคนใช้ยืนยันว่าไม่บวม เราจึงเล่าทั้งเสียงดีและเสียงเสียของแต่ละยี่ห้อ</li><li>ความเห็นชม Anker ปี 2568–69 ใน Pantip ราว 32 ข้อเป็นแพทเทิร์นสแปม ไม่ได้นับ หลักฐานของ Anker จึงยังบาง</li><li>Xiaomi/ZMI มีเสียงทน 3–5 ปี ~8 เสียง แต่ยังไม่เจอรุ่นที่ขายตอนนี้ผ่านเกณฑ์รีวิวใน Shopee</li><li>กฎการนำพาวเวอร์แบงก์ขึ้นเครื่องบินเปลี่ยนบ่อย เช็กกับสายการบินก่อนเดินทาง</li><li>สเปกในตารางมาจากหน้าร้านและรูปสินค้า ยังไม่ได้วัดเอง</li></ul></section>
+<section><h2>ที่มาของข้อมูล</h2><ul class="src"><li>Pantip: กระทู้พาวเวอร์แบงก์ 55 กระทู้ ปี 2556–2569</li><li>YouTube: คลิปทดสอบความจุและรีวิวระยะยาวช่องไอทีไทย 46 คลิป คอมเมนต์ 2,045 รายการ</li><li>Facebook: กลุ่มจุดกางเต็นท์ งานบ้านที่รัก แม่บ้านชอบรีวิว และโพสต์ไฟดับหาดใหญ่</li></ul></section>
+<footer>ปุ่มไป Shopee เป็นลิงก์แอฟฟิลิเอท ถ้าซื้อผ่านลิงก์เราได้ค่าคอมมิชชันจาก Shopee ราคาที่คุณจ่ายเท่าเดิม · <a href="/">ดูหมวดอื่น</a></footer>
+</div>
+<script>
+(function(){var q=new URLSearchParams(location.search),ch=(q.get('ch')||'hub').replace(/[^a-z0-9-]/gi,'').slice(0,12)||'hub';
+document.querySelectorAll('a.go').forEach(function(a){a.href='/go?p='+encodeURIComponent(a.dataset.pid)+'&s=powerbank&ch='+encodeURIComponent(ch);});
+document.querySelectorAll('a.home').forEach(function(a){a.href='/?ch='+encodeURIComponent(ch);});})();
+</script>
+</body></html>
