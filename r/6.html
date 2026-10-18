@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>เตาอบไฟฟ้า ตัวไหนดี? · สรุปให้ตัวไหนดี</title>
+<meta name="description" content="สรุปจากเสียงผู้ใช้จริง: เตาอบไฟฟ้า เทียบสเปกและเสียงคนใช้แบบแถวต่อแถว">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Kanit:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5ef; --card:#ffffff; --ink:#1b2340; --ink-2:#4a5270; --ink-3:#7a8099;
+  --rule:#dcd8cc; --accent:#f5c518; --accent-ink:#1b2340; --mark:#fff1b0;
+  --good:#1f7a4d; --warn:#a2541b; --chip:#eceae2;
+  --font-display:"Kanit",system-ui,sans-serif; --font-body:"Anuphan",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}}
+:root[data-theme="dark"]{--paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 var(--font-body)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;font-style:normal;line-height:1.25;overflow-wrap:anywhere;min-width:0}
+a{color:inherit}
+.mast{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-2)}
+.mast b{font-family:var(--font-display);font-weight:600;color:var(--ink)}
+.code{background:var(--accent);color:var(--accent-ink);font-weight:600;border-radius:4px;padding:1px 8px;white-space:nowrap}
+header.top{padding:28px 0 8px}
+header.top h1{font-size:clamp(28px,7vw,40px);margin:0 0 10px}
+.meta{color:var(--ink-2);font-size:14px;margin:0}
+.meta span{white-space:nowrap}
+.verdict{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:16px 18px;margin:22px 0 8px}
+.verdict h2{font-size:18px;margin:0 0 8px}
+.verdict ul{margin:0;padding-left:20px}
+.verdict li{margin:4px 0}
+section{padding-top:34px}
+section>h2{font-size:22px;margin:0 0 4px}
+.sub{color:var(--ink-2);font-size:14px;margin:0 0 16px}
+mark{background:var(--mark);color:inherit;padding:0 2px}
+/* findings */
+.find{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.find li{padding:12px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.find b{font-weight:600}
+.find small{color:var(--ink-3);font-size:13px}
+blockquote{margin:6px 0 0;padding:0 0 0 12px;border-left:2px solid var(--rule);color:var(--ink-2)}
+/* compare */
+.cmp{background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow:clip}
+.cmp-head{position:sticky;top:0;z-index:2;background:var(--card);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px;border-bottom:1px solid var(--rule)}
+.cmp-head figure{margin:0;text-align:center;min-width:0}
+.cmp-head img{width:100%;max-width:96px;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.cmp-head figcaption{font:600 13px/1.3 var(--font-display);margin-top:6px;overflow-wrap:anywhere}
+.row{padding:10px 12px;border-bottom:1px solid var(--rule)}
+.row:last-child{border-bottom:0}
+.row h3{font:600 13px/1.3 var(--font-body);color:var(--ink-3);margin:0 0 6px;letter-spacing:.02em}
+.cells{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;font-size:14px;line-height:1.45}
+.cells div{min-width:0;overflow-wrap:anywhere}
+.na{color:var(--ink-3)}
+.yes{color:var(--good);font-weight:600}
+/* product notes */
+.prod{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:16px;margin-bottom:12px;display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px}
+.prod img{width:72px;height:72px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.prod h3{font-size:17px;margin:0 0 4px}
+.prod p{margin:4px 0;font-size:15px}
+.prod .fits{color:var(--ink-2)}
+.shop{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:10px;font-size:14px;color:var(--ink-3)}
+.shop a{border:1px solid var(--ink-3);border-radius:4px;padding:4px 12px;text-decoration:none;color:var(--ink);white-space:nowrap}
+.shop a:hover{border-color:var(--ink)}
+.shop a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* caveats */
+.cav{list-style:none;padding:0;margin:0}
+.cav li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid var(--rule)}
+.cav li::before{content:"!";position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;background:var(--chip);color:var(--warn);font:600 12px/18px var(--font-display);text-align:center}
+.src{font-size:14px;color:var(--ink-2)}
+.src li{margin:3px 0}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-3)}
+
+.mast a.home{font-family:var(--font-display);font-weight:600;color:var(--ink);text-decoration:none}.clips{margin-top:6px}.clips a{color:var(--ink);text-underline-offset:3px}.srch{font-size:15px;margin:18px 0 4px}.src a{color:var(--ink-2);text-underline-offset:3px}footer a{color:var(--ink-2)}.cmp-head,.cells{grid-template-columns:repeat(3,minmax(0,1fr))}</style></head>
+<body style="--n:3"><div class="wrap">
+<div class="mast"><a href="/" class="home">สรุปให้ตัวไหนดี</a><span>สรุปจากผู้ใช้จริง <span class="code">รหัส 6</span></span></div>
+<header class="top"><h1>เตาอบไฟฟ้า ตัวไหนดี?</h1>
+<p class="meta"><span>อ่านคอมเมนต์ YouTube ~5,100 รายการจาก 96 คลิป</span> · <span>กลุ่ม FB 3 กลุ่ม 10 โพสต์</span> · <span>Pantip 2 กระทู้</span> · <span>อัปเดต 18 ต.ค. 2569</span></p>
+<p class="meta clips"><a href="https://th.shp.ee/w2z3pcyh" rel="noopener">คลิปใน Shopee</a> · <a href="https://youtube.com/shorts/IIF0O-Sb4e4" rel="noopener">คลิปใน YouTube</a></p></header>
+<div class="verdict"><h2>สรุปสั้น</h2><ul><li>ไฟเหวี่ยง (อุณหภูมิในเตาไม่ตรงหน้าปัด) <b>เจอได้ทุกยี่ห้อ</b> แม้เตาราคาสูง จึงควร<mark>ซื้อเทอร์โมมิเตอร์วัดในเตาคู่กันเสมอ</mark></li><li>ครูเบเกอรี่แนะนำ <b>30–40 ลิตรขึ้นไป</b> (60 ลิตรขึ้นไปถ้าทำขาย) แยกไฟบน/ล่างได้ พัดลมปิดได้ และไม่ตัดไฟถี่ทุก 5 นาที</li><li>เตาใหญ่ 1,700–2,200 วัตต์ ให้เช็กเบรกเกอร์และ<b>ไม่ใช้ปลั๊กพ่วง</b> มีเสียงไฟบ้านตัดและปลั๊กพ่วงละลาย</li></ul></div>
+<section><h2>เสียงจากผู้ใช้จริง</h2><ul class="find"><li><b>ไฟเหวี่ยง: หน้าปัดกับในเตาไม่ตรงกัน</b><small>≥20 เสียงจากคลิปรีวิวอิสระ และเป็นปัญหาอันดับ 1 ในกลุ่มเบเกอรี่</small><blockquote>“เปิด 160 วัดได้ 120–125”</blockquote><blockquote>“ยี่ห้อเดียวกัน รุ่นเดียวกัน 2 เครื่อง เครื่องแรกเค้กสุก อีกเครื่องไม่สุก”</blockquote></li><li><b>ซื้อใหญ่ไว้ก่อน</b><small>คอมเมนต์เรื่องขนาด 201 ครั้ง ใต้คลิปช่องเบเกอรี่</small><blockquote>“ซื้อไม่ถึง 20 ลิตร เสียดาย อบได้นิดเดียว”</blockquote><blockquote>“เคยซื้อ 9 ลิตร ไฟบนต่ำ ห้านาทีก็ไหม้”</blockquote></li><li><b>พัดลมที่ปิดได้ และแยกไฟบน/ล่างได้</b><small>พูดถึงพัดลม 149 ครั้ง · ไฟบน/ล่าง 107 ครั้ง</small><blockquote>“ไม่ได้เลือกอบลมร้อน อบอาหารไม่กรอบ”</blockquote></li><li><b>เตาที่ตัดไฟทุก 5 นาทีไม่ควรซื้อ</b><small>เชฟนุ่นพูดในคลิปเลือกเตา คนทวน 19 ครั้ง</small><blockquote>“ไม่เคยคิดว่าเตาที่ตัดไฟคือไม่โอเค”</blockquote></li><li><b>เทอร์โมมิเตอร์: วางชั้นกลาง ตรงกลางเตา อ่านหลังวอร์ม 10–15 นาที</b><small>แนะนำซ้ำ 99 ครั้งในช่องผู้เชี่ยวชาญ · ของถูกบางตัววัดเพี้ยนเอง</small><blockquote>“ใช้ 2 ตัว ไม่เท่ากันเลย ตัวหนึ่งต่ำกว่าหน้าเตา อีกตัวสูงกว่า”</blockquote></li><li><b>เสียงคนใช้หลายปียังน้อย</b><small>คอมเมนต์ที่บอก “ใช้มา X ปี” มีแค่ 9 จาก 2,664 ในช่องผู้เชี่ยวชาญ</small><blockquote>“ใช้มา 3 ปี ยังไม่มีปัญหา (OTTO 60 ลิตร)”</blockquote><blockquote>“ใช้มา 3 ปีแล้ว รักน้องมาก (Sharp EO-42K)”</blockquote></li></ul></section>
+<section><h2>เทียบ 3 ตัวแบบแถวต่อแถว</h2><p class="sub">สเปกจากเว็บแบรนด์และร้านค้า (ดูที่มาท้ายหน้า) และเสียงคนใช้</p>
+<div class="cmp"><div class="cmp-in"><div class="cmp-head"><figure><img src="https://cf.shopee.co.th/file/217c94215a279afb40b749986dbd9907_tn" alt="OTTO TO-772 60 ลิตร" loading="lazy"><figcaption>OTTO TO-772</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/th-11134207-81ztm-mqysbtmu93ic0b_tn" alt="Tecnoplus TNP SO 863 B 63 ลิตร" loading="lazy"><figcaption>Tecnoplus SO 863 B</figcaption></figure><figure><img src="https://cf.shopee.co.th/file/th-11134207-7r98u-lvwnf30w9rkf4b_tn" alt="Sharp EO-42K 42 ลิตร" loading="lazy"><figcaption>Sharp EO-42K</figcaption></figure></div><div class="row"><h3>ความจุ</h3><div class="cells"><div>60 ลิตร</div><div>63 ลิตร</div><div>42 ลิตร</div></div></div><div class="row"><h3>กำลังไฟ</h3><div class="cells"><div>1,700 วัตต์ (HomePro)</div><div>2,200 วัตต์ (HomePro)</div><div>1,800 วัตต์ (HomePro)</div></div></div><div class="row"><h3>ช่วงอุณหภูมิบนหน้าปัด</h3><div class="cells"><div>100–250°C (HomePro)</div><div>100–250°C</div><div>70–250°C (HomePro)</div></div></div><div class="row"><h3>พัดลม / ลมร้อน</h3><div class="cells"><div>มีพัดลมกระจายความร้อน (HomePro)</div><div>แบรนด์ไม่ระบุ (มี 6 โปรแกรม)</div><div>มีระบบลมร้อน (HomePro)</div></div></div><div class="row"><h3>วัสดุตัวเครื่อง</h3><div class="cells"><div>สแตนเลส (HomePro)</div><div>เหล็กเคลือบสี (HomePro)</div><div>สแตนเลส (HomePro)</div></div></div><div class="row"><h3>ประกัน</h3><div class="cells"><div>1 ปี (HomePro)</div><div>1 ปี (HomePro)</div><div>1 ปี (HomePro)</div></div></div><div class="row"><h3>ช่อง YouTube ทำขนมที่ใช้จริง</h3><div class="cells"><div>Sunny Thai Food, Chef Smite</div><div>เชฟนุ่น, Little bite (ใช้ยี่ห้อนี้ ไม่ระบุรุ่น)</div><div>ไม่มีช่องผู้เชี่ยวชาญ · มีคลิปรีวิวผู้ใช้ 1 ช่อง</div></div></div><div class="row"><h3>เสียงคนใช้ระยะยาว (YouTube · FB · Pantip)</h3><div class="cells"><div>ใช้ 3 ปีไม่มีปัญหา (บวก 3 เสียง) แต่มีเสียงลบหลายเสียงตอนได้ของ เช่น พัดลมไม่หมุน ขดลวดบนไม่ติด</div><div>ยังไม่มีเสียงหลายปี · ไฟเหวี่ยงทั้งที่เพิ่งซื้อ 1 เสียง · Pantip: Tecno+ 60 ลิตร คลาด ±10°C</div><div>ใช้ 3 ปี 1 เสียง · หน้าเค้กดำ 1 เสียง · Pantip: Sharp 40 ลิตร คลาด ±10°C</div></div></div><div class="row"><h3>คะแนนใน Shopee (แค่ความประทับใจแรก)</h3><div class="cells"><div>★4.8 · 3,711 รีวิว</div><div>★4.83 · 306 รีวิว</div><div>★4.85 · 233 รีวิว</div></div></div><div class="row"><h3>เหมาะกับ</h3><div class="cells"><div>อบหลายถาด เริ่มทำขนมขาย งบจำกัด</div><div>อบหลายชั้น อยากได้เตาใหญ่สุดในสามตัว</div><div>มือใหม่ อบขนมที่บ้าน ครัวเล็ก</div></div></div></div></div></section>
+<section><h2>รายตัว</h2><p class="sub">ราคาคือราคาวันที่เก็บข้อมูล อาจเปลี่ยนแล้ว</p><article class="prod"><img src="https://cf.shopee.co.th/file/217c94215a279afb40b749986dbd9907_tn" alt="" loading="lazy"><div><h3>OTTO TO-772 60 ลิตร</h3><p>เตา 60 ลิตร มีพัดลม ตัวเครื่องสแตนเลส และเป็นรุ่นที่ช่องทำขนม 2 ช่องใช้จริง มีเสียงคนใช้ 3 ปีไม่มีปัญหา แต่ก็มีเสียงเรื่องพัดลมหรือขดลวดไม่ทำงานตั้งแต่ได้ของ ควรลองเครื่องทันทีที่ได้รับ</p><p class="fits">เหมาะกับ: อบหลายถาด เริ่มทำขนมขาย งบจำกัด</p><div class="shop"><span>~฿3,349 (18 ต.ค. 2569)</span><a class="go" data-pid="21843339/1835899729" href="/go?p=21843339/1835899729&amp;s=oven&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a><a class="go" data-pid="53085910/11838540749" href="/go?p=53085910/11838540749&amp;s=oven&amp;ch=hub" rel="nofollow sponsored">Seagull 60 ลิตร</a><a class="go" data-pid="7769141/5625404598" href="/go?p=7769141/5625404598&amp;s=oven&amp;ch=hub" rel="nofollow sponsored">เทอร์โมมิเตอร์เตาอบ แบบเข็ม</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-81ztm-mqysbtmu93ic0b_tn" alt="" loading="lazy"><div><h3>Tecnoplus TNP SO 863 B 63 ลิตร</h3><p>ใหญ่สุดในสามตัว 63 ลิตร 2,200 วัตต์ มี 6 โปรแกรมและไฟส่องในเตา เป็นยี่ห้อเดียวกับที่ครูเบเกอรี่ช่องใหญ่ใช้ ยังไม่มีเสียงคนใช้หลายปี และตัวเครื่องเป็นเหล็กเคลือบสี ไม่ใช่สแตนเลส</p><p class="fits">เหมาะกับ: อบหลายชั้น อยากได้เตาใหญ่สุดในสามตัว</p><div class="shop"><span>~฿5,990 (18 ต.ค. 2569)</span><a class="go" data-pid="99859214/2201279179" href="/go?p=99859214/2201279179&amp;s=oven&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a><a class="go" data-pid="7769141/5625404598" href="/go?p=7769141/5625404598&amp;s=oven&amp;ch=hub" rel="nofollow sponsored">เทอร์โมมิเตอร์เตาอบ แบบเข็ม</a><a class="go" data-pid="233962089/9090881679" href="/go?p=233962089/9090881679&amp;s=oven&amp;ch=hub" rel="nofollow sponsored">เทอร์โมมิเตอร์ Bakery D&#x27;VER</a></div></div></article><article class="prod"><img src="https://cf.shopee.co.th/file/th-11134207-7r98u-lvwnf30w9rkf4b_tn" alt="" loading="lazy"><div><h3>Sharp EO-42K 42 ลิตร</h3><p>42 ลิตรอยู่ในขนาดขั้นต่ำที่ผู้เชี่ยวชาญแนะนำสำหรับมือใหม่ มีระบบลมร้อนและแกนหมุนย่างไก่ มีเสียงคนใช้ 3 ปี 1 เสียง และเสียงหน้าเค้กดำ 1 เสียง</p><p class="fits">เหมาะกับ: มือใหม่ อบขนมที่บ้าน ครัวเล็ก</p><div class="shop"><span>~฿3,389 (18 ต.ค. 2569)</span><a class="go" data-pid="144046792/2894789886" href="/go?p=144046792/2894789886&amp;s=oven&amp;ch=hub" rel="nofollow sponsored">ดูที่ร้าน</a><a class="go" data-pid="7769141/5625404598" href="/go?p=7769141/5625404598&amp;s=oven&amp;ch=hub" rel="nofollow sponsored">เทอร์โมมิเตอร์เตาอบ แบบเข็ม</a><a class="go" data-pid="172071848/26093197636" href="/go?p=172071848/26093197636&amp;s=oven&amp;ch=hub" rel="nofollow sponsored">เทอร์โมมิเตอร์ ThermoPro</a></div></div></article></section>
+<section><h2>สิ่งที่เราไม่เคลม</h2><ul class="cav"><li>ไม่บอกว่ายี่ห้อไหนทนที่สุด เสียงคนใช้หลายปีของสามรุ่นนี้มีแค่ 0–3 เสียงต่อรุ่น</li><li>หน้าสินค้าของทั้งสามรุ่นไม่ได้ระบุชัดว่าเปิดไฟล่างอย่างเดียว หรือปิดพัดลมแยกได้ ควรถามร้านก่อนซื้อ</li><li>ตัวเลข ±10°C จาก Pantip เป็นของ Sharp 40 ลิตรและ Tecno+ 60 ลิตรที่ไม่ระบุรุ่น ไม่ใช่การวัดรุ่นในตาราง</li><li>เราไม่ได้วัดอุณหภูมิเตาเอง ทุกเตาอาจไฟเหวี่ยงได้ แม้ยี่ห้อราคาสูง</li><li>SMEG มีเสียงระยะยาวดีที่สุดในข้อมูล (ใช้ 9 ปี) แต่ราคาเกินสามหมื่นและไม่มีในร้านที่เราลิงก์ได้</li></ul></section>
+<section><h2>ที่มาของข้อมูล</h2><ul class="src"><li>YouTube ช่องเบเกอรี่และช่างซ่อม 14 ช่อง: เชฟนุ่น, Littlegirl Studio, Bakery Clinic, ชูการี่, เชฟมด, Chef Smite, Sunny Thai Food และอื่นๆ (43 คลิป 2,664 คอมเมนต์)</li><li>YouTube คลิปรีวิวอิสระ 30 คลิป (~1,600 คอมเมนต์)</li><li>YouTube เทอร์โมมิเตอร์เตาอบ ไทยและต่างประเทศ 23 คลิป (~850 คอมเมนต์)</li><li>กลุ่ม Facebook งานบ้านที่รัก, เบเกอรี่พอเพียง, เบเกอรี่ โซไซตี้ (เตาอบ 6 โพสต์ · เทอร์โมมิเตอร์ 4 โพสต์)</li><li>Pantip 2 กระทู้ (เตาอบ Verasu / HOMEMATE)</li></ul><h3 class="srch">ที่มาของสเปก</h3><ul class="src"><li><a href="https://www.homepro.co.th/p/1019455" rel="noopener">HomePro OTTO TO-772</a></li><li><a href="https://www.tecnoplusthai.com/product/tnp-so-863-b/" rel="noopener">Tecnoplus TNP SO 863 B (เว็บแบรนด์)</a></li><li><a href="https://www.homepro.co.th/p/1064102" rel="noopener">HomePro Tecnoplus SO863 B</a></li><li><a href="https://www.globalhouse.co.th/product/detail/8859162103034" rel="noopener">Global House Tecnoplus SO 863 B</a></li><li><a href="https://www.homepro.co.th/p/1028834" rel="noopener">HomePro Sharp EO-42K</a></li></ul></section>
+<footer>ลิงก์ร้านเป็นลิงก์แอฟฟิลิเอท ถ้าซื้อผ่านลิงก์เราได้ค่าคอมมิชชันจาก Shopee ราคาที่คุณจ่ายเท่าเดิม · <a href="/">ดูหมวดอื่น</a></footer>
+</div>
+<script>
+(function(){var q=new URLSearchParams(location.search),ch=(q.get('ch')||'hub').replace(/[^a-z0-9-]/gi,'').slice(0,12)||'hub';
+document.querySelectorAll('a.go').forEach(function(a){a.href='/go?p='+encodeURIComponent(a.dataset.pid)+'&s=oven&ch='+encodeURIComponent(ch);});
+document.querySelectorAll('a.home').forEach(function(a){a.href='/?ch='+encodeURIComponent(ch);});})();
+</script>
+</body></html>
