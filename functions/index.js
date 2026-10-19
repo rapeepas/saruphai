@@ -414,8 +414,9 @@ const OG = {
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 export async function onRequestGet({ request, env }) {
   const u0 = new URL(request.url), m0 = OG[u0.searchParams.get("c") || ""];
-  // home page: research-report style list (_hub/r/home.html) unless a code is asked for
-  if (!u0.searchParams.get("c") && (u0.pathname === "/" || u0.pathname === "/index.html")) { try { const hp = await env.ASSETS.fetch(new URL("/r/home", u0.origin)); if (hp.ok) return hp; } catch (e) {} }
+  // home page: research-report style list (_hub/r/home.html) unless a researched code is asked for
+  // (user 19 Oct: categories without real-user research are cut — their old codes land on home too)
+  if (!(m0 && m0.r) && (u0.pathname === "/" || u0.pathname === "/index.html")) { try { const hp = await env.ASSETS.fetch(new URL("/r/home", u0.origin)); if (hp.ok) return hp; } catch (e) {} }
   let res = await env.ASSETS.fetch(request);
   if (m0 && m0.r) { try { const rp = await env.ASSETS.fetch(new URL(`/r/${u0.searchParams.get("c")}`, u0.origin)); if (rp.ok) res = rp; } catch (e) {} }
   try {
