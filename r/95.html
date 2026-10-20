@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>เครื่องล้างจานตัวไหนดี ตัวไหนดี? · สรุปให้ตัวไหนดี</title>
+<meta name="description" content="สรุปจากเสียงผู้ใช้จริง: เครื่องล้างจานตัวไหนดี เทียบสเปกและเสียงคนใช้แบบแถวต่อแถว">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Kanit:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5ef; --card:#ffffff; --ink:#1b2340; --ink-2:#4a5270; --ink-3:#7a8099;
+  --rule:#dcd8cc; --accent:#f5c518; --accent-ink:#1b2340; --mark:#fff1b0;
+  --good:#1f7a4d; --warn:#a2541b; --chip:#eceae2;
+  --font-display:"Kanit",system-ui,sans-serif; --font-body:"Anuphan",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}}
+:root[data-theme="dark"]{--paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
+  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 var(--font-body)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;font-style:normal;line-height:1.25;overflow-wrap:anywhere;min-width:0}
+a{color:inherit}
+.mast{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-2)}
+.mast b{font-family:var(--font-display);font-weight:600;color:var(--ink)}
+.code{background:var(--accent);color:var(--accent-ink);font-weight:600;border-radius:4px;padding:1px 8px;white-space:nowrap}
+header.top{padding:28px 0 8px}
+header.top h1{font-size:clamp(28px,7vw,40px);margin:0 0 10px}
+.meta{color:var(--ink-2);font-size:14px;margin:0}
+.meta span{white-space:nowrap}
+.verdict{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:16px 18px;margin:22px 0 8px}
+.verdict h2{font-size:18px;margin:0 0 8px}
+.verdict ul{margin:0;padding-left:20px}
+.verdict li{margin:4px 0}
+section{padding-top:34px}
+section>h2{font-size:22px;margin:0 0 4px}
+.sub{color:var(--ink-2);font-size:14px;margin:0 0 16px}
+mark{background:var(--mark);color:inherit;padding:0 2px}
+/* findings */
+.find{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.find li{padding:12px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.find b{font-weight:600}
+.find small{color:var(--ink-3);font-size:13px}
+blockquote{margin:6px 0 0;padding:0 0 0 12px;border-left:2px solid var(--rule);color:var(--ink-2)}
+/* compare */
+.cmp{background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow:clip}
+.cmp-head{position:sticky;top:0;z-index:2;background:var(--card);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px;border-bottom:1px solid var(--rule)}
+.cmp-head figure{margin:0;text-align:center;min-width:0}
+.cmp-head img{width:100%;max-width:96px;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.cmp-head figcaption{font:600 13px/1.3 var(--font-display);margin-top:6px;overflow-wrap:anywhere}
+.row{padding:10px 12px;border-bottom:1px solid var(--rule)}
+.row:last-child{border-bottom:0}
+.row h3{font:600 13px/1.3 var(--font-body);color:var(--ink-3);margin:0 0 6px;letter-spacing:.02em}
+.cells{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;font-size:14px;line-height:1.45}
+.cells div{min-width:0;overflow-wrap:anywhere}
+.na{color:var(--ink-3)}
+.yes{color:var(--good);font-weight:600}
+/* product notes */
+.prod{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:16px;margin-bottom:12px;display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px}
+.prod img{width:72px;height:72px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
+.prod h3{font-size:17px;margin:0 0 4px}
+.prod p{margin:4px 0;font-size:15px}
+.prod .fits{color:var(--ink-2)}
+.shop{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:10px;font-size:14px;color:var(--ink-3)}
+.shop a{border:1px solid var(--ink-3);border-radius:4px;padding:4px 12px;text-decoration:none;color:var(--ink);white-space:nowrap}
+.shop a:hover{border-color:var(--ink)}
+.shop a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* caveats */
+.cav{list-style:none;padding:0;margin:0}
+.cav li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid var(--rule)}
+.cav li::before{content:"!";position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;background:var(--chip);color:var(--warn);font:600 12px/18px var(--font-display);text-align:center}
+.src{font-size:14px;color:var(--ink-2)}
+.src li{margin:3px 0}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-3)}
+
+.mast a.home{font-family:var(--font-display);font-weight:600;color:var(--ink);text-decoration:none}.clips{margin-top:6px}.clips a{color:var(--ink);text-underline-offset:3px}.srch{font-size:15px;margin:18px 0 4px}.src a{color:var(--ink-2);text-underline-offset:3px}footer a{color:var(--ink-2)}
+/* table bands, column links, situation chips (19 Oct) */
+.band{font:600 12px/1.3 var(--font-body);letter-spacing:.04em;color:var(--ink-2);background:var(--chip);padding:7px 12px;border-bottom:1px solid var(--rule)}
+.golinks .cells a{display:inline-block;font-size:13px;color:var(--ink);text-underline-offset:3px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.chip{font:inherit;font-size:14px;padding:7px 13px;border:1px solid var(--rule);border-radius:999px;background:var(--card);color:var(--ink);cursor:pointer}
+.chip.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
+.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* wide tables: keep band + row labels visible while swiping sideways */
+.cmp .band span{position:sticky;left:12px}
+.cmp .row h3{position:sticky;left:12px;display:inline-block;background:var(--card);padding-right:6px}
+.cmp-head,.cells{grid-template-columns:repeat(1,minmax(0,1fr))}</style></head>
+<body style="--n:1"><div class="wrap">
+<div class="mast"><a href="/" class="home">สรุปให้ตัวไหนดี</a><span>สรุปจากผู้ใช้จริง <span class="code">รหัส 95</span></span></div>
+<header class="top"><h1>เครื่องล้างจานตัวไหนดี ตัวไหนดี?</h1>
+<p class="meta"><span>จากคอมเมนต์และคำตอบในเธรดใต้คลิป YouTube ไทยที่รีวิวและเล่าข้อดีข้อเสียของเครื่องล้างจานหลังใช้จริง</span> · <span>นับเฉพาะคนที่เล่าว่าใช้เองมาเป็นปี หรือเล่าอาการเสียหลังใช้ ไม่นับคอมเมนต์ถามราคา</span> · <span>เสริมด้วยกระทู้ Pantip ที่คนเล่าว่าใช้มากี่ปีและเรื่องศูนย์บริการ</span> · <span>อัปเดต 20 ต.ค. 2569</span></p>
+</header>
+<div class="verdict"><h2>สรุปสั้น</h2><ul><li>แบบตั้งโต๊ะที่ผ่านเกณฑ์คือ <b>Toshiba DW-08T1(S)-TH</b> 8 ชุดอาหาร ล้างน้ำร้อน 70°C ประกันมอเตอร์ 5 ปี เจ้าของรุ่นนี้เล่าว่า <mark>ใช้มาปีกว่า ล้างทุกวัน ยังตอบโจทย์</mark> แต่ไม่มีลมร้อนเป่าแห้ง จานแถวบนยังเปียก ต้องผึ่งต่อ</li><li>แบบตั้งพื้นหรือบิวท์อิน ยี่ห้อที่คนเล่าว่าใช้ยาวที่สุดคือ <mark>Bosch (หลายบ้านใช้ 6–20 ปี)</mark> แต่เป็นเสียงระดับซีรีส์ ไม่ใช่รหัสรุ่นที่ขายตอนนี้ และร้านใน Shopee ยังมีรีวิวน้อยเกินเกณฑ์ของเรา</li><li>เครื่องตั้งโต๊ะนำเข้าราคาถูก (Xiaomi / Mijia) มีคนเล่าซ้ำว่า <b>ขึ้น E2 / E8 ใน 9 วันถึง 1 ปี</b> และศูนย์ไทยไม่รับซ่อมเครื่องนำเข้า จึงไม่ได้ใส่</li></ul></div>
+<section><h2>เลือกตามสถานการณ์</h2><ul class="find"><li><b>ตั้งพื้นหรือบิวท์อิน ครอบครัว 4 คนขึ้นไป</b><p>ยังไม่มีลิงก์ที่ผ่านเกณฑ์ ยี่ห้อที่คนใช้เล่าว่าทนที่สุดคือ Bosch (หลายบ้านใช้ 6–20 ปี) แต่เป็นเสียงระดับซีรีส์ ไม่มีใครบอกรหัสรุ่นที่ขายตอนนี้ ร้าน bosch home appliances ใน Shopee ขาย Series 4 (SMS46NI01Q, SMS4HMC25M) และ Series 6 (SMS6ECI11E) แต่รีวิวยังไม่ถึงเกณฑ์ ถ้าจะซื้อตอนนี้ ให้ซื้อจากร้านของยี่ห้อเองหรือห้างที่มีศูนย์ดูแล เพราะคนใช้ Bosch ติเรื่องค่าซ่อมและอะไหล่ที่ช้า Electrolux ยังไม่แนะนำ เพราะเสียงใหม่เล่าว่าปั๊มเสียในปีแรก</p><p class="fits">ยังไม่มีตัวที่ผ่านเกณฑ์สำหรับกรณีนี้</p></li><li><b>ตั้งโต๊ะ คอนโด ครอบครัวเล็ก</b><p>Toshiba DW-08T1(S)-TH ใส่ได้ 8 ชุดอาหาร วางบนเคาน์เตอร์ได้ มีศูนย์ Toshiba ในไทยและประกันมอเตอร์ 5 ปี เหมาะกับคนที่มีที่ผึ่งจานต่อ</p><p class="fits">ตัวที่ตรงกับกรณีนี้: <a href="#p0">Toshiba DW-08T1(S)-TH (ตั้งโต๊ะ)</a></p></li></ul></section>
+<section><h2>คำถามที่คนถามบ่อย</h2><ul class="find"><li><b>เครื่องล้างจานกินน้ำกินไฟเยอะไหม</b><p>Toshiba DW-08T1(S)-TH ใช้ไฟ 1,380 วัตต์ตามที่ HomePro ระบุ ส่วนปริมาณน้ำต่อรอบ ทั้ง Toshiba และ HomePro ไม่ได้บอกเป็นลิตร ถ้าจะเทียบหลายยี่ห้อ ให้ดูตัวเลขลิตรต่อรอบในคู่มือของรุ่นนั้น ไม่ใช่เปอร์เซ็นต์ประหยัดน้ำในโฆษณา</p></li><li><b>อาหารไทยมันเยอะ ล้างออกไหม</b><p>คนใช้ Electrolux แบบตั้งพื้นเล่าว่าจานคราบแห้งกรังก็ออกมาเกลี้ยง และ Toshiba ในหน้านี้ล้างด้วยน้ำร้อน 70°C คนใช้แนะนำให้เทเศษอาหารและน้ำมันออกก่อนใส่เครื่อง ใช้ผงล้างจาน เกลือ และน้ำยาแววาวสำหรับเครื่องล้างจาน ไม่ใช้น้ำยาล้างจานมือ และเลือกรุ่นที่มีช่องใส่ผงแยก</p></li><li><b>แบบตั้งโต๊ะกับแบบตั้งพื้น ต่างกันยังไง เลือกแบบไหน</b><p>แบบตั้งโต๊ะเล็กพอวางบนเคาน์เตอร์ Toshiba ในหน้านี้กว้าง 55 ลึก 50 สูง 59 ซม. ใส่ได้ 8 ชุดอาหาร เหมาะกับคอนโดหรือบ้าน 1–3 คน แบบตั้งพื้นกว้าง 60 ซม. วางใต้เคาน์เตอร์หรือข้างซิงก์ ใส่ได้มากกว่า (ชื่อสินค้า Electrolux ESA47200SX ในร้านทางการเขียน 13 ชุด) และยี่ห้อที่คนเล่าว่าใช้เป็นสิบปีอย่าง Bosch เป็นแบบตั้งพื้น ถ้าบ้านมี 4 คนขึ้นไปหรือล้างทุกมื้อ แบบตั้งพื้นคุ้มกว่า</p></li><li><b>ต้องเดินท่อน้ำหรือเจาะผนังไหม ติดตั้งยากหรือเปล่า</b><p>แบบตั้งพื้นและบิวท์อินต้องต่อท่อน้ำดีและท่อน้ำทิ้ง จึงควรวางใกล้ซิงก์และมีปลั๊กไฟที่รับกำลังไฟสูงได้ บิวท์อินต้องเตรียมช่องในตู้ครัวด้วย ส่วน Toshiba ตั้งโต๊ะในหน้านี้ หน้าเว็บของ Toshiba และ HomePro ไม่ได้บอกวิธีต่อน้ำเข้า ให้ถามร้านก่อนสั่งว่าต่อจากก๊อกได้ไหมและต้องใช้ข้อต่ออะไร</p></li><li><b>ทำไมไม่มี Xiaomi หรือ Mijia ที่ราคาถูกกว่า</b><p>คนใช้เล่าซ้ำว่าเครื่องตั้งโต๊ะ Xiaomi / Mijia ขึ้นรหัส E2 หรือ E8 ตั้งแต่ 9 วันถึง 1 ปี บางเครื่องไฟรั่วตอนเครื่องปล่อยน้ำ ร้านให้ส่งซ่อมจีน รอเป็นเดือน และศูนย์ Xiaomi ไทยไม่รับซ่อมเครื่องนำเข้า จึงไม่ได้ใส่ในหน้านี้</p></li><li><b>Bosch ทนจริงไหม ทำไมไม่มีลิงก์</b><p>คนใช้ Bosch เล่าว่าใช้ใกล้ 10 ปีไม่เคยซ่อม และบางบ้านเกิน 20 ปี แต่ส่วนใหญ่เป็นเครื่องรุ่นเก่าและไม่ได้บอกรหัสรุ่น ข้อที่ติคือค่าซ่อมแพงและอะไหล่ช้า ร้านของ Bosch ใน Shopee ยังมีรีวิวน้อยเกินเกณฑ์ของเรา จึงยังไม่ใส่ลิงก์ ถ้าจะซื้อตอนนี้ ให้ซื้อจากร้านของยี่ห้อหรือห้างที่ส่งเรื่องเข้าศูนย์ได้</p></li></ul></section>
+<section><h2>เสียงจากผู้ใช้จริง</h2><ul class="find"><li><b>Bosch ใช้ได้เป็นสิบปี</b><small>เสียงระดับยี่ห้อ คนเล่าส่วนใหญ่ไม่ได้บอกรหัสรุ่น และชมวัสดุตะกร้า ถัง และสายว่าดี</small><blockquote>“ที่บ้านใช้ Bosch เกิน 20 ปี เสียน้อยมาก”</blockquote><blockquote>“รุ่นเก่า ใช้ใกล้ 10 ปี ยังไม่เคยซ่อม”</blockquote></li><li><b>ข้อติดของ Bosch คือค่าซ่อมและอะไหล่</b><small>หลายกระทู้ถามเรื่องบริการหลังการขายและอะไหล่ที่ช้า มีคนเล่าว่าเครื่องใหม่บางเครื่องมีปัญหาใน 1–3 ปี</small><blockquote>“ค่าซ่อมเครื่องเยอรมันแพงเกือบเท่าเครื่องใหม่”</blockquote></li><li><b>Electrolux เสียงปนกัน</b><small>มีคนใช้ 8 ปีไม่มีปัญหา แต่เสียงใหม่กว่าเล่าว่าปั๊มเสียในปีแรกและรออะไหล่ จึงยังไม่แนะนำ</small><blockquote>“ใช้มา 8 ปี ยังไม่มีปัญหา”</blockquote><blockquote>“ปีนิดๆ ปั๊มเสีย รออะไหล่”</blockquote></li><li><b>Toshiba DW-08T1 ใช้ทุกวันมาปีกว่า</b><small>เจ้าของรุ่นนี้หลายคนเล่าตรงรุ่น และมีคนใช้ Toshiba ตั้งโต๊ะอีกรุ่นมาราว 3 ปี ยังไม่เจอเสียงลบตรงรุ่น ข้อติดคือจานแถวบนยังเปียกเพราะไม่มีลมร้อนเป่า</small><blockquote>“ใช้มาแล้ว 1 ปี ตอบโจทย์มาก”</blockquote><blockquote>“รุ่นนี้ใช้มาปีกว่า โอเค”</blockquote></li><li><b>เครื่องตั้งโต๊ะนำเข้าราคาถูก พังเร็ว</b><small>Xiaomi / Mijia ขึ้นรหัส E2 หรือ E8 ตั้งแต่ 9 วันถึง 1 ปี บางคนเจอไฟรั่ว ร้านให้ส่งซ่อมจีน</small><blockquote>“9 วันขึ้น E8 ร้านบอกต้องส่งซ่อมจีน”</blockquote><blockquote>“Xiaomi ไทยไม่รับซ่อมเครื่องนำเข้า”</blockquote></li><li><b>เรื่องที่คนใช้อยากให้รู้ก่อนซื้อ</b><small>ชามเยอะเรียงยาก บางใบบิ่น · ต้องใช้ผงล้างจาน เกลือ และน้ำยาแววาวสำหรับเครื่อง ซึ่งมีแบรนด์ไทยขายที่ HomePro ราคาต่อครั้งไม่แพง · เลือกรุ่นที่มีช่องใส่ผงแยก</small><blockquote>“ชามเยอะเรียงยาก”</blockquote></li></ul></section>
+<section><h2>เทียบ 1 ตัวแบบแถวต่อแถว</h2><p class="sub">สเปกจากเว็บแบรนด์ คู่มือ และห้างที่ระบุรุ่น (ดูที่มาท้ายหน้า) และเสียงคนใช้</p>
+<div class="cmp"><div class="cmp-in"><div class="cmp-head"><figure data-col="0"><img src="https://cf.shopee.co.th/file/th-11134207-7r98o-lwwmxr3aw4b376_tn" alt="TOSHIBA เครื่องล้างจาน รุ่น DW-08T1(S)-TH (Yong House ยงเฮ้าส์)" loading="lazy"><figcaption>Toshiba DW-08T1(S)-TH (ตั้งโต๊ะ)</figcaption></figure></div><div class="band"><span>สเปกจากแบรนด์และคู่มือ</span></div><div class="row"><h3>ประเภท / ขนาด</h3><div class="cells"><div data-col="0">ตั้งโต๊ะ กว้าง 55 × ลึก 50 × สูง 59 ซม. (Toshiba) · หนัก 27 กก. (HomePro)</div></div></div><div class="row"><h3>ความจุ</h3><div class="cells"><div data-col="0">8 ชุดอาหาร (Toshiba)</div></div></div><div class="row"><h3>อุณหภูมิล้าง</h3><div class="cells"><div data-col="0">ล้างน้ำร้อน 70°C มีระบบควบคุมอุณหภูมิ (Toshiba)</div></div></div><div class="row"><h3>โปรแกรม</h3><div class="cells"><div data-col="0">Toshiba ระบุ 5 โปรแกรม (Auto, ECO, 90 นาที, Glass, Rapid) + โหมดล้างตัวเครื่อง 50 นาที · HomePro ระบุ 7 โปรแกรม (Hygiene, Normal, ECO, Glass, 90 นาที, Rapid, Self-clean)</div></div></div><div class="row"><h3>อบแห้ง</h3><div class="cells"><div data-col="0">ไม่มีระบบเป่าแห้ง (Toshiba) · คนใช้เล่าว่าจานออกมาร้อน แต่แถวบนยังเปียก</div></div></div><div class="row"><h3>กำลังไฟ / ไฟบ้าน</h3><div class="cells"><div data-col="0">1,380 วัตต์ (HomePro) · 220V 50Hz (Toshiba)</div></div></div><div class="row"><h3>ปริมาณน้ำต่อรอบ</h3><div class="cells"><div data-col="0">แบรนด์ไม่ระบุเป็นลิตร (ตรวจหน้า Toshiba และ HomePro)</div></div></div><div class="row"><h3>การต่อน้ำเข้า</h3><div class="cells"><div data-col="0">หน้าเว็บ Toshiba และ HomePro ไม่ระบุ</div></div></div><div class="row"><h3>ระดับเสียง</h3><div class="cells"><div data-col="0">49 dB(A) (Toshiba)</div></div></div><div class="row"><h3>กันน้ำรั่ว</h3><div class="cells"><div data-col="0">มีระบบตรวจจับและตัดการรั่วของน้ำ (Toshiba)</div></div></div><div class="row"><h3>ประกัน</h3><div class="cells"><div data-col="0">ตัวเครื่อง 2 ปี มอเตอร์ 5 ปี (Toshiba)</div></div></div><div class="row"><h3>คะแนนใน Shopee (แค่ความประทับใจแรก)</h3><div class="cells"><div data-col="0">★4.83 · 127 รีวิว</div></div></div><div class="band"><span>เสียงคนใช้จริง</span></div><div class="row"><h3>เสียงคนใช้ไทยระยะยาว</h3><div class="cells"><div data-col="0">เจ้าของรุ่นนี้เล่าว่าใช้ทุกวันมาปีกว่า ยังตอบโจทย์ · จานแถวบนยังเปียก ต้องผึ่ง</div></div></div><div class="band"><span>รีวิวใน Shopee (ทั้งคำชมและคำติ)</span></div><div class="row"><h3>รีวิวใน Shopee</h3><div class="cells"><div data-col="0">1–3 ดาว 6 จาก 127 รีวิว (4.7%) · ชม: “ไม่ต้องติดตั้งท่อน้ำเข้า (เติมน้ำเองได้)” · ติ: “ไม่มีระบบอบแห้งใช้เวลาในการล้าง 3 ชั่วโมงทิ้งไว้เหม็นอับ”</div></div></div><div class="band"><span>เหมาะกับใคร</span></div><div class="row"><h3>เหมาะกับ</h3><div class="cells"><div data-col="0">คอนโด ครัวเล็ก ครอบครัว 1–3 คน มีที่ว่างบนเคาน์เตอร์</div></div></div><div class="row golinks"><div class="cells"><div data-col="0"><a href="#p0">ดูรายละเอียด</a></div></div></div></div></div></section>
+<section><h2>รายตัว</h2><p class="sub">ราคาคือราคาวันที่เก็บข้อมูล อาจเปลี่ยนแล้ว</p><article class="prod" id="p0"><img src="https://cf.shopee.co.th/file/th-11134207-7r98o-lwwmxr3aw4b376_tn" alt="" loading="lazy"><div><h3>TOSHIBA เครื่องล้างจาน รุ่น DW-08T1(S)-TH (Yong House ยงเฮ้าส์)</h3><p>เครื่องตั้งโต๊ะ 8 ชุดอาหาร ขนาด 55 × 50 × 59 ซม. ล้างน้ำร้อน 70°C มีระบบตัดน้ำเมื่อรั่ว ประกันตัวเครื่อง 2 ปี มอเตอร์ 5 ปี เจ้าของรุ่นนี้เล่าว่าใช้ทุกวันมาปีกว่ายังตอบโจทย์ ไม่มีลมร้อนเป่าแห้ง จานแถวบนยังเปียก ต้องผึ่งต่อ</p><p class="fits">เหมาะกับ: คอนโด ครัวเล็ก ครอบครัว 1–3 คน</p><div class="shop"><span>~฿9,185 (20 ต.ค. 2569)</span><a class="go" data-pid="63334820/19795668749" href="/go?p=63334820/19795668749&amp;s=dishwasher&amp;ch=hub" rel="nofollow sponsored">ดูใน Shopee</a><a class="go" data-pid="617921716/25802583827" href="/go?p=617921716/25802583827&amp;s=dishwasher&amp;ch=hub" rel="nofollow sponsored">Yonghouse Official Store (รุ่นเดียวกัน)</a></div></div></article></section>
+<section><h2>สิ่งที่เราไม่เคลม</h2><ul class="cav"><li>เสียงคนใช้ Bosch เป็นระดับซีรีส์ (6–20 ปี) ไม่ตรงรหัสรุ่นที่ขายตอนนี้ ส่วน Electrolux มีทั้งเสียงใช้ 8 ปีและเสียงใหม่ว่าพังง่าย ซ่อมบ่อย</li><li>Bosch และ Electrolux ยังไม่มีลิงก์ในหน้านี้ เพราะร้านใน Shopee ที่ระบุรหัสรุ่นยังมีรีวิวไม่ถึง 100 (ตรวจ 20 ต.ค.)</li><li>เสียง Toshiba DW-08T1 ตรงรุ่นใช้มาราวปีเศษ ยังไม่มีเสียงหลายปีตรงรุ่น (มีคนใช้ Toshiba ตั้งโต๊ะอีกรุ่นราว 3 ปี)</li><li>Toshiba ระบุ 5 โปรแกรม แต่ HomePro ระบุ 7 โปรแกรมสำหรับรหัสเดียวกัน</li><li>Toshiba ระบุว่าไม่มีระบบเป่าแห้ง คนใช้ยืนยันว่าจานแถวบนยังเปียก ต้องผึ่งต่อ</li><li>ร้าน Yong House ที่เลือกไม่ใช่ร้านทางการ ร้าน Yonghouse Official Store มีรุ่นเดียวกันแต่รีวิวยังน้อย</li><li>Xiaomi / Mijia ตั้งโต๊ะไม่ได้ใส่: คนใช้เล่าซ้ำว่าขึ้นรหัส E2 หรือ E8 ใน 9 วันถึง 1 ปี บางเครื่องไฟรั่ว ร้านให้ส่งซ่อมจีน และศูนย์ Xiaomi ไทยไม่รับซ่อมเครื่องนำเข้า</li><li>Siemens ยังไม่ได้ใส่: มีคนชม แต่อีกคนเล่าว่าปีแรกซ่อม 3 ครั้ง ครั้งละเป็นเดือน</li><li>รีวิวใน Shopee มาจากรีวิวในแอป Shopee ของลิงก์ที่เราเลือก ทั้งคำชมและคำติ (1–3 ดาว) ส่วนใหญ่เขียนช่วงแรกหลังได้ของ · เสียงคนใช้ระยะยาวยังเป็นหลักในการเลือก</li></ul></section>
+<section><h2>ที่มาของข้อมูล</h2><ul class="src"><li>YouTube ไทย 12 คลิป: รีวิว Xiaomi / Mijia ตั้งโต๊ะ, Dreame, Bosch Series 6 / Series 8, Toshiba ตั้งโต๊ะ, Electrolux ตั้งโต๊ะ, คลิปข้อดีข้อเสีย (873 คอมเมนต์และคำตอบในเธรด)</li><li>Xiaomi / Mijia พังใน 9 วันถึง 1 ปี 6 เสียง · Bosch เกิน 20 ปี 1 เสียง · Toshiba ปีกว่า 1–2 เสียง</li><li>Pantip 5 คำค้น · Bosch ใกล้ 10 ปี 1 เสียง · 4–5 ปี 1 เสียง · Electrolux 8 ปี 1 เสียง · Siemens ซ่อม 3 ครั้งปีแรก 1 เสียง · Xiaomi E2 ใน 11 เดือน 1 เสียง</li></ul><h3 class="srch">ที่มาของสเปก</h3><ul class="src"><li><a href="https://www.toshiba-lifestyle.com/th/kitchen-appliances/dishwasher/tabletop/toshiba-tabletop-dishwasher-dw-08t1-s-th" rel="noopener">Toshiba ไทย DW-08T1(S)-TH (8 ชุดอาหาร, 70°C, 5 โปรแกรม, ไม่มีเป่าแห้ง, 49 dB(A), 55 × 50 × 59 ซม., ประกันมอเตอร์ 5 ปี)</a></li><li><a href="https://www.homepro.co.th/p/1198590" rel="noopener">HomePro TOSHIBA DW-08T1(S)-TH (1,380 W, 27 กก., 7 โปรแกรม)</a></li></ul></section>
+<footer>ปุ่มไป Shopee เป็นลิงก์แอฟฟิลิเอท ถ้าซื้อผ่านลิงก์เราได้ค่าคอมมิชชันจาก Shopee ราคาที่คุณจ่ายเท่าเดิม · <a href="/">ดูหมวดอื่น</a></footer>
+</div>
+<script>
+(function(){var q=new URLSearchParams(location.search),ch=(q.get('ch')||'hub').replace(/[^a-z0-9-]/gi,'').slice(0,12)||'hub';
+document.querySelectorAll('a.go').forEach(function(a){a.href='/go?p='+encodeURIComponent(a.dataset.pid)+'&s=dishwasher&ch='+encodeURIComponent(ch);});
+document.querySelectorAll('a.home').forEach(function(a){a.href='/?ch='+encodeURIComponent(ch);});
+document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){
+ document.querySelectorAll('.chip').forEach(function(x){x.classList.toggle('on',x===b);});
+ var keep=b.dataset.cols==='all'?null:b.dataset.cols.split(','),k=0;
+ document.querySelectorAll('.cmp [data-col]').forEach(function(el){el.style.display=(!keep||keep.indexOf(el.dataset.col)>=0)?'':'none';});
+ var m=keep?keep.length:1;document.body.style.setProperty('--n',m);
+ document.querySelectorAll('.cmp-head,.cells').forEach(function(el){el.style.gridTemplateColumns='repeat('+m+',minmax(0,1fr))';});});});})();
+</script>
+</body></html>
