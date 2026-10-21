@@ -87,12 +87,12 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-si
 /* wide tables: keep band + row labels visible while swiping sideways */
 .cmp .band span{position:sticky;left:12px}
 .cmp .row h3{position:sticky;left:12px;display:inline-block;background:var(--card);padding-right:6px}
-.cmp-head,.cells{grid-template-columns:repeat(3,minmax(0,1fr))}</style></head>
+.noimg{display:inline-grid;place-items:center;width:72px;height:72px;border-radius:6px;border:1px dashed var(--rule);background:var(--chip);color:var(--ink-3);font:600 22px var(--font-display)}.cmp-head .noimg{width:64px;height:64px}.nolink{border:1px dashed var(--warn);color:var(--warn);border-radius:4px;padding:4px 10px;font-size:13px}.lnote{flex-basis:100%;color:var(--ink-3);font-size:13px}.mast a.up{color:var(--ink);text-decoration:none;font-weight:600}.mast a.up:hover{text-decoration:underline}.tmap{background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow-x:auto}.tmap table{border-collapse:collapse;min-width:720px;width:100%;font-size:14px;line-height:1.45}.tmap th,.tmap td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}.tmap thead th{font:600 13px var(--font-body);color:var(--ink-3);background:var(--chip)}.tmap tbody th{position:sticky;left:0;background:var(--card);min-width:150px;font:600 15px/1.35 var(--font-display)}.tmap tbody th a{color:var(--ink);text-underline-offset:3px}.tmap tbody th small{display:block;font:400 13px var(--font-body);color:var(--ink-3);margin-top:4px}.tmap tr:last-child th,.tmap tr:last-child td{border-bottom:0}.sit{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}.sit a{text-decoration:none}.subs{display:grid;gap:10px}.subcard{display:block;background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:14px 16px;text-decoration:none;color:var(--ink)}.subcard:hover{border-color:var(--ink-3)}.subcard:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.subcard h3{font-size:17px;margin:0}.subcard p{margin:4px 0 0;font-size:14px;color:var(--ink-2)}.subcard .cnt{color:var(--ink-3);font-size:13px}.subcard.off{border-style:dashed;color:var(--ink-3)}.cmp-head,.cells{grid-template-columns:repeat(3,minmax(0,1fr))}</style></head>
 <body style="--n:3"><div class="wrap">
 <div class="mast"><a href="/" class="home">สรุปให้ตัวไหนดี</a><span>สรุปจากผู้ใช้จริง <span class="code">รหัส 78</span></span></div>
 <header class="top"><h1>ผ้าห่มเย็น ตัวไหนดี?</h1>
 <p class="meta"><span>อ่านคอมเมนต์ 320 รายการจาก 16 คลิป</span> · <span>Pantip 8 กระทู้</span> · <span>กลุ่ม FB 4 กลุ่ม (ข้อมูลบาง)</span> · <span>อัปเดต 18 ต.ค. 2569</span></p>
-<p class="meta clips"><a href="https://th.shp.ee/53en4mrs" rel="noopener">คลิปใน Shopee</a></p></header>
+<p class="meta clips"><a href="https://th.shp.ee/53en4mrs" rel="noopener">คลิปใน Shopee</a> · <a href="https://youtube.com/shorts/Yj1hS0foNQI" rel="noopener">คลิปใน YouTube</a></p></header>
 <div class="verdict"><h2>สรุปสั้น</h2><ul><li>ผ้าห่มเย็น <b>ไม่ได้ทำความเย็นเอง</b> แค่ช่วยระบายความร้อนจากตัว จึงต้องใช้คู่พัดลมหรือแอร์ ถ้าห้องแอร์เย็นจัดอาจหนาว</li><li>ปัญหาที่คนเจอบ่อยที่สุดคือ <b>ขึ้นขุยหลังซักไม่กี่ครั้ง</b> ทำให้คันและเย็นน้อยลง ดูเนื้อผ้าและวิธีซักก่อนซื้อ</li><li>เสียงคนใช้ระยะยาวในหมวดนี้มีน้อยมาก ยี่ห้อที่มีเสียงใช้นานชัดที่สุดคือ <mark>IKEA (4–5 ปี)</mark></li></ul></div>
 
 
@@ -108,6 +108,7 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-si
 (function(){var q=new URLSearchParams(location.search),ch=(q.get('ch')||'hub').replace(/[^a-z0-9-]/gi,'').slice(0,12)||'hub';
 document.querySelectorAll('a.go').forEach(function(a){a.href='/go?p='+encodeURIComponent(a.dataset.pid)+'&s=cooling-blanket&ch='+encodeURIComponent(ch);});
 document.querySelectorAll('a.home').forEach(function(a){a.href='/?ch='+encodeURIComponent(ch);});
+document.querySelectorAll('a[data-c]').forEach(function(a){a.href='/?ch='+encodeURIComponent(ch)+'&c='+encodeURIComponent(a.dataset.c);});
 document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){
  document.querySelectorAll('.chip').forEach(function(x){x.classList.toggle('on',x===b);});
  var keep=b.dataset.cols==='all'?null:b.dataset.cols.split(','),k=0;
