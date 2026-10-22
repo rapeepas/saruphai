@@ -1,119 +1,251 @@
 <!doctype html>
-<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light dark">
 <title>ปั๊มน้ำอัตโนมัติ ตัวไหนดี? · สรุปให้ตัวไหนดี</title>
-<meta name="description" content="สรุปจากเสียงผู้ใช้จริง: ปั๊มน้ำอัตโนมัติ เทียบสเปกและเสียงคนใช้แบบแถวต่อแถว">
+<meta name="description" content="สรุปจากเสียงผู้ใช้จริง: ปั๊มน้ำอัตโนมัติ แยกตามประเภท แต่ละประเภทเทียบรุ่นแบบแถวต่อแถว">
 <meta property="og:type" content="website"><meta property="og:site_name" content="สรุปให้ตัวไหนดี"><meta property="og:image" content="https://saruphai.pages.dev/og/90.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Kanit:wght@500;600&display=swap" rel="stylesheet">
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>/* report_v3.css - v3 look (approved mockup _design/mockup_v3.html, HANDOFF_v3.md) for category hubs + type sub-pages
+   whose json has "design": "v3". Rendered by _tools/page_v3.py. Works without JavaScript (iPhone Safari / in-app viewers).
+   Dark stage sections + light/dark content sections; Noto Sans Thai; tier badges A/B/C; old-shape compare table. */
 :root{
-  --paper:#f7f5ef; --card:#ffffff; --ink:#1b2340; --ink-2:#4a5270; --ink-3:#7a8099;
-  --rule:#dcd8cc; --accent:#f5c518; --accent-ink:#1b2340; --mark:#fff1b0;
-  --good:#1f7a4d; --warn:#a2541b; --chip:#eceae2;
-  --font-display:"Kanit",system-ui,sans-serif; --font-body:"Anuphan",system-ui,sans-serif;
+  --bg:#fff; --bg-2:#f5f5f7; --ink:#1d1d1f; --ink-2:#424245; --ink-3:#6e6e73; --rule:#d2d2d7; --link:#0066cc;
+  --cta:#ee4d2d; --cta-ink:#fff; --a:#1f7a4d; --a-bg:#e6f4ec; --b:#1d5fb8; --b-bg:#e7eefa; --c:#9a5b00; --c-bg:#fbf0dc;
+  --stage:#05070b; --stage-ink:#f5f5f7; --stage-ink-2:#a1a1a6; --ice:#5ac8fa; --ice-2:#0a84ff; --tint:#eaf4fb;
+  --font:"Noto Sans Thai","Sukhumvit Set","Thonburi",system-ui,sans-serif; --nav-h:48px; --ln-h:52px;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
-  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}}
-:root[data-theme="dark"]{--paper:#11152a; --card:#1a2038; --ink:#eef0f7; --ink-2:#b9bed3; --ink-3:#8c92ab;
-  --rule:#2c3352; --mark:#4a4220; --chip:#252c48; --good:#5cc08e; --warn:#e3a06a;}
+  --bg:#000; --bg-2:#161617; --ink:#f5f5f7; --ink-2:#d2d2d7; --ink-3:#a1a1a6; --rule:#38383d; --link:#2997ff;
+  --a:#5cc08e; --a-bg:#12291d; --b:#6aa6ff; --b-bg:#14213a; --c:#f0b45a; --c-bg:#2e2210; --tint:#0c1a24;}}
+:root[data-theme="dark"]{--bg:#000; --bg-2:#161617; --ink:#f5f5f7; --ink-2:#d2d2d7; --ink-3:#a1a1a6; --rule:#38383d; --link:#2997ff;
+  --a:#5cc08e; --a-bg:#12291d; --b:#6aa6ff; --b-bg:#14213a; --c:#f0b45a; --c-bg:#2e2210; --tint:#0c1a24;}
 *{box-sizing:border-box}
 html,body{overflow-x:clip}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 var(--font-body)}
-.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
-h1,h2,h3{font-family:var(--font-display);font-weight:600;font-style:normal;line-height:1.25;overflow-wrap:anywhere;min-width:0}
-a{color:inherit}
-.mast{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-2)}
-.mast b{font-family:var(--font-display);font-weight:600;color:var(--ink)}
-.code{background:var(--accent);color:var(--accent-ink);font-weight:600;border-radius:4px;padding:1px 8px;white-space:nowrap}
-header.top{padding:28px 0 8px}
-header.top h1{font-size:clamp(28px,7vw,40px);margin:0 0 10px}
-.meta{color:var(--ink-2);font-size:14px;margin:0}
-.meta span{white-space:nowrap}
-.verdict{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:16px 18px;margin:22px 0 8px}
-.verdict h2{font-size:18px;margin:0 0 8px}
-.verdict ul{margin:0;padding-left:20px}
-.verdict li{margin:4px 0}
-section{padding-top:34px}
-section>h2{font-size:22px;margin:0 0 4px}
-.sub{color:var(--ink-2);font-size:14px;margin:0 0 16px}
-mark{background:var(--mark);color:inherit;padding:0 2px}
-/* findings */
-.find{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
-.find li{padding:12px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
-.find b{font-weight:600}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--font);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5{font-weight:700;line-height:1.3;margin:0;overflow-wrap:anywhere}
+p{margin:0}
+a{color:var(--link);text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ice-2);outline-offset:3px;border-radius:6px}
+mark{background:rgba(255,204,0,.28);color:inherit;padding:0 2px;border-radius:3px}
+.w{max-width:1040px;margin:0 auto;padding:0 16px}
+
+/* nav */
+.gn{position:sticky;top:0;z-index:30;height:var(--nav-h);background:rgba(5,7,11,.82);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);color:#f5f5f7}
+.gn .w{height:100%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.gn .brand{font-weight:700;font-size:16px;color:#f5f5f7;white-space:nowrap}
+.gn .crumb{font-size:13px;color:#a1a1a6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.gn .crumb a{color:#d2d2d7}
+.ln{position:sticky;top:var(--nav-h);z-index:29;background:rgba(5,7,11,.72);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.08);color:#f5f5f7}
+.ln .w{display:flex;align-items:center;gap:14px;min-height:var(--ln-h)}
+.ln b{font-size:16px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:42%}
+.ln nav{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.ln nav::-webkit-scrollbar{display:none}
+.ln nav a{font-size:13px;color:#d2d2d7;white-space:nowrap;padding:14px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 22px;border-radius:999px;font:600 15px/1.3 var(--font);background:var(--cta);color:var(--cta-ink);white-space:nowrap}
+.btn.sm{min-height:34px;padding:6px 14px;font-size:13px}
+.more{font-size:17px;white-space:nowrap}.more::after{content:" ›"}
+.wait{display:inline-flex;align-items:center;min-height:34px;padding:4px 12px;border-radius:999px;border:1px dashed var(--c);color:var(--c);font-size:12px;font-weight:600}
+
+/* dark stage hero */
+.stage{position:relative;overflow:hidden;color:var(--stage-ink);background:radial-gradient(120% 70% at 50% 38%,#1a2b45 0%,#0b1220 45%,var(--stage) 75%)}
+.stage .eyebrow{font-size:14px;font-weight:600;color:var(--ice);letter-spacing:.02em}
+.stage h1{font-size:clamp(38px,10vw,88px);font-weight:800;letter-spacing:-.01em;line-height:1.2}
+.stage .lede{font-size:clamp(18px,2.6vw,24px);color:var(--stage-ink-2);margin-top:12px}
+.stage .ctas{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:center;align-items:center;margin-top:24px}
+.stage .ctas .more{color:#6cb6ff}
+.hero{text-align:center;padding:64px 0 40px}
+.prod{position:relative;margin:40px auto 0;width:min(84vw,520px)}
+.prod img.p{display:block;width:100%;height:auto;position:relative;z-index:2;filter:drop-shadow(0 30px 40px rgba(0,0,0,.55))}
+.prod::before{content:"";position:absolute;inset:-25% -10% -15%;z-index:0;background:radial-gradient(50% 45% at 50% 50%,rgba(90,200,250,.26),transparent 70%);filter:blur(10px)}
+.prod .refl{display:block;width:100%;height:auto;transform:scaleY(-1);opacity:.16;margin-top:2px;max-height:120px;object-fit:cover;object-position:bottom;
+  -webkit-mask-image:linear-gradient(to top,rgba(0,0,0,.9),transparent 70%);mask-image:linear-gradient(to top,rgba(0,0,0,.9),transparent 70%)}
+.prod .who{display:block;font-size:12px;color:#8e8e93;margin-top:6px;position:relative;z-index:2}
+
+/* hub hero: swipe of type cards */
+.hub-hero{padding-bottom:28px}
+.hcar{display:grid;grid-auto-flow:column;grid-auto-columns:86%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:32px 7% 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch;text-align:left}
+.hcar::-webkit-scrollbar{display:none}
+@media (min-width:900px){.hcar{grid-auto-columns:min(30%,340px);padding:40px 16px 8px}}
+.slide{scroll-snap-align:center;display:flex;flex-direction:column;gap:8px;border-radius:30px;padding:24px 22px;color:#f5f5f7;min-height:470px;
+  background:radial-gradient(110% 60% at 50% 55%,var(--glow,#1d3f7a) 0%,rgba(11,18,32,.9) 55%,rgba(5,7,11,.95) 100%);border:1px solid rgba(255,255,255,.08);
+  --ic-body:#2c2c2e;--ic-top:#3a3a3c;--ic-line:#e5e5ea;--ic-accent:#409cff;--ic-soft:#0f2c4d;--ic-shadow:rgba(0,0,0,.6);--ic-gloss:rgba(255,255,255,.18)}
+.slide:hover{text-decoration:none}
+.slide .st{font-size:13px;font-weight:600;color:#7ee2a8;display:flex;align-items:center;gap:6px}
+.slide .st::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.slide .st.off{color:#a1a1a6}
+.slide h2{font-size:28px;font-weight:800;line-height:1.25}
+.slide p{font-size:15px;color:#c7c7cc}
+.slide .pic{position:relative;height:130px;margin:14px 0 6px;overflow:hidden}
+.slide .pic img,.slide .pic svg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 18px 24px rgba(0,0,0,.6))}
+.slide ul{list-style:none;padding:0;margin:0;font-size:14px;color:#c7c7cc}
+.slide li{padding-left:20px;position:relative;margin:5px 0}
+.slide li::before{position:absolute;left:0;font-weight:700}
+.slide li.p::before{content:"+";color:#7ee2a8}.slide li.c::before{content:"−";color:#ffb35c}
+.slide .go{margin-top:auto;padding-top:10px;color:#6cb6ff;font-size:16px;font-weight:600}.slide .go::after{content:" ›"}
+.slide .who{font-size:12px;color:#8e8e93}
+.swipehint{text-align:center;font-size:13px;color:#8e8e93;margin-top:10px}
+@media (min-width:900px){.swipehint{display:none}}
+/* icon classes (style ข icons, _design/make_icons.py) */
+.i-b{fill:var(--ic-body,#e9eef5);stroke:var(--ic-line,#3a3a3c);stroke-width:2}.i-t{fill:var(--ic-top,#fff);stroke:var(--ic-line,#3a3a3c);stroke-width:2}
+.i-l{fill:none;stroke:var(--ic-line,#3a3a3c);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.i-a{fill:none;stroke:var(--ic-accent,#0a84ff);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.i-af{fill:var(--ic-accent,#0a84ff)}.i-s{fill:var(--ic-soft,#d5e7ff)}.i-sh{fill:var(--ic-shadow,rgba(0,0,0,.09))}
+.i-g{fill:none;stroke:var(--ic-gloss,rgba(255,255,255,.9));stroke-width:3;stroke-linecap:round}
+
+/* light sections */
+.ch{padding:72px 0;scroll-margin-top:calc(var(--nav-h) + var(--ln-h))}
+.ch.tint{background:var(--tint)}
+.ch.alt{background:var(--bg-2)}
+.h-l{font-size:clamp(30px,7vw,56px);font-weight:800;letter-spacing:-.005em}
+.h-m{font-size:clamp(24px,5vw,36px);font-weight:700}
+.lede2{font-size:clamp(17px,2.4vw,21px);color:var(--ink-2);margin-top:12px;max-width:36em}
+.center{text-align:center}.center .lede2{margin-inline:auto}
+.verdict{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:12px}
+.verdict li{padding:16px 18px;border-radius:18px;background:var(--bg);font-size:16px;line-height:1.6}
+.ch.alt .verdict li{background:var(--bg)}
+.ch:not(.alt):not(.tint) .verdict li{background:var(--bg-2)}
+
+/* tier badges + legend */
+.tier{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;width:max-content;max-width:100%;white-space:nowrap}
+.tier::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.tier.A{background:var(--a-bg);color:var(--a)}.tier.B{background:var(--b-bg);color:var(--b)}.tier.C{background:var(--c-bg);color:var(--c)}
+.tlegend{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px}
+@media (min-width:800px){.tlegend{grid-template-columns:repeat(3,1fr)}}
+.tlegend li{display:flex;flex-direction:column;gap:6px;padding:14px 16px;border-radius:16px;background:var(--bg-2);font-size:14px;color:var(--ink-2)}
+.ch.alt .tlegend li{background:var(--bg)}
+
+/* type map table (hub) */
+.tmap{margin-top:28px;border-radius:20px;overflow-x:auto;background:var(--bg);border:1px solid var(--rule)}
+.tmap table{border-collapse:collapse;min-width:760px;width:100%;font-size:14px;line-height:1.5}
+.tmap th,.tmap td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--rule)}
+.tmap thead th{font-size:13px;font-weight:600;color:var(--ink-3);background:var(--bg-2)}
+.tmap tbody th{position:sticky;left:0;z-index:1;background:var(--bg);min-width:150px;font-size:15px;font-weight:700}
+.tmap tbody th small{display:block;font-size:12px;font-weight:400;color:var(--ink-3);margin-top:4px}
+.tmap tr:last-child th,.tmap tr:last-child td{border-bottom:0}
+.tmap ul{margin:0;padding-left:16px}
+.tmap td{min-width:150px}.tmap td:nth-child(4){min-width:250px}.tmap td:nth-child(5){min-width:190px}
+
+/* bento */
+.bento{display:grid;gap:14px;margin-top:32px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:800px){.bento{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.tile{border-radius:24px;padding:22px 20px;background:var(--bg);min-height:160px;display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-width:0}
+.tile.big{grid-column:span 2}
+.tile.dark{background:#0b1220;color:#f5f5f7}
+.tile .k{font-size:13px;color:var(--ink-3);font-weight:600}.tile.dark .k{color:#a1a1a6}
+.tile h3{font-size:20px;font-weight:700;line-height:1.35}
+.tile p{font-size:14px;color:var(--ink-2)}.tile.dark p{color:#c7c7cc}
+
+/* situations */
+.sit{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{display:inline-flex;align-items:center;min-height:40px;padding:8px 16px;border-radius:999px;border:1px solid var(--rule);background:var(--bg);color:var(--ink);font-size:14px}
+.chip.on,.chip:hover{border-color:var(--ice-2)}
+.find{list-style:none;padding:0;margin:24px 0 0;border-top:1px solid var(--rule)}
+.find li{padding:14px 0;border-bottom:1px solid var(--rule);display:grid;gap:4px}
+.find b{font-weight:700}.find p{font-size:15px;color:var(--ink-2)}.find .fits{font-size:14px}
 .find small{color:var(--ink-3);font-size:13px}
-blockquote{margin:6px 0 0;padding:0 0 0 12px;border-left:2px solid var(--rule);color:var(--ink-2)}
-/* compare */
-.cmp{background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow:clip}
-.cmp-head{position:sticky;top:0;z-index:2;background:var(--card);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px;border-bottom:1px solid var(--rule)}
-.cmp-head figure{margin:0;text-align:center;min-width:0}
-.cmp-head img{width:100%;max-width:96px;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
-.cmp-head figcaption{font:600 13px/1.3 var(--font-display);margin-top:6px;overflow-wrap:anywhere}
-.row{padding:10px 12px;border-bottom:1px solid var(--rule)}
-.row:last-child{border-bottom:0}
-.row h3{font:600 13px/1.3 var(--font-body);color:var(--ink-3);margin:0 0 6px;letter-spacing:.02em}
-.cells{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;font-size:14px;line-height:1.45}
-.cells div{min-width:0;overflow-wrap:anywhere}
-.na{color:var(--ink-3)}
-.yes{color:var(--good);font-weight:600}
-/* product notes */
-.prod{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:16px;margin-bottom:12px;display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px}
-.prod img{width:72px;height:72px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid var(--rule)}
-.prod h3{font-size:17px;margin:0 0 4px}
-.prod p{margin:4px 0;font-size:15px}
-.prod .fits{color:var(--ink-2)}
-.shop{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:10px;font-size:14px;color:var(--ink-3)}
-.shop a{border:1px solid var(--ink-3);border-radius:4px;padding:4px 12px;text-decoration:none;color:var(--ink);white-space:nowrap}
-.shop a:hover{border-color:var(--ink)}
-.shop a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-/* caveats */
-.cav{list-style:none;padding:0;margin:0}
-.cav li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid var(--rule)}
-.cav li::before{content:"!";position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;background:var(--chip);color:var(--warn);font:600 12px/18px var(--font-display);text-align:center}
-.src{font-size:14px;color:var(--ink-2)}
-.src li{margin:3px 0}
-footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-3)}
+blockquote{margin:6px 0 0;padding:0 0 0 12px;border-left:2px solid var(--rule);color:var(--ink-2);font-size:15px}
 
-.mast a.home{font-family:var(--font-display);font-weight:600;color:var(--ink);text-decoration:none}.clips{margin-top:6px}.clips a{color:var(--ink);text-underline-offset:3px}.srch{font-size:15px;margin:18px 0 4px}.src a{color:var(--ink-2);text-underline-offset:3px}footer a{color:var(--ink-2)}
-/* table bands, column links, situation chips (19 Oct) */
-.band{font:600 12px/1.3 var(--font-body);letter-spacing:.04em;color:var(--ink-2);background:var(--chip);padding:7px 12px;border-bottom:1px solid var(--rule)}
-.golinks .cells a{display:inline-block;font-size:13px;color:var(--ink);text-underline-offset:3px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
-.chip{font:inherit;font-size:14px;padding:7px 13px;border:1px solid var(--rule);border-radius:999px;background:var(--card);color:var(--ink);cursor:pointer}
-.chip.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
-.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* cut-away callouts */
+.cutaway{position:relative;width:min(92vw,560px);margin:36px auto 0;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 20px 50px rgba(10,40,80,.18)}
+.cutaway img{display:block;width:100%;height:auto}
+.dot{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:var(--ice-2);color:#fff;font:700 14px/30px var(--font);text-align:center;box-shadow:0 0 0 6px rgba(10,132,255,.22)}
+.dot.warn{background:#ff9f0a;box-shadow:0 0 0 6px rgba(255,159,10,.25)}
+.credit{font-size:12px;color:var(--ink-3);margin:10px auto 0;max-width:560px}
+.legend{list-style:none;padding:0;margin:24px auto 0;max-width:820px;display:grid;gap:12px;text-align:left}
+@media (min-width:800px){.legend{grid-template-columns:repeat(2,1fr)}}
+.legend li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;padding:16px;border-radius:18px;background:var(--bg)}
+.legend li span{width:30px;height:30px;border-radius:50%;background:var(--ice-2);color:#fff;font:700 14px/30px var(--font);text-align:center}
+.legend li.warn span{background:#ff9f0a}
+.legend b{display:block;font-size:17px}.legend p{font-size:14px;color:var(--ink-2);margin-top:2px}
 
-/* wide tables: keep band + row labels visible while swiping sideways */
-.cmp .band span{position:sticky;left:12px}
-.cmp .row h3{position:sticky;left:12px;display:inline-block;background:var(--card);padding-right:6px}
-.noimg{display:inline-grid;place-items:center;width:72px;height:72px;border-radius:6px;border:1px dashed var(--rule);background:var(--chip);color:var(--ink-3);font:600 22px var(--font-display)}.cmp-head .noimg{width:64px;height:64px}.nolink{border:1px dashed var(--warn);color:var(--warn);border-radius:4px;padding:4px 10px;font-size:13px}.lnote{flex-basis:100%;color:var(--ink-3);font-size:13px}.mast a.up{color:var(--ink);text-decoration:none;font-weight:600}.mast a.up:hover{text-decoration:underline}.tmap{background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow-x:auto}.tmap table{border-collapse:collapse;min-width:720px;width:100%;font-size:14px;line-height:1.45}.tmap th,.tmap td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}.tmap thead th{font:600 13px var(--font-body);color:var(--ink-3);background:var(--chip)}.tmap tbody th{position:sticky;left:0;background:var(--card);min-width:150px;font:600 15px/1.35 var(--font-display)}.tmap tbody th a{color:var(--ink);text-underline-offset:3px}.tmap tbody th small{display:block;font:400 13px var(--font-body);color:var(--ink-3);margin-top:4px}.tmap tr:last-child th,.tmap tr:last-child td{border-bottom:0}.sit{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}.sit a{text-decoration:none}.subs{display:grid;gap:10px}.subcard{display:block;background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:14px 16px;text-decoration:none;color:var(--ink)}.subcard:hover{border-color:var(--ink-3)}.subcard:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.subcard h3{font-size:17px;margin:0}.subcard p{margin:4px 0 0;font-size:14px;color:var(--ink-2)}.subcard .cnt{color:var(--ink-3);font-size:13px}.subcard.off{border-style:dashed;color:var(--ink-3)}.cmp-head,.cells{grid-template-columns:repeat(1,minmax(0,1fr))}</style></head>
-<body style="--n:1"><div class="wrap">
-<div class="mast"><a href="/" class="home">สรุปให้ตัวไหนดี</a><span>สรุปจากผู้ใช้จริง <span class="code">รหัส 90</span></span></div>
-<header class="top"><h1>ปั๊มน้ำอัตโนมัติ ตัวไหนดี?</h1>
-<p class="meta"><span>กลุ่ม Facebook ถาม-ตอบ สารพัดปัญหาเรื่องบ้าน กระทู้ &quot;ปั๊มน้ำยี่ห้อไหนเสียงเงียบสุดและคุณภาพดี&quot; (ก.ย. 2569) อ่าน 122 จาก 154 คอมเมนต์</span> · <span>เสียงคนใช้แยกยี่ห้อ: Kikawa ~12 · Grundfos ชม ~15 ติ ~6 · Hitachi ~10 · Mitsubishi ~6 · Torque ~7</span> · <span>ไม่นับร้านซ่อมหรือร้านขายที่โฆษณา และคอมเมนต์ทะเลาะกันที่ไม่มีข้อมูล</span> · <span>อัปเดต 19 ต.ค. 2569</span></p>
-</header>
-<div class="verdict"><h2>สรุปสั้น</h2><ul><li><b>เริ่มจากถามว่าดูดน้ำจากไหน</b> ดูดจากแท้งค์บนดินหรือบ่อที่ระดับน้ำลึกไม่เกิน 8 เมตร ใช้ปั๊มอัตโนมัติทั่วไปได้ ถ้าลึกกว่านั้นต้องใช้ปั๊มดูดลึกซึ่งเป็นคนละแบบ บางรุ่นดูดได้แค่ 4 เมตร เช่น Kikawa KQ จึงเหมาะกับดูดจากแท้งค์</li><li>ยี่ห้อที่คนใช้เล่าว่าใช้ได้ 10–20 ปีคือ <b>Kikawa</b> (ใช้มาเกือบ 20 ปี เงียบ น้ำแห้งแล้วดับเอง) <b>Hitachi</b> (ใช้ตั้งแต่ปี 2004 ผ่านน้ำท่วมปี 2554) และ <b>Mitsubishi</b> (10 ปี เปลี่ยนแค่ลูกปืน) ส่วน <b>Grundfos</b> คนชมว่าเงียบที่สุด แต่ก็มีคนเจอพังซ้ำและค่าซ่อมแพง</li><li>จุดที่เสียบ่อยคือ <mark>ถังแรงดัน / ถังลม</mark> ต้องเติมลมหรือเปลี่ยนตามรอบ ส่วนปั๊มถังกลมมีคนเจอท่อข้างในเป็นสนิมเมื่อใช้ไปราว 6 ปี</li><li>ควรมี<b>ระบบตัดเมื่อน้ำแห้ง</b> หรือใช้คู่กับลูกลอยไฟฟ้าในแท้งค์ เพราะรุ่นเก่าที่ไม่มีระบบนี้ทำงานทั้งคืนจนเครื่องร้อน และตั้งปั๊มในที่ไม่โดนฝน ทำกล่องครอบช่วยกันแดดและลดเสียง</li><li>ลิงก์ในหน้านี้ตอนนี้เป็น Hitachi ทั้งหมด เพราะ Kikawa, Mitsubishi และ Grundfos ยังไม่มีลิงก์ใน Shopee ที่ผ่านเกณฑ์ของเรา</li></ul></div>
-<section><h2>เลือกตามสถานการณ์</h2><ul class="find"><li><b></b><p>แบบถังเหลี่ยมแรงดันคงที่ 150–200 วัตต์ เปิดหลายก๊อกแล้วน้ำไม่ค่อยดรอป คนในกลุ่มบอกว่าบ้านชั้นเดียว 250 วัตต์ก็พอ ใช้คู่กับลูกลอยไฟฟ้าในแท้งค์เพื่อกันปั๊มทำงานตอนน้ำหมด</p><p class="fits">ยังไม่มีตัวที่ผ่านเกณฑ์สำหรับกรณีนี้</p></li><li><b></b><p>ดูระยะส่งน้ำสูงสุดก่อนวัตต์ รุ่น 200 วัตต์ถังเหลี่ยมส่งได้ 14 เมตร ส่วนถังกลมวัตต์เท่ากันส่งได้ 20 เมตร หรือขยับเป็นถังเหลี่ยม 300 วัตต์ (18 เมตร)</p><p class="fits">ยังไม่มีตัวที่ผ่านเกณฑ์สำหรับกรณีนี้</p></li><li><b></b><p>ปั๊ม Hitachi ในหน้านี้ดูดได้ลึกสุด 8 เมตรจากระดับน้ำ ถ้าระดับน้ำลึกกว่านั้นต้องใช้ปั๊มดูดลึก (Deep Well) หรือปั๊มจุ่ม ซึ่งไม่อยู่ในหน้านี้ ส่วน Kikawa KQ ดูดได้ 4 เมตร ไม่เหมาะกับบ่อ</p><p class="fits">ยังไม่มีตัวที่ผ่านเกณฑ์สำหรับกรณีนี้</p></li><li><b></b><p>ผู้ผลิตบางรายเขียนในหน้าสินค้าว่าให้สูบจากถังพักน้ำเท่านั้น ไม่ต่อดูดจากท่อประปาโดยตรง วิธีที่คนส่วนใหญ่ใช้คือให้น้ำประปาลงแท้งค์ก่อนแล้วจึงสูบเข้าบ้าน ถ้าจะต่อแบบอื่นให้ถามการประปาในพื้นที่ก่อน</p><p class="fits">ยังไม่มีตัวที่ผ่านเกณฑ์สำหรับกรณีนี้</p></li></ul></section>
-<section><h2>คำถามที่คนถามบ่อย</h2><ul class="find"><li><b>ปั๊มน้ำยี่ห้อไหนเสียงเงียบและทน?</b><p>คนใช้เล่าว่า Kikawa ทั้งเงียบและใช้ได้เกือบ 20 ปีโดยไม่มีเสียงติ แต่ตอนนี้ยังไม่มีลิงก์ที่ผ่านเกณฑ์ Grundfos เงียบที่สุดตามที่คนชม แต่ค่าซ่อมแพง ถ้าเทียบ Hitachi กับ Mitsubishi คนบอกว่า Mitsubishi ถังเหลี่ยมเงียบกว่า ส่วนปั๊มถังกลมเสียงดังกว่า และทุกยี่ห้อเงียบลงได้ถ้าทำกล่องครอบ</p></li><li><b>Hitachi กับ Mitsubishi เลือกอันไหนดี?</b><p>ทั้งสองยี่ห้อมีคนใช้ 10 ปีขึ้นไปและอะไหล่หาง่าย Mitsubishi มีคนบอกว่าเงียบกว่า แต่มีคนเจอถังกลมเป็นสนิมที่ 6 ปี Hitachi มีคนใช้ตั้งแต่ปี 2004 ผ่านน้ำท่วมมาแล้ว ตอนนี้ลิงก์ที่ผ่านเกณฑ์มีแค่ Hitachi</p></li><li><b>Grundfos แพงแล้วคุ้มไหม?</b><p>คนที่ได้เครื่องดีใช้ 10–13 ปีปัญหาน้อย และบริษัทเปลี่ยนให้ในช่วงประกันมอเตอร์ แต่ก็มีคนเจอแบบถังลมเสียปีละครั้งและค่าซ่อมจนแทบซื้อใหม่ SCALA ต้องเติมลมตามรอบ ถ้าเลือก Grundfos ให้ถามเรื่องศูนย์บริการใกล้บ้านและค่าอะไหล่ก่อน</p></li><li><b>ต้องมีระบบตัดเมื่อน้ำแห้งไหม?</b><p>ควรมี เพราะรุ่นเก่าที่ไม่มีระบบนี้ทำงานทั้งคืนตอนน้ำหมดจนเครื่องร้อน Hitachi ในหน้านี้ผู้ผลิตเขียนแค่ตัวตัดเมื่อมอเตอร์ร้อน จึงควรติดลูกลอยไฟฟ้าในแท้งค์ให้ตัดไฟปั๊มตอนน้ำต่ำ Kikawa และ Grundfos ผู้ผลิตเขียนว่ามีระบบตัดเมื่อขาดน้ำ</p></li><li><b>บ้านเช่า สูบน้ำจากแท้งค์ ใช้ปั๊มกี่วัตต์?</b><p>คนในกลุ่มบอกว่าบ้านชั้นเดียว 250 วัตต์ก็พอ บ้าน 3 ชั้นต้องแรงกว่า ให้ดูระยะส่งน้ำสูงสุดเทียบกับความสูงจุดใช้น้ำที่สูงที่สุดในบ้าน</p></li><li><b>ถังแรงดัน / ถังลมต้องดูแลยังไง?</b><p>เป็นจุดที่เสียบ่อยที่สุด ถ้าปั๊มติดดับถี่ๆ ตอนเปิดก๊อก มักเป็นที่ถัง ปั๊มบางแบบต้องเติมลมตามรอบ ส่วนถังไนโตรเจนของ Hitachi ผู้ผลิตบอกว่าไม่ต้องเติม มีคนใช้ 10 ปีแล้วถังลมเพิ่งรั่ว ถังเปลี่ยนแยกได้</p></li><li><b>ควรตั้งปั๊มไว้ตรงไหน?</b><p>ตั้งในที่ไม่โดนฝน ทำหลังคาหรือกล่องครอบกันแดดกันน้ำ ซึ่งช่วยลดเสียงด้วย และควรเลือกจุดที่ยังได้ยินเสียงปั๊มบ้าง เพราะถ้าเงียบมาก น้ำรั่วหรือลืมปิดก๊อกจะไม่รู้</p></li><li><b>ปั๊มอินเวอร์เตอร์ดีกว่าไหม?</b><p>คนใช้บอกว่าเงียบมากและน้ำไม่ดรอปเวลาเปิดหลายก๊อก แต่ราคาสูง และช่างซ่อมปั๊มเตือนว่ารุ่นเงียบน้ำแรงมักอะไหล่แพง ควรดูว่ามีศูนย์บริการก่อนซื้อ</p></li></ul></section>
-<section><h2>เสียงจากผู้ใช้จริง</h2><ul class="find"><li><b>ใช้ได้นาน 10–20 ปี</b><small>FB ~25 (Kikawa, Hitachi, Mitsubishi)</small><blockquote>“ใช้มาเกือบ 20 ปี ทนมาก เสียงเงียบ”</blockquote><blockquote>“ใช้ตั้งแต่ปี 2004 ผ่านน้ำท่วมปี 2011 ยังใช้ได้”</blockquote><blockquote>“ใช้ 10 ปี เปลี่ยนแค่ลูกปืน”</blockquote></li><li><b>น้ำแห้งแล้วปั๊มร้อน</b><small>FB ~3</small><blockquote>“เคยน้ำแห้ง ร้อน ดับเอง เย็นแล้วกลับมาทำงานปกติ”</blockquote><blockquote>“รุ่นเก่าไม่มีระบบตัดเมื่อไม่มีน้ำ ทำงานทั้งคืน เครื่องร้อนมาก”</blockquote></li><li><b>ถังลม / ถังแรงดันเสีย</b><small>FB ~5 (ส่วนใหญ่ Grundfos)</small><blockquote>“เสียบ่อยปีละครั้ง จนหมดความอดทน”</blockquote><blockquote>“10 ปี ถังลมเพิ่งรั่ว”</blockquote><blockquote>“ต้องเติมลมเป็นระยะ ไม่เติมพังได้”</blockquote></li><li><b>ถังกลมเป็นสนิม</b><small>FB ~1 (Mitsubishi)</small><blockquote>“ถังกลม 6 ปี ท่อข้างในเป็นสนิม น้ำทะลัก”</blockquote></li><li><b>ค่าซ่อมแพง</b><small>FB ~4</small><blockquote>“พังทีแทบซื้อใหม่”</blockquote><blockquote>“อย่าซื้อแบบบอร์ด บอร์ดเสียราคาสูง”</blockquote></li><li><b>เงียบเกินไปจนไม่รู้ว่าน้ำรั่ว</b><small>FB ~3</small><blockquote>“น้ำรั่วหรือลืมปิดก๊อกแล้วไม่รู้”</blockquote></li></ul></section>
-<section><h2>เทียบ 1 ตัวแบบแถวต่อแถว</h2><p class="sub">สเปกจากเว็บแบรนด์ คู่มือ และห้างที่ระบุรุ่น (ดูที่มาท้ายหน้า) และเสียงคนใช้</p>
-<div class="cmp"><div class="cmp-in"><div class="cmp-head"><figure data-col="0"><img src="https://cf.shopee.co.th/file/th-11134207-81ztk-mnjjwual24g45a_tn" alt="HITACHI ปั๊มน้ำอัตโนมัติ WT-P200XX 200 วัตต์ (นพดลพานิช)" loading="lazy"><figcaption>HITACHI WT-P200XX (ถังกลม)</figcaption></figure></div><div class="band"><span>สเปกจากแบรนด์และคู่มือ</span></div><div class="row"><h3>วัตต์</h3><div class="cells"><div data-col="0">200 W</div></div></div><div class="row"><h3>แรงดัน / ระยะส่ง</h3><div class="cells"><div data-col="0" class=yes>ส่งสูงสุด 20 ม.</div></div></div><div class="row"><h3>อัตราการไหล</h3><div class="cells"><div data-col="0">58 ลิตร/นาที</div></div></div><div class="row"><h3>ดูดลึกสูงสุด</h3><div class="cells"><div data-col="0">8 ม.</div></div></div><div class="row"><h3>ระบบตัดน้ำแห้ง</h3><div class="cells"><div data-col="0">ผู้ผลิตไม่ระบุ (ตรวจ HomePro) · มีตัวจับอุณหภูมิกันชิ้นส่วนเสียรูป</div></div></div><div class="row"><h3>ถัง / ชนิด</h3><div class="cells"><div data-col="0">ถังกลม (ถังแรงดัน) · ผู้ผลิตบอกว่าเคลือบกันสนิม 3 ชั้น</div></div></div><div class="row"><h3>ประกันมอเตอร์</h3><div class="cells"><div data-col="0">10 ปี (อะไหล่ 1 ปี 6 เดือน)</div></div></div><div class="band"><span>เสียงคนใช้จริง</span></div><div class="row"><h3>เสียงคนใช้ระยะยาว</h3><div class="cells"><div data-col="0">"ปั๊มกลมเสียงดังกว่า Mitsubishi" · ปั๊มถังกลมยี่ห้ออื่นมีคนเจอสนิมในท่อเมื่อใช้ 6 ปี</div></div></div><div class="band"><span>รีวิวใน Shopee (ทั้งคำชมและคำติ)</span></div><div class="row"><h3>รีวิวใน Shopee</h3><div class="cells"><div data-col="0">ชม: “ปั๊มน้ำฮิตาชิใช้ปั้มน้ำบาดาลน้ำแรงดีถูกใจค่ะ เสียงปั๊มก็ไม่ดังมาก”</div></div></div><div class="band"><span>เหมาะกับใคร</span></div><div class="row"><h3>เหมาะกับ</h3><div class="cells"><div data-col="0">บ้าน 2–3 ชั้น ต้องส่งสูง งบน้อยกว่า</div></div></div><div class="row"><h3>ร้าน</h3><div class="cells"><div data-col="0">นพดลพานิช (ไม่ใช่ร้าน official)</div></div></div><div class="row golinks"><div class="cells"><div data-col="0"><a href="#p0">ดูรายละเอียด</a></div></div></div></div></div></section>
-<section><h2>รายตัว</h2><p class="sub">ราคาคือราคาวันที่เก็บข้อมูล อาจเปลี่ยนแล้ว</p><article class="prod" id="p0"><img src="https://cf.shopee.co.th/file/th-11134207-81ztk-mnjjwual24g45a_tn" alt="" loading="lazy"><div><h3>HITACHI ปั๊มน้ำอัตโนมัติ WT-P200XX 200 วัตต์ (นพดลพานิช)</h3><p>ถังกลม 200 วัตต์ ส่งได้สูงถึง 20 ม. สูงกว่าถังเหลี่ยมวัตต์เท่ากัน ดูดลึก 8 ม. 58 ลิตร/นาที ประกันมอเตอร์ 10 ปี ผู้ผลิตบอกว่าถังเคลือบกันสนิม 3 ชั้น ข้อควรรู้: คนในกลุ่มบอกว่าปั๊มกลมเสียงดังกว่า และมีคนใช้ปั๊มถังกลมยี่ห้ออื่นเจอสนิมในท่อเมื่อใช้ 6 ปี ไม่ควรตั้งใกล้ห้องนอน</p><p class="fits">เหมาะกับ: บ้าน 2–3 ชั้น ต้องส่งสูง</p><div class="shop"><span>~฿7,728 (19 ต.ค. 2569)</span><a class="go" data-pid="114881280/23273599509" href="/go?p=114881280/23273599509&amp;s=water-pump&amp;ch=hub" rel="nofollow sponsored">ดูใน Shopee</a></div></div></article></section>
-<section><h2>สิ่งที่เราไม่เคลม</h2><ul class="cav"><li>Kikawa (ไต้หวัน) เป็นยี่ห้อที่คนใช้เล่าว่าทนที่สุดและไม่มีเสียงติ แต่ยังไม่มีลิงก์ใน Shopee ที่ผ่านเกณฑ์ (ลิงก์ที่มีรีวิวไม่ถึง 20) คนในกลุ่มแนะนำให้ซื้อตรงกับบริษัท ตาม HomePro รุ่น KQ-400(Z) 400 W ดูดลึก 4 ม. ส่งสูง 27 ม. 58 ลิตร/นาที ตัดการทำงานเมื่อขาดน้ำหรือร้อนผิดปกติ ประกันมอเตอร์ 7 ปี</li><li>Mitsubishi มีเสียงใช้ 10 ปีและคนบอกว่าเงียบกว่า Hitachi โดยเฉพาะแบบถังเหลี่ยม แต่ยังไม่มีลิงก์ตัวเครื่องที่ผ่านเกณฑ์ ตาม HomePro รุ่น EP-205R2 200 W ดูดลึก 8 ม. ส่งสูง 20 ม. 59 ลิตร/นาที ประกันมอเตอร์ 11 ปี มีเทอร์มอลโพรเทคเตอร์ แต่ไม่ได้เขียนว่ามีระบบตัดน้ำแห้ง</li><li>Grundfos SCALA2 คนชมว่าเงียบ น้ำแรงสม่ำเสมอ และมีคนใช้ 13 ปีปัญหาน้อย แต่ก็มีคนเจอแบบถังลมเสียปีละครั้งและค่าซ่อมสูง ตาม HomePro รุ่น SCALA2 3-45 550 W ส่งสูง 45 ม. มีระบบตัดน้ำแห้งและกันรั่ว เสียงต่ำกว่า 47 dB ประกันมอเตอร์ 2 ปี ราคาสองหมื่นกว่าบาท ยังไม่มีลิงก์ใน Shopee ที่ผ่านเกณฑ์</li><li>Torque คนชมว่าเงียบและแรง แต่ยังไม่มีเสียงใช้นาน จึงยังไม่ใส่ในหน้านี้</li><li>ทั้งสามลิงก์ในหน้านี้ไม่ใช่ร้าน official ของ Hitachi ควรขอใบรับประกันจากร้าน</li><li>หน้า HomePro ของ WM-P200XX2 เขียนในรายละเอียดว่ามีระบบตัดน้ำแห้ง แต่ช่องสเปกระบุแค่ตัดอุณหภูมิ เราจึงเขียนว่าผู้ผลิตไม่ระบุ</li><li>ลิงก์ WM-P XX รวมหลายขนาดไว้ในลิงก์เดียว คะแนนและจำนวนรีวิวเป็นของทุกขนาดรวมกัน</li><li>สเปกในตารางมาจากเว็บ Hitachi ประเทศไทย (GX3) และหน้าสินค้า HomePro (XX, WT-P)</li><li>ปั๊มถังเหลี่ยมแรงดันคงที่ (Hitachi WM-P XX / GX3, Mitsubishi EP) ยังไม่ใส่: เสียงคนใช้บน YouTube ผสมกัน หลายคนเจอ pressure switch เสียใน 2–3 ปี เสียงดัง หรือเครื่องติดทุกไม่กี่นาที · ถังกลม (Hitachi WT-P, Mitsubishi WP) มีคนใช้ 10–20 ปีหลายคน</li><li>Mitsubishi WP ถังกลมมีเสียงคนใช้ยืนยัน แต่ยังไม่เจอลิสต์ที่ผ่านเกณฑ์รีวิวของเรา · Kikawa เสียงดีแต่ลิสต์มีรีวิวน้อย</li><li>รีวิวใน Shopee มาจากรีวิวในแอป Shopee ของลิงก์ที่เราเลือก ทั้งคำชมและคำติ (1–3 ดาว) ส่วนใหญ่เขียนช่วงแรกหลังได้ของ · เสียงคนใช้ระยะยาวยังเป็นหลักในการเลือก</li></ul></section>
-<section><h2>ที่มาของข้อมูล</h2><ul class="src"><li>Facebook: กลุ่มถาม-ตอบ สารพัดปัญหาเรื่องบ้าน กระทู้ "เครื่องปั้มน้ำยี่ห้อไหนเสียงเงียบสุดและคุณภาพดี" (ก.ย. 2569) 154 คอมเมนต์ อ่าน 122 · ผู้ถามสูบน้ำจากแท้งค์ในบ้านเช่า</li><li>Facebook: คนถามในกลุ่มเดียวกันอีก 2 กระทู้ (Hitachi กับ Mitsubishi) ยังไม่ได้อ่าน</li></ul><h3 class="srch">ที่มาของสเปก</h3><ul class="src"><li><a href="https://www.hitachi-homeappliances.com/th-th/products/water-pump/shallow-well-compact/wm-p150gx3cgo.html" rel="noopener">Hitachi Thailand official WM-P150GX3CGO: 150 W, suction 8 m, discharge 12 m, max 41 L/min (34 @12 m), switch 1.6/2.0 kgf/cm², bladder tank, motor temp detector, no dry-run listed, unit 1 yr / motor 10 yr, 10.8 kg</a></li><li><a href="https://www.hitachi-homeappliances.com/th-th/products/water-pump/shallow-well-compact/wm-p200gx3cgo.html" rel="noopener">Hitachi Thailand official WM-P200GX3CGO: 200 W, suction 8 m, discharge 14 m, max 49 L/min, bladder tank, unit 1 yr / motor 10 yr</a></li><li><a href="https://www.hitachi-homeappliances.com/th-th/products/water-pump/" rel="noopener">Hitachi Thailand water pump catalogue (GX3 compact = current; XX no longer listed)</a></li><li><a href="https://www.homepro.co.th/p/1147417" rel="noopener">HomePro HITACHI WM-P150XX: 150 W, suction 8 m, head 13 m, 50 L/min, motor 10 yr, parts 1.6 yr, temperature sensor; discontinued → WM-P150XX2</a></li><li><a href="https://www.homepro.co.th/p/1147441" rel="noopener">HomePro HITACHI WM-P200XX: 200 W, suction 8 m, head 14 m, 58 L/min, motor 10 yr, parts 1.6 yr, nitrogen tank no refill, temperature sensor only</a></li><li><a href="https://www.homepro.co.th/p/1147405" rel="noopener">HomePro HITACHI WM-P300XX: 300 W, suction 8 m, head 18 m, 62 L/min, motor 10 yr, parts 1 yr 6 mo</a></li><li><a href="https://www.homepro.co.th/p/1147398" rel="noopener">HomePro HITACHI WT-P200XX: 200 W, suction 8 m, head 20 m, 58 L/min, motor 10 yr, parts 1.6 yr, tank 3-layer anti-rust coating</a></li><li><a href="https://www.homepro.co.th/p/1290677" rel="noopener">HomePro HITACHI WM-P200XX2: 200 W, suction 8 m, head 14 m, 55 L/min, safety field = ตัดอุณหภูมิ (description mentions dry-run; conflicting)</a></li><li><a href="https://www.homepro.co.th/p/1209772" rel="noopener">HomePro KIKAWA KQ-400(Z): 400 W, suction 4 m, head 27 m, 58 L/min, cuts off when short of water / abnormal temp, motor 7 yr, parts 2 yr</a></li><li><a href="https://www.homepro.co.th/p/1209773" rel="noopener">HomePro KIKAWA KQ-800(Z): 800 W, suction 4 m, head 36 m, 88 L/min, same protection, motor 7 yr, parts 2 yr</a></li><li><a href="https://www.homepro.co.th/p/1283217" rel="noopener">HomePro MITSUBISHI EP-205R2: 200 W, suction 8 m, head 20 m, 59 L/min, thermal protector, motor 11 yr, parts 1 yr (no dry-run mentioned)</a></li><li><a href="https://www.homepro.co.th/p/1265519" rel="noopener">HomePro GRUNDFOS SCALA2 3-45: 550 W, suction 8 m, head 45 m, 63 L/min, dry-running protection, anti-cycling, &lt;47 dB, motor 2 yr, parts 2 yr; pump from storage tank only, not straight from mains</a></li></ul></section>
-<footer>ปุ่มไป Shopee เป็นลิงก์แอฟฟิลิเอท ถ้าซื้อผ่านลิงก์เราได้ค่าคอมมิชชันจาก Shopee ราคาที่คุณจ่ายเท่าเดิม · <a href="/">ดูหมวดอื่น</a></footer>
-</div>
-<script>
-(function(){var q=new URLSearchParams(location.search),ch=(q.get('ch')||'hub').replace(/[^a-z0-9-]/gi,'').slice(0,12)||'hub';
-document.querySelectorAll('a.go').forEach(function(a){a.href='/go?p='+encodeURIComponent(a.dataset.pid)+'&s=water-pump&ch='+encodeURIComponent(ch);});
-document.querySelectorAll('a.home').forEach(function(a){a.href='/?ch='+encodeURIComponent(ch);});
-document.querySelectorAll('a[data-c]').forEach(function(a){a.href='/?ch='+encodeURIComponent(ch)+'&c='+encodeURIComponent(a.dataset.c);});
-document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){
- document.querySelectorAll('.chip').forEach(function(x){x.classList.toggle('on',x===b);});
- var keep=b.dataset.cols==='all'?null:b.dataset.cols.split(','),k=0;
- document.querySelectorAll('.cmp [data-col]').forEach(function(el){el.style.display=(!keep||keep.indexOf(el.dataset.col)>=0)?'':'none';});
- var m=keep?keep.length:1;document.body.style.setProperty('--n',m);
- document.querySelectorAll('.cmp-head,.cells').forEach(function(el){el.style.gridTemplateColumns='repeat('+m+',minmax(0,1fr))';});});});})();
-</script>
-</body></html>
+/* compare table: old site shape (columns side by side, up to 3 visible on a phone, label above values), v3 look */
+.cmp3{margin-top:32px;border-radius:22px;background:var(--bg);border:1px solid var(--rule)}
+.c3-head{position:sticky;top:calc(var(--nav-h) + var(--ln-h));z-index:5;display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:8px;
+  padding:12px;border-bottom:1px solid var(--rule);border-radius:22px 22px 0 0;background:color-mix(in srgb,var(--bg) 92%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.c3-head figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;min-width:0}
+.c3-head .ph{position:relative;width:100%;max-width:84px;aspect-ratio:1;overflow:hidden}
+.c3-head .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.c3-head .ph .noimg{position:absolute;inset:0;display:grid;place-items:center;border-radius:14px;background:var(--bg-2);color:var(--ink-3);font-weight:700}
+.c3-head figcaption{font-size:13px;font-weight:700;line-height:1.3;overflow-wrap:anywhere}
+.c3-head .tier{font-size:11px;padding:2px 8px}
+.c3-sec{font-size:20px;font-weight:800;padding:22px 12px 8px;border-bottom:1px solid var(--rule)}
+.c3-row{padding:12px;border-bottom:1px solid var(--rule)}
+.c3-row h5{font-size:13px;font-weight:600;color:var(--ink-3);margin:0 0 6px}
+.c3-cells{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:8px}
+.c3-cells>div{min-width:0;overflow-wrap:anywhere;font-size:14px;line-height:1.45}
+.c3-cells .v{font-weight:600}
+.c3-cells .v.big{font-size:clamp(20px,5.6vw,30px);font-weight:800;line-height:1.15;background:linear-gradient(120deg,var(--ice-2),var(--ice));-webkit-background-clip:text;background-clip:text;color:transparent}
+.c3-cells .yes .v:not(.big){color:var(--a)}
+.c3-cells .yes .v.big{background:linear-gradient(120deg,#1f9d5c,#5cc08e);-webkit-background-clip:text;background-clip:text}
+.c3-cells .n{font-size:12px;color:var(--ink-3);margin-top:3px;line-height:1.4}
+.c3-row.span .c3-cells{grid-template-columns:1fr}
+.c3-foot{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:8px;padding:14px 12px}
+.c3-foot .btn,.c3-foot .wait{white-space:normal;text-align:center;font-size:13px;padding:8px 6px;min-height:40px;justify-content:center}
+.cmp3.wide{overflow-x:auto;scroll-snap-type:x proximity}
+.cmp3.wide .c3-in{min-width:calc(var(--n)*118px + 24px)}
+.cmp3.wide .c3-head{position:static}
+.cmp3.wide .c3-sec,.cmp3.wide .c3-row h5{position:sticky;left:12px;display:inline-block}
+.cmp3.wide .c3-row.span .c3-cells{position:sticky;left:12px;max-width:min(calc(100vw - 58px),720px)}
+.swipe{font-size:13px;color:var(--ink-3);text-align:center;margin-top:10px}
+
+/* model cards on stage */
+.mcard{border-radius:28px;overflow:hidden;margin-top:24px;display:grid;color:#f5f5f7;background:radial-gradient(80% 60% at 30% 40%,#16324d 0%,#0b1220 55%,#05070b 100%);scroll-margin-top:calc(var(--nav-h) + var(--ln-h) + 8px)}
+@media (min-width:800px){.mcard{grid-template-columns:1fr 1.2fr}}
+.mcard .pic{position:relative;height:240px;margin:28px 24px 0;overflow:hidden}
+.mcard .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 24px 30px rgba(0,0,0,.6))}
+.mcard .txt{padding:16px 24px 28px;display:flex;flex-direction:column;gap:10px;justify-content:center}
+.mcard h3{font-size:24px;font-weight:800}
+.mcard p{color:#c7c7cc;font-size:15px}
+.mcard .why{font-size:13px;color:#a1a1a6}
+.mcard .fits{color:#e5e5ea}
+.mcard .watch{color:#ffb35c;font-size:14px}
+.mcard .tier.A{background:rgba(126,226,168,.15);color:#7ee2a8}.mcard .tier.B{background:rgba(106,166,255,.18);color:#9cc3ff}.mcard .tier.C{background:rgba(240,180,90,.18);color:#f0b45a}
+.mcard .addons{margin:6px 0 0;padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.06);list-style:none;display:grid;gap:10px}
+.mcard .addons h4{font-size:14px;color:#ffb35c}
+.mcard .addons li{font-size:14px;color:#c7c7cc}.mcard .addons li b{color:#f5f5f7}
+.mcard .addons small{display:block;color:#8e8e93;font-size:12px}
+.mcard .addons a{color:#6cb6ff}
+.mcard .buy{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:6px}
+.mcard .wait{border-color:#f0b45a;color:#f0b45a}
+
+/* weak part -> fix */
+.fix{display:grid;gap:14px;margin-top:28px}
+@media (min-width:800px){.fix{grid-template-columns:1fr 1fr}}
+.fx{border-radius:24px;padding:22px 22px;background:var(--bg);display:flex;flex-direction:column;gap:6px}
+.fx .tag{font-size:13px;font-weight:700;color:var(--c)}.fx .tag.ok{color:var(--a)}
+.fx h3{font-size:20px}.fx p{font-size:15px;color:var(--ink-2)}.fx small{color:var(--ink-3);font-size:13px}
+
+/* caveats, sources, footer */
+.cav{list-style:none;padding:0;margin:20px 0 0}
+.cav li{padding:10px 0 10px 28px;position:relative;border-bottom:1px solid var(--rule);font-size:15px;color:var(--ink-2)}
+.cav li::before{content:"!";position:absolute;left:0;top:11px;width:20px;height:20px;border-radius:50%;background:var(--c-bg);color:var(--c);font:700 12px/20px var(--font);text-align:center}
+.src{font-size:13px;color:var(--ink-3)}.src h2{font-size:15px;color:var(--ink-2);margin:0 0 8px}.src h3{font-size:14px;color:var(--ink-2);margin:16px 0 6px}
+.src ul{padding-left:18px;margin:0}.src li{margin:3px 0}.src a{color:var(--ink-3);text-decoration:underline;text-underline-offset:3px}
+.draftbar{background:#3a2a05;color:#ffd27a;font-size:13px;padding:8px 16px;text-align:center}
+footer.ft{padding:28px 0 calc(28px + env(safe-area-inset-bottom));font-size:12px;color:var(--ink-3);background:var(--bg-2)}
+footer.ft a{color:var(--ink-2)}
+@media (max-width:420px){.ln b{max-width:34%}.tile.big{grid-column:span 2}.hero{padding-top:48px}}
+/* 22 Oct review fixes */
+.prod img.p{max-height:42vh;width:auto;max-width:100%;margin:0 auto}
+.prod .refl{width:auto;max-width:100%;margin-left:auto;margin-right:auto}
+.cutaway{background:#1c1c1e;padding:10px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.cutaway img{border-radius:16px}
+.shopchip{display:inline-block;font-size:12px;line-height:1;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,159,10,.55);color:#ff9f0a}
+.c3-note{font-size:13px;color:#8e8e93;text-align:center;margin:10px 0 0}
+
+</style></head>
+<body>
+<header class="gn"><div class="w"><a class="brand" href="/">สรุปให้ตัวไหนดี</a><span class="crumb">ปั๊มน้ำอัตโนมัติ</span></div></header>
+<div class="ln"><div class="w"><b>ปั๊มน้ำอัตโนมัติ</b><nav aria-label="ส่วนของหน้า"><a href="#types">11 ประเภท</a><a href="#map">ตารางประเภท</a><a href="#sit">เลือกตามบ้าน</a><a href="#tips">ที่ช่างย้ำ</a><a href="#faq">คำถาม</a></nav></div></div>
+<main>
+<section class="stage hero hub-hero" id="types"><div class="w"><p class="eyebrow">รหัส 90</p><h1>ปั๊มน้ำอัตโนมัติ<br>ตัวไหนดี?</h1><p class="lede">เลือกประเภทให้ตรงบ้านก่อน แล้วค่อยเลือกยี่ห้อ</p></div><div class="hcar" aria-label="11 ประเภทปั๊มน้ำอัตโนมัติ"><a class="slide" href="/?c=90-1" data-c="90-1" style="--glow:#1d3f7a"><span class="st">มีรุ่นที่ผ่าน 5 รุ่น</span><h2>ถังกลม</h2><p>บ้าน 1–2 ชั้น ดูดจากถังพัก เปิดทีละจุด อยากซ่อมง่าย</p><div class="pic"><img src="/img/p/hitachi-wt-p150xx.webp" alt="Hitachi WT-P150XX 150 วัตต์ (ถังกลม)" loading="lazy"></div><ul><li class="p">ทนที่สุดในสายตาช่าง อะไหล่ถูก ช่างทั่วไปซ่อมเป็น</li><li class="p">ก๊อกแรกน้ำแรง</li><li class="c">ถังเหล็กผุรั่วราวปีที่ 5–10 (แก้ด้วยถังสเตนเลส)</li><li class="c">เปิดหลายก๊อกพร้อมกันน้ำแรงสลับเบา เสียงดังกว่า</li></ul><span class="go">ดู 5 รุ่นในประเภทนี้</span><span class="who">ในรูป: Hitachi WT-P150XX 150 วัตต์</span></a><a class="slide" href="/?c=90-2" data-c="90-2" style="--glow:#0f5a66"><span class="st">มีรุ่นที่ผ่าน 2 รุ่น</span><h2>ถังเหลี่ยม แรงดันคงที่</h2><p>บ้าน 2–3 ชั้น มีเครื่องทำน้ำอุ่น เปิดหลายจุดพร้อมกัน</p><div class="pic"><img src="/img/p/mitsubishi-ep-205r2e.webp" alt="Mitsubishi EP-205R2E 200 วัตต์ (ถังเหลี่ยม แรงดันคงที่)" loading="lazy"></div><ul><li class="p">แรงดันนิ่ง ไม่แรงสลับเบา</li><li class="p">ไม่มีถังเหล็กใหญ่ให้ผุ</li><li class="c">สวิตช์แรงดัน / flow switch และถังไนโตรเจนเสียราวปีที่ 3–4</li><li class="c">ค่าซ่อมรวมอาจมากกว่าถังกลม</li></ul><span class="go">ดู 2 รุ่นในประเภทนี้</span><span class="who">ในรูป: Mitsubishi EP-205R2E 200 วัตต์</span></a><div class="slide" style="--glow:#6b4f22"><span class="st off">ยังไม่มีรุ่นที่มีเสียงใช้นานพอ</span><h2>อินเวอร์เตอร์</h2><p>อยากได้แรงดันนิ่งมาก (rain shower) ประหยัดไฟ</p><div class="pic"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img"><title>อินเวอร์เตอร์</title><ellipse class="i-sh" cx="60" cy="108" rx="32" ry="5"/><rect class="i-b" x="30" y="18" width="60" height="86" rx="14"/><path class="i-g" d="M38 30v40"/><rect class="i-s" x="40" y="32" width="40" height="26" rx="6"/><path class="i-a" d="M44 46c4-9 8 9 12 0s8 9 12 0 6-6 8-4"/><circle class="i-l" cx="60" cy="80" r="9"/></svg></div><ul><li class="p">แรงดันคงที่ เงียบตอนใช้น้ำน้อย</li><li class="p">บางรุ่นแจ้งน้ำรั่ว น้ำขาด</li><li class="c">บอร์ดเสียแพง ไฟตก ไฟกระชากทำบอร์ดเสียได้</li><li class="c">Grundfos SCALA2 รั่วใต้ฐานซ้ำหลายคน · Hitachi Inverter มีปัญหาปีที่ 3–5</li></ul></div><a class="slide" href="/?c=90-4" data-c="90-4" style="--glow:#3b2a6b"><span class="st">มีรุ่นที่ผ่าน 1 รุ่น</span><h2>ปั๊มเงียบ หลายใบพัด</h2><p>เน้นเงียบ ทาวน์เฮาส์ติดเพื่อนบ้าน ดูดจากถังพักบนดิน</p><div class="pic"><img src="/img/p/walrus-wq400b.webp" alt="Walrus WQ400B 370 วัตต์ (ปั๊มเงียบหลายใบพัด)" loading="lazy"></div><ul><li class="p">เงียบที่สุดในเสียงคนใช้ น้ำแรงสม่ำเสมอ</li><li class="p">ใบพัดสเตนเลส</li><li class="c">ระยะดูดสั้นกว่าปั๊มถัง</li><li class="c">ช่างนอกไม่ค่อยรับซ่อม · เงียบจนไม่รู้ว่าน้ำรั่ว</li></ul><span class="go">ดู 1 รุ่นในประเภทนี้</span><span class="who">ในรูป: Walrus WQ400B 370 วัตต์</span></a><a class="slide" href="/?c=90-5" data-c="90-5" style="--glow:#1f5a3a"><span class="st">มีรุ่นที่ผ่าน 2 รุ่น</span><h2>บูสเตอร์ บ้านใหญ่</h2><p>บ้าน 3–5 ชั้น หลายห้องน้ำ พูลวิลล่า</p><div class="pic"><img src="/img/p/grundfos-cmb3-46pt18l.webp" alt="Grundfos CMB3-46 PT18L 500 วัตต์ (บูสเตอร์ + ถังแรงดัน 18 ลิตร)" loading="lazy"></div><ul><li class="p">แรง เงียบ ทน ใบพัดสเตนเลสหลายชั้น</li><li class="p">ช่างพูดว่าดีสุดสำหรับบ้านใหญ่</li><li class="c">แบบถังต้องเช็กลมทุก 6 เดือน</li><li class="c">ราคาสูง ค่าซ่อมแพง</li></ul><span class="go">ดู 2 รุ่นในประเภทนี้</span><span class="who">ในรูป: Grundfos CMB3-46 PT18L 500 วัตต์</span></a><div class="slide" style="--glow:#5a2a2a"><span class="st off">ยังไม่มีรุ่นที่มีเสียงใช้นานพอ</span><h2>บูสเตอร์อาคาร</h2><p>หอพัก อพาร์ตเมนต์ โรงแรม 10 ห้องขึ้นไป</p><div class="pic"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img"><title>อาคาร หอพัก</title><ellipse class="i-sh" cx="60" cy="108" rx="36" ry="5"/><rect class="i-b" x="34" y="14" width="52" height="90" rx="6"/><path class="i-g" d="M40 22v30"/><rect class="i-s" x="44" y="26" width="12" height="10" rx="2"/><rect class="i-s" x="64" y="26" width="12" height="10" rx="2"/><rect class="i-s" x="44" y="46" width="12" height="10" rx="2"/><rect class="i-s" x="64" y="46" width="12" height="10" rx="2"/><rect class="i-s" x="44" y="66" width="12" height="10" rx="2"/><rect class="i-s" x="64" y="66" width="12" height="10" rx="2"/><path class="i-l" d="M54 104V88h12v16"/><path class="i-a" d="M96 104V24M90 30l6-6 6 6"/></svg></div><ul><li class="p">ช่างแนะนำแบ่งโซน เช่น ปั๊ม 1 ตัวต่อราว 9 ห้อง พร้อมถังพัก</li><li class="c">ต้องให้ช่างออกแบบระบบ ไม่ใช่เลือกจากตาราง</li></ul></div><div class="slide" style="--glow:#2a4a6b"><span class="st off">ยังไม่มีรุ่นที่มีเสียงใช้นานพอ</span><h2>ซับเมิร์ส / บาดาล</h2><p>บ่อบาดาล 15 เมตรขึ้นไป สวน ไร่</p><div class="pic"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img"><title>ซับเมิร์ส / บ่อบาดาล</title><path class="i-s" d="M14 52c8 4 16-4 24 0s16-4 24 0 16-4 24 0 16-4 20-2v58H14z"/><path class="i-l" d="M10 30h100"/><path class="i-a" d="M60 30v42"/><rect class="i-b" x="48" y="70" width="24" height="38" rx="10"/><path class="i-g" d="M54 78v18"/><path class="i-a" d="M14 52c8 4 16-4 24 0s16-4 24 0 16-4 24 0 16-4 20-2" opacity=".6"/></svg></div><ul><li class="p">ดันน้ำจากบ่อลึกได้</li><li class="c">ไฟตกบ่อยทำให้เสียได้ปีละ 1–2 ครั้ง</li><li class="c">ต้องเลือกขนาดตามบ่อ 3 / 4 / 5 นิ้ว และดูสายไฟ เบรกเกอร์</li></ul></div><div class="slide" style="--glow:#4a4a20"><span class="st off">ยังไม่มีรุ่นที่มีเสียงใช้นานพอ</span><h2>ปั๊มเจ็ท ดูดลึก</h2><p>บ่อลึก 12–30 เมตร บ่อที่มีทรายมาก</p><ul><li class="p">บ่อที่มีทรายเยอะ ปั๊มเจ็ทไม่พังง่ายเท่าซับเมิร์ส (ตามที่คนใช้เล่า)</li><li class="c">คาปาซิเตอร์สตาร์ทเสียได้ราวปีที่ 4–5</li></ul></div><div class="slide" style="--glow:#5a3a1a"><span class="st off">ยังไม่มีรุ่นที่มีเสียงใช้นานพอ</span><h2>ปั๊มออโต้ราคาถูก ไม่มีถังใหญ่</h2><p>เหมาะงานเกษตร สวน ล้างรถ หรือก๊อกจุดเดียว ไม่เหมาะใช้ในบ้าน</p><ul><li class="p">ถูก แรง</li><li class="c">กระป๋องแรงดันเล็กต้องเปลี่ยนทุก 1–2 ปี</li><li class="c">ตัดต่อบ่อยถ้าต่อเครื่องทำน้ำอุ่นหรือใช้ทั้งบ้าน · กินไฟ</li></ul></div><div class="slide" style="--glow:#203a5a"><span class="st off">ยังไม่มีรุ่นที่มีเสียงใช้นานพอ</span><h2>บูสเตอร์เฉพาะจุด</h2><p>ห้องน้ำชั้นบนที่น้ำจากแท็งก์ไหลเบา คอนโด</p><ul><li class="p">ตัวเล็ก ติดเฉพาะจุด ทำงานด้วย flow switch</li><li class="c">ตัวเล็กราคาถูกบางตัวใช้ไปสักพักเสียงดังขึ้นมาก</li></ul></div><div class="slide" style="--glow:#3a5a20"><span class="st off">ยังไม่มีรุ่นที่มีเสียงใช้นานพอ</span><h2>ปั๊มบาดาลโซลาร์</h2><p>สวน ไร่ ที่ไม่มีไฟบ้าน</p><ul><li class="p">DC ต่อแผงตรง ลงทุนน้อย · AC + อินเวอร์เตอร์ทนกว่า</li><li class="c">DC บัสเลสรอบจัด ร้อน ลูกปืนหลวม ราว 3–5 ปี</li><li class="c">มดหรือฟ้าผ่าเข้ากล่องควบคุม</li></ul></div></div><p class="swipehint">ปัดซ้าย–ขวาเพื่อดูอีก 10 ประเภท</p></section>
+<section class="ch alt"><div class="w"><h2 class="h-l">สรุปสั้น</h2><ul class="verdict"><li><b>เริ่มจากถามว่าดูดน้ำจากไหน</b> ส่วนใหญ่ดูดจากถังพักบนดิน (ห้ามดูดตรงจากท่อประปา) ถ้าเป็นบ่อลึกเกิน 8 เมตรต้องใช้ปั๊มเจ็ทหรือซับเมิร์สซึ่งเป็นคนละแบบ</li><li><b>บ้าน 1–2 ชั้น เปิดทีละจุด อยากซ่อมง่าย</b>: ถังกลม ซีรีส์ที่คนใช้นานที่สุด (Hitachi WT-P 10–30 ปี) จุดอ่อนคือถังเหล็กผุ แก้ได้ด้วยถังสเตนเลส</li><li><b>มีน้ำอุ่น เปิดหลายจุดพร้อมกัน</b>: ถังเหลี่ยมแรงดันคงที่ แลกกับสวิตช์และถังแรงดันเล็กที่ต้องเปลี่ยนราวปีที่ 3–4</li><li><b>เน้นเงียบ</b>: ปั๊มหลายใบพัด (Walrus) แต่ระยะดูดสั้นกว่า · <b>บ้าน 3–5 ชั้น</b>: บูสเตอร์ Grundfos CMB</li><li>ปั๊มอินเวอร์เตอร์ยังไม่มีรุ่นที่ผ่าน เพราะรุ่นที่มีเสียงใช้นานก็มีเสียงเสียซ้ำ (Grundfos SCALA2 รั่วใต้ฐาน, Hitachi Inverter มีปัญหาปีที่ 3–5)</li></ul></div></section>
+<section class="ch" id="map"><div class="w"><h2 class="h-l">ปั๊มน้ำแต่ละประเภทต่างกันอย่างไร</h2><p class="lede2">ข้อดีข้อเสียตามหลักการจากช่างและคู่มือ จำนวนปีมาจากเสียงคนใช้ แตะชื่อประเภทเพื่อดูรุ่นที่ผ่าน · ปัดตารางเพื่อดูคอลัมน์ที่เหลือ</p><div class="tmap"><table><thead><tr><th scope="col">ประเภท</th><th scope="col">เหมาะกับบ้านแบบไหน</th><th scope="col">ข้อดีข้อเสียตามหลักการ</th><th scope="col">ใช้ได้กี่ปีตามเสียงคนใช้</th></tr></thead><tbody><tr><th scope="row"><a href="/?c=90-1" data-c="90-1">ถังกลม</a><small>5 รุ่น · รหัส 90-1</small></th><td>บ้าน 1–2 ชั้น ดูดจากถังพัก เปิดทีละจุด อยากซ่อมง่าย</td><td><ul><li>+ ทนที่สุดในสายตาช่าง อะไหล่ถูก ช่างทั่วไปซ่อมเป็น</li><li>+ ก๊อกแรกน้ำแรง</li><li>− ถังเหล็กผุรั่วราวปีที่ 5–10 (แก้ด้วยถังสเตนเลส)</li><li>− เปิดหลายก๊อกพร้อมกันน้ำแรงสลับเบา เสียงดังกว่า</li></ul></td><td>Hitachi WT-P 10–30 ปี · Mitsubishi WP มอเตอร์ 10 ปีขึ้นไป แต่ถังเหล็กสนิม 5–9 ปี</td></tr><tr><th scope="row"><a href="/?c=90-2" data-c="90-2">ถังเหลี่ยม แรงดันคงที่</a><small>2 รุ่น · รหัส 90-2</small></th><td>บ้าน 2–3 ชั้น มีเครื่องทำน้ำอุ่น เปิดหลายจุดพร้อมกัน</td><td><ul><li>+ แรงดันนิ่ง ไม่แรงสลับเบา</li><li>+ ไม่มีถังเหล็กใหญ่ให้ผุ</li><li>− สวิตช์แรงดัน / flow switch และถังไนโตรเจนเสียราวปีที่ 3–4</li><li>− ค่าซ่อมรวมอาจมากกว่าถังกลม</li></ul></td><td>Mitsubishi EP รุ่นเก่า 9–20 ปีขึ้นไป แต่เครื่องช่วงหลังมีเสียงเสียใน 2–4 ปี</td></tr><tr><th scope="row">อินเวอร์เตอร์<small>ยังไม่มีรุ่นที่มีเสียงใช้นานพอ</small></th><td>อยากได้แรงดันนิ่งมาก (rain shower) ประหยัดไฟ</td><td><ul><li>+ แรงดันคงที่ เงียบตอนใช้น้ำน้อย</li><li>+ บางรุ่นแจ้งน้ำรั่ว น้ำขาด</li><li>− บอร์ดเสียแพง ไฟตก ไฟกระชากทำบอร์ดเสียได้</li><li>− Grundfos SCALA2 รั่วใต้ฐานซ้ำหลายคน · Hitachi Inverter มีปัญหาปีที่ 3–5</li></ul></td><td>SCALA2 มีคนใช้ 4 ปีและ 6–7 ปี แต่เสียงเสียซ้ำ จึงยังไม่ผ่าน</td></tr><tr><th scope="row"><a href="/?c=90-4" data-c="90-4">ปั๊มเงียบ หลายใบพัด</a><small>1 รุ่น · รหัส 90-4</small></th><td>เน้นเงียบ ทาวน์เฮาส์ติดเพื่อนบ้าน ดูดจากถังพักบนดิน</td><td><ul><li>+ เงียบที่สุดในเสียงคนใช้ น้ำแรงสม่ำเสมอ</li><li>+ ใบพัดสเตนเลส</li><li>− ระยะดูดสั้นกว่าปั๊มถัง</li><li>− ช่างนอกไม่ค่อยรับซ่อม · เงียบจนไม่รู้ว่าน้ำรั่ว</li></ul></td><td>Walrus TQ 8–9 ปี (มีเคส TQ200 มอเตอร์ไหม้ 3 ปี)</td></tr><tr><th scope="row"><a href="/?c=90-5" data-c="90-5">บูสเตอร์ บ้านใหญ่</a><small>2 รุ่น · รหัส 90-5</small></th><td>บ้าน 3–5 ชั้น หลายห้องน้ำ พูลวิลล่า</td><td><ul><li>+ แรง เงียบ ทน ใบพัดสเตนเลสหลายชั้น</li><li>+ ช่างพูดว่าดีสุดสำหรับบ้านใหญ่</li><li>− แบบถังต้องเช็กลมทุก 6 เดือน</li><li>− ราคาสูง ค่าซ่อมแพง</li></ul></td><td>Grundfos CMB 10 ปีขึ้นไป (กลุ่มช่าง) · YouTube ยังไม่พบเสียงตรงรุ่น</td></tr><tr><th scope="row">บูสเตอร์อาคาร<small>ยังไม่มีรุ่นที่มีเสียงใช้นานพอ</small></th><td>หอพัก อพาร์ตเมนต์ โรงแรม 10 ห้องขึ้นไป</td><td><ul><li>+ ช่างแนะนำแบ่งโซน เช่น ปั๊ม 1 ตัวต่อราว 9 ห้อง พร้อมถังพัก</li><li>− ต้องให้ช่างออกแบบระบบ ไม่ใช่เลือกจากตาราง</li></ul></td><td>หน้านี้ให้คำแนะนำเรื่องระบบ ไม่แนะนำรุ่น</td></tr><tr><th scope="row">ซับเมิร์ส / บาดาล<small>ยังไม่มีรุ่นที่มีเสียงใช้นานพอ</small></th><td>บ่อบาดาล 15 เมตรขึ้นไป สวน ไร่</td><td><ul><li>+ ดันน้ำจากบ่อลึกได้</li><li>− ไฟตกบ่อยทำให้เสียได้ปีละ 1–2 ครั้ง</li><li>− ต้องเลือกขนาดตามบ่อ 3 / 4 / 5 นิ้ว และดูสายไฟ เบรกเกอร์</li></ul></td><td>Franklin 19 ปี (ระดับยี่ห้อ ไม่ระบุรุ่น) แต่กล่องควบคุมแพ้ไฟไม่นิ่ง</td></tr><tr><th scope="row">ปั๊มเจ็ท ดูดลึก<small>ยังไม่มีรุ่นที่มีเสียงใช้นานพอ</small></th><td>บ่อลึก 12–30 เมตร บ่อที่มีทรายมาก</td><td><ul><li>+ บ่อที่มีทรายเยอะ ปั๊มเจ็ทไม่พังง่ายเท่าซับเมิร์ส (ตามที่คนใช้เล่า)</li><li>− คาปาซิเตอร์สตาร์ทเสียได้ราวปีที่ 4–5</li></ul></td><td>Hitachi เจ็ท 2 ท่อ 10 ปีขึ้นไป (เสียงเดียว ไม่ระบุรุ่น)</td></tr><tr><th scope="row">ปั๊มออโต้ราคาถูก ไม่มีถังใหญ่<small>ยังไม่มีรุ่นที่มีเสียงใช้นานพอ</small></th><td>เหมาะงานเกษตร สวน ล้างรถ หรือก๊อกจุดเดียว ไม่เหมาะใช้ในบ้าน</td><td><ul><li>+ ถูก แรง</li><li>− กระป๋องแรงดันเล็กต้องเปลี่ยนทุก 1–2 ปี</li><li>− ตัดต่อบ่อยถ้าต่อเครื่องทำน้ำอุ่นหรือใช้ทั้งบ้าน · กินไฟ</li></ul></td><td>ยังไม่พบเสียงใช้นานระดับรุ่น</td></tr><tr><th scope="row">บูสเตอร์เฉพาะจุด<small>ยังไม่มีรุ่นที่มีเสียงใช้นานพอ</small></th><td>ห้องน้ำชั้นบนที่น้ำจากแท็งก์ไหลเบา คอนโด</td><td><ul><li>+ ตัวเล็ก ติดเฉพาะจุด ทำงานด้วย flow switch</li><li>− ตัวเล็กราคาถูกบางตัวใช้ไปสักพักเสียงดังขึ้นมาก</li></ul></td><td>ยังไม่พบเสียงใช้นานระดับรุ่น</td></tr><tr><th scope="row">ปั๊มบาดาลโซลาร์<small>ยังไม่มีรุ่นที่มีเสียงใช้นานพอ</small></th><td>สวน ไร่ ที่ไม่มีไฟบ้าน</td><td><ul><li>+ DC ต่อแผงตรง ลงทุนน้อย · AC + อินเวอร์เตอร์ทนกว่า</li><li>− DC บัสเลสรอบจัด ร้อน ลูกปืนหลวม ราว 3–5 ปี</li><li>− มดหรือฟ้าผ่าเข้ากล่องควบคุม</li></ul></td><td>AC + อินเวอร์เตอร์ 5–10 ปีหลายเสียง (ระดับยี่ห้อ ยังไม่ระบุรุ่น)</td></tr></tbody></table></div><p class="swipe">ปัดตารางไปทางซ้ายเพื่อดูข้อดีข้อเสียและอายุใช้งาน →</p></div></section>
+<section class="ch tint" id="sit"><div class="w"><h2 class="h-l">เลือกตามบ้านของคุณ</h2><div class="sit"><a class="chip" href="/?c=90-1" data-c="90-1">บ้าน 1–2 ชั้น เน้นทน ซ่อมง่าย</a><a class="chip" href="/?c=90-2" data-c="90-2">มีน้ำอุ่น อยากได้น้ำนิ่ง</a><a class="chip" href="/?c=90-4" data-c="90-4">ปั๊มอยู่ใกล้ห้องนอน หรือติดเพื่อนบ้าน</a><a class="chip" href="/?c=90-5" data-c="90-5">บ้าน 3–5 ชั้น หลายห้องน้ำ</a></div><ul class="find"><li><b>บ้าน 1–2 ชั้น เน้นทน ซ่อมง่าย</b><p>ถังกลม ช่างทั่วไปซ่อมเป็น เตรียมเปลี่ยนถังเป็นสเตนเลสเมื่อถังเหล็กผุ</p><p class="fits"><a href="/?c=90-1" data-c="90-1">ดูปั๊มน้ำถังกลม 5 รุ่น ›</a></p></li><li><b>มีน้ำอุ่น อยากได้น้ำนิ่ง</b><p>ถังเหลี่ยมแรงดันคงที่ ยอมเปลี่ยนสวิตช์และถังแรงดันเล็กเป็นระยะ</p><p class="fits"><a href="/?c=90-2" data-c="90-2">ดูปั๊มน้ำถังเหลี่ยม แรงดันคงที่ 2 รุ่น ›</a></p></li><li><b>ปั๊มอยู่ใกล้ห้องนอน หรือติดเพื่อนบ้าน</b><p>ปั๊มเงียบหลายใบพัด หรือทำกล่องเก็บเสียงที่มีช่องระบายอากาศให้ปั๊มเดิม</p><p class="fits"><a href="/?c=90-4" data-c="90-4">ดูปั๊มน้ำเงียบ หลายใบพัด 1 รุ่น ›</a></p></li><li><b>บ้าน 3–5 ชั้น หลายห้องน้ำ</b><p>บูสเตอร์หลายใบพัด หรือแยกปั๊มเสริมพร้อมถังพักบนชั้น</p><p class="fits"><a href="/?c=90-5" data-c="90-5">ดูปั๊มบูสเตอร์ บ้านใหญ่ 2 รุ่น ›</a></p></li><li><b>บ่อบาดาล / บ่อลึก</b><p>ยังไม่มีรุ่นที่ผ่าน ปั๊มในหน้านี้ดูดได้ลึกสุด 4–8 เมตรจากระดับน้ำ ลึกกว่านั้นต้องใช้ปั๊มเจ็ทหรือซับเมิร์ส</p></li><li><b>หอพัก โรงแรม อาคาร</b><p>ให้ช่างออกแบบระบบ แบ่งโซนปั๊มพร้อมถังพัก ไม่ใช่เลือกจากตาราง</p></li></ul></div></section>
+<section class="ch alt" id="tips"><div class="w"><h2 class="h-l">ช่างหลายคน<br>พูดตรงกัน</h2><div class="bento"><div class="tile dark big"><span class="k">ก่อนเลือกยี่ห้อ</span><h3>ดูดน้ำจากไหน บ้านกี่ชั้น เปิดพร้อมกันกี่จุด</h3><p>คำถามแรกที่ช่างในกลุ่มถามทุกครั้ง</p></div><div class="tile"><span class="k">ติดตั้ง</span><h3>ยกสูงจากพื้น 10–15 ซม. อยู่ในร่ม</h3><p>ใส่ข้อต่อยูเนียนกับวาล์วไว้ถอดซ่อม ไม่ลดขนาดท่อเข้า-ออก</p></div><div class="tile"><span class="k">อย่าเลือกวัตต์เกินบ้าน</span><h3>เสียงดังและตัดต่อบ่อยขึ้น</h3><p>เลือกจุดกลางของกราฟปั๊มในคู่มือ ไม่ใช่ค่าสูงสุด</p></div><div class="tile dark"><span class="k">ปั๊มติดเองตอนไม่มีใครใช้น้ำ</span><h3>เช็กน้ำรั่วในบ้านหรือเช็ควาล์ว</h3><p>ถ้าปั๊มติดดับถี่ มักเป็นที่ลมในถังหมด</p></div><div class="tile"><span class="k">RO / เครื่องกรอง</span><h3>อย่าต่อหลังปั๊ม</h3><p>ต่อจากประปาก่อนเข้าถังพัก ไม่งั้นปั๊มติดดับถี่และเสียไว</p></div></div></div></section>
+<section class="ch"><div class="w"><h2 class="h-m">ป้ายระดับหลักฐานในหน้าเทียบรุ่น</h2><ul class="tlegend"><li><span class="tier A">ใช้ยาวยืนยัน</span>มีคนใช้รุ่นนี้หรือซีรีส์นี้ 5 ปีขึ้นไป หรือนานกว่า 2 เท่าของประกันหลัก</li><li><span class="tier B">ซีรีส์ทน</span>รุ่นปัจจุบันของซีรีส์ที่ใช้ยาวยืนยันแล้ว ยี่ห้อเดียวกัน เทคหลักเดียวกัน (เทียบสเปกแล้ว)</li><li><span class="tier C">ใหม่ ยังไม่มีเสียงใช้ยาว</span>รุ่นใหม่ ยังไม่มีเสียงใช้ยาว ผ่านเกณฑ์รีวิว ช่าง ประกัน และบริการหลังขายครบ 4 ข้อ</li></ul></div></section>
+<section class="ch alt" id="faq"><div class="w"><h2 class="h-l">คำถามที่คนถามบ่อย</h2><ul class="find"><li><b>บ้านกี่ชั้นใช้ปั๊มกี่วัตต์</b><p>คนในกลุ่มช่างปั๊มแนะนำคร่าวๆ ว่าบ้านชั้นเดียว 1 ห้องน้ำ 100–150 วัตต์ · 2 ชั้น 2–3 ห้องน้ำ 250–350 วัตต์ · 3–4 ชั้นหรือมี rain shower 400 วัตต์ขึ้นไป หรือแยกปั๊มเสริมพร้อมถังพักบนชั้น และไม่ควรเลือกวัตต์เกินบ้าน เพราะเสียงดังและตัดต่อบ่อย</p></li><li><b>ถังกลมกับถังเหลี่ยมต่างกันอย่างไร</b><p>ถังกลมทนและอะไหล่ถูก ก๊อกแรกน้ำแรง แต่ถังเหล็กผุได้ราวปีที่ 5–10 และเปิดหลายก๊อกพร้อมกันน้ำแรงสลับเบา ถังเหลี่ยมให้แรงดันนิ่งกว่า เหมาะกับบ้านที่มีน้ำอุ่น แต่สวิตช์กับถังแรงดันเล็กต้องเปลี่ยนราวปีที่ 3–4 ค่าซ่อมรวมอาจมากกว่า</p></li><li><b>ปั๊มติดๆ ดับๆ ถี่ เกิดจากอะไร</b><p>ส่วนใหญ่ลมหรือแก๊สในถังแรงดันหมด เช็กด้วยเกจวัดลมยาง ถ้าปั๊มติดเองตอนไม่มีใครเปิดน้ำ ให้เช็กน้ำรั่วในบ้านหรือเช็ควาล์ว ช่างเตือนว่าเติมลมอย่างเดียวเป็นการแก้ปลายเหตุ ต้องหาจุดรั่วด้วย</p></li><li><b>ปั๊มไม่ทำงานเลย ต้องซื้อใหม่ไหม</b><p>ช่างในคลิปซ่อมเจอบ่อยว่ามดเข้าไปทำรังในสวิตช์แรงดัน ทำความสะอาดแล้วหาย ไม่ต้องซื้ออะไหล่ ลองเช็กจุดนี้ก่อน</p></li><li><b>ต้องมีระบบตัดเมื่อน้ำแห้งไหม</b><p>ควรมี ปั๊มที่เดินตัวเปล่าตอนน้ำหมดถังจะร้อนจนเสีย หลายรุ่นผู้ผลิตเขียนแค่ตัวตัดเมื่อมอเตอร์ร้อน ถ้ารุ่นที่เลือกไม่ได้เขียนว่าตัดเมื่อน้ำแห้ง ให้ติดลูกลอยไฟฟ้าในถังพัก</p></li><li><b>ปั๊มอินเวอร์เตอร์ดีกว่าไหม</b><p>เงียบและแรงดันนิ่ง แต่บอร์ดเสียแพง และไฟตก ไฟกระชาก หรือฟ้าผ่าทำบอร์ดเสียได้ ตอนนี้ยังไม่มีรุ่นที่ผ่านเกณฑ์ของเรา เพราะรุ่นที่มีเสียงใช้นานก็มีเสียงเสียซ้ำ ถ้าจะใช้ควรติดกันไฟกระชาก</p></li><li><b>ปั๊มดูดตรงจากท่อประปาได้ไหม</b><p>ผู้ผลิตหลายรายเขียนว่าให้สูบจากถังพักเท่านั้น วิธีที่คนส่วนใหญ่ใช้คือให้น้ำประปาลงถังพักก่อนแล้วจึงสูบเข้าบ้าน ถ้าจะต่อแบบอื่นให้ถามการประปาในพื้นที่ก่อน</p></li><li><b>ทำปั๊มให้เงียบลงได้ไหม</b><p>ช่างแนะนำกล่องเก็บเสียงที่มีช่องระบายอากาศ แผ่นแดมป์เสียงติดในฝาครอบ และเปลี่ยนลูกปืนเมื่อเริ่มดัง แต่ควรได้ยินเสียงปั๊มบ้าง เพราะถ้าเงียบมาก น้ำรั่วหรือลืมปิดก๊อกจะไม่รู้</p></li></ul></div></section>
+<section class="ch"><div class="w"><h2 class="h-m">เสียงจากผู้ใช้จริง</h2><ul class="find"><li><b>อายุปั๊มขึ้นกับการติดตั้งและน้ำ</b><small>Facebook</small><blockquote>“อย่างน้อย 3 ปีเริ่มเสีย ขึ้นกับติดตั้ง ในร่มไหม มีแท้งค์ไหม”</blockquote><blockquote>“ประปาเค็ม ไม่เกิน 3 ปี”</blockquote></li><li><b>ถังผุ เปลี่ยนถังแล้วใช้ต่อ</b><small>Facebook · YouTube</small><blockquote>“10 ปีเปลี่ยนถัง ใช้ต่ออีก 10 ปี”</blockquote></li></ul></div></section>
+<section class="ch"><div class="w"><h2 class="h-m">สิ่งที่เราไม่เคลม</h2><ul class="cav"><li>เสียงใช้นานส่วนใหญ่เป็นระดับซีรีส์ (เช่น Hitachi WT-P, Mitsubishi EP) จากรุ่นก่อนๆ เราติดป้ายระดับหลักฐานไว้ทุกรุ่นในหน้าย่อย</li><li>รุ่นที่มีเสียงเสียซ้ำแบบเดียวกันหลายคนไม่อยู่ในหน้านี้: Hitachi WM-P XX, Hitachi Inverter และ Turbine, Grundfos SCALA2, Torque WPS / SMART</li><li>DAB E.SYBOX ยังไม่ใส่ เพราะยังไม่มีเสียงใช้นานพอและไม่พบร้านทางการใน Shopee</li><li>อย่าทำถังแรงดันเองจากท่อ PVC มีเคสฝาแตกพุ่ง</li></ul></div></section>
+</main>
+<section class="ch alt src" id="src"><div class="w"><h2>ที่มาของข้อมูล</h2><ul><li>กลุ่ม Facebook ชมรมช่างปั๊มน้ำฮิตาชิ-มิตซู และกลุ่มถาม-ตอบเรื่องบ้าน · Pantip · Lemon8 (ไม่นับโพสต์สปอนเซอร์)</li><li>YouTube: คลิปช่าง รีวิว และร้านขายปั๊ม อ่านคอมเมนต์และการตอบกลับ ไม่นับคอมเมนต์ขายของ</li><li>สเปกจากหน้าสินค้า HomePro ที่ระบุรุ่นตรง และเว็บ Hitachi</li><li>Facebook: กลุ่มชมรมช่างปั๊มน้ำฮิตาชิ-มิตซู (กระทู้อายุปั๊ม, กลมกับเหลี่ยม, Inverter หาตัวเงียบ, Torque, โรงแรม 36 ห้อง) และกลุ่มถาม-ตอบเรื่องบ้าน</li><li>Pantip: กระทู้กลมกับเหลี่ยม, ทาวน์เฮาส์เลือกปั๊ม, Inverter กับ Scala2, Scala2 กับ CMB, ซับเมิร์สบาดาล</li><li>YouTube: คลิปช่างและรีวิวแยก 6 ประเภท พร้อมคอมเมนต์และการตอบกลับ (คุยกับลุงช่าง, บุญทวีก่อสร้าง, ช่างอ้น KPCP, dogfilm และอื่นๆ)</li></ul><h3>ที่มาของสเปก</h3><ul><li><a href="https://www.homepro.co.th/p/1265519" rel="noopener">HomePro GRUNDFOS SCALA2 3-45 (ใช้ในแถวอินเวอร์เตอร์): 550 W, ส่ง 45 ม., 63 ล./นาที, 47 dB, กันน้ำแห้ง, มอเตอร์ 2 ปี</a></li></ul></div></section><footer class="ft"><div class="w">ปุ่มไป Shopee เป็นลิงก์แอฟฟิลิเอท ถ้าซื้อผ่านลิงก์ เราได้ค่าคอมมิชชันจาก Shopee ราคาที่คุณจ่ายเท่าเดิม · อัปเดต 22 ต.ค. 2569 · <a href="/">ดูหมวดอื่น</a></div></footer>
+<script>(function(){var q=new URLSearchParams(location.search),ch=(q.get('ch')||'hub').replace(/[^a-z0-9-]/gi,'').slice(0,12)||'hub';document.querySelectorAll('a.go').forEach(function(a){a.href='/go?p='+encodeURIComponent(a.dataset.pid)+'&s='+a.dataset.s+'&ch='+encodeURIComponent(ch);});if(location.protocol!=='file:')document.querySelectorAll('a[data-c]').forEach(function(a){a.href='/?ch='+encodeURIComponent(ch)+'&c='+encodeURIComponent(a.dataset.c);});})();</script></body></html>
